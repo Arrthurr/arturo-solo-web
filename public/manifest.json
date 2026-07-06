@@ -1,0 +1,9 @@
+{
+  "name": "Arturo Solo LLC",
+  "short_name": "Arturo Solo",
+  "description": "Founder-led AI build studio for small businesses. Working AI, built into your business.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#000000"
+}
