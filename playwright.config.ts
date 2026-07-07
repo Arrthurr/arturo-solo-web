@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { iosProviderProfile, mobileProfile } from './e2e/device-profiles';
 
 const port = 3000;
 const baseURL = `http://127.0.0.1:${port}`;
@@ -26,6 +27,17 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      testIgnore: /mobile/,
+    },
+    {
+      name: 'mobile',
+      use: { ...mobileProfile },
+      testMatch: /mobile/,
+    },
+    {
+      name: 'ios',
+      use: { ...iosProviderProfile },
+      testMatch: /mobile/,
     },
   ],
 });

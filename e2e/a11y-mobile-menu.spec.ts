@@ -1,8 +1,6 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Mobile menu accessibility', () => {
-  test.use({ viewport: { width: 375, height: 812 } });
-
   test('toggle exposes aria-expanded and aria-controls', async ({ page }) => {
     await page.goto('/');
 

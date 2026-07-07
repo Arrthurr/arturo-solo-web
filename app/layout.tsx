@@ -1,6 +1,13 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import ScrollToTop from '@/components/ScrollToTop';
 import './globals.css';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#000000',
+};
 
 export const metadata: Metadata = {
   title: {
@@ -40,6 +47,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Arturo Solo',
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
