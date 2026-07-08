@@ -88,3 +88,14 @@ npm run test:e2e
 ```
 
 Playwright uses Next.js on `127.0.0.1:3000` (`next dev` locally; `next start` in CI after build).
+
+## Cursor Cloud specific instructions
+
+Standard commands are in `## Verification` above and `package.json` scripts; the update script only runs `npm install` and `npx playwright install chromium`.
+
+Non-obvious environment notes:
+
+- The app requires `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to be set or `next build`/`next dev` will throw when the Supabase browser client is constructed. A committed `.env.local` (gitignored) provides placeholder values so lint/typecheck/test/build/dev/e2e all pass with no live backend. If `.env.local` is missing on a fresh pod, recreate it with the same two `NEXT_PUBLIC_*` placeholders (mirrors the CI `build`/`test:e2e` env in `.github/workflows/ci.yml`).
+- Resend and Upstash are optional and degrade gracefully when unset (`lib/email/notify-lead.ts` warns and skips; `lib/rate-limit.ts` returns `limitConfigured: false`). No creds needed for local dev.
+- With only placeholder Supabase creds, the contact form's server action (`app/actions/submit-contact.ts`) runs end-to-end but the `contact_leads` insert fails against the fake host and returns the graceful server-error message. Zod validation, honeypot redirect, and rate-limit paths all work without a live backend. A genuinely successful lead → `/success` requires a real Supabase project (`SUPABASE_SERVICE_ROLE_KEY` + a `contact_leads` table).
+- `npm run dev`/`test:e2e` bind to port `3000`; Playwright's `webServer` reuses an already-running dev server locally.
