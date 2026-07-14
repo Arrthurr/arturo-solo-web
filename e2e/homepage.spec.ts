@@ -10,7 +10,7 @@ test.describe('Homepage', () => {
     await expect(page.getByRole('heading', { name: 'Custom AI Build' })).toBeVisible();
     await expect(page.getByText('Why Arturo')).toBeVisible();
 
-    const founderPhoto = page.getByAltText('Arthur Turnbull');
+    const founderPhoto = page.locator('#team').locator('img');
     await expect(founderPhoto).toBeVisible();
     await expect(founderPhoto).toHaveAttribute(
       'srcset',
@@ -19,6 +19,8 @@ test.describe('Homepage', () => {
     await expect(
       page.locator('#team').getByText('Arthur Turnbull', { exact: true }),
     ).toBeVisible();
-    await expect(page.getByText('AT', { exact: true })).toHaveCount(0);
+    await expect(
+      page.locator('#team').getByText('AT', { exact: true }),
+    ).toHaveCount(0);
   });
 });
