@@ -20,7 +20,7 @@ Run against the Vercel **preview** URL before touching production DNS.
 - [ ] Contact submit → Supabase **dev** project row + Resend notification → `/success` warm copy
 - [ ] `/blog` returns 200 with empty-state when no posts
 - [ ] Publish one test post in dev Supabase → appears on index and `/blog/[slug]`
-- [ ] `/privacy-policy` and `/terms-of-service` — Arturo copy including Supabase disclosure
+- [ ] `/privacy-policy` and `/terms-of-service` — Arturo privacy policy covering website + published apps (incl. Supabase disclosure); Terms Arturo-specific
 - [ ] Mobile menu: `aria-expanded` / `aria-controls` wired correctly
 - [ ] No `href="#"` placeholders in nav or footer
 - [ ] Production Vercel env scoped to **prod** Supabase; preview scoped to **dev** Supabase
