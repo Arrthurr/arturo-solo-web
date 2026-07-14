@@ -23,7 +23,8 @@ export default function PrivacyPolicyPage() {
 
               <h2>1. Who we are</h2>
               <p>
-                Arturo Solo LLC (&ldquo;we,&rdquo; &ldquo;us&rdquo;) operates arturosolo.com and publishes apps and products under the Arturo Solo LLC name.
+                Arturo Solo LLC (&ldquo;we,&rdquo; &ldquo;us&rdquo;) operates arturosolo.com and publishes apps and products under the Arturo Solo LLC name
+                (including any iOS apps we distribute).
                 For privacy questions, deletion requests, or to revoke consent where applicable, contact{' '}
                 <a href="mailto:start@arturosolo.com">start@arturosolo.com</a>.
               </p>
@@ -31,7 +32,7 @@ export default function PrivacyPolicyPage() {
               <h2>2. Scope</h2>
               <p>
                 This policy covers (a) the arturosolo.com marketing website, including the contact form, and (b) apps and products we publish
-                (including iOS apps distributed under Arturo Solo LLC). When a specific product uses different practices, we will update this
+                or may distribute under Arturo Solo LLC, including any iOS apps. When a specific product uses different practices, we will update this
                 policy before relying on those practices.
               </p>
 
