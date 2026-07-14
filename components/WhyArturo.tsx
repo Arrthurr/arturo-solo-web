@@ -23,12 +23,20 @@ export default function WhyArturo() {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center"
         >
-          <div className="relative aspect-square max-w-md mx-auto md:mx-0 rounded-2xl overflow-hidden bg-gray-200 flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="text-6xl font-bold text-gray-400 mb-4">AT</div>
-              <p className="text-sm text-gray-500 font-display">Arthur Turnbull</p>
+          <figure className="max-w-md mx-auto md:mx-0">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-200">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/arthur-turnbull.jpg"
+                srcSet="/arthur-turnbull.jpg 1x, /arthur-turnbull@2x.jpg 2x"
+                alt=""
+                className="h-full w-full object-cover object-top"
+              />
             </div>
-          </div>
+            <figcaption className="mt-4 text-sm text-gray-500 font-display">
+              Arthur Turnbull
+            </figcaption>
+          </figure>
 
           <div>
             <p className="text-sm uppercase tracking-widest text-gray-500 mb-4">

@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   creator: 'Arturo Solo LLC',
   publisher: 'Arturo Solo LLC',
   metadataBase: new URL('https://arturosolo.com'),
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
