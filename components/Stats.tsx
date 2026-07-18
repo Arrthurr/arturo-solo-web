@@ -60,14 +60,14 @@ export default function Stats() {
             <p className="text-sm text-gray-500 mb-8 uppercase tracking-wider">
               Client contexts (subordinate proof)
             </p>
-            <div className="flex flex-wrap items-center gap-10 opacity-70">
+            <div className="flex flex-wrap items-center gap-x-12 gap-y-8 opacity-70">
               {proofLogos.map((client) => (
-                <div key={client.name} className="relative h-10 w-28">
+                <div key={client.name} className="relative flex h-12 items-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="h-10 w-auto object-contain brightness-0 invert"
+                    className="h-10 w-auto max-w-[10rem] object-contain object-left brightness-0 invert"
                   />
                 </div>
               ))}
