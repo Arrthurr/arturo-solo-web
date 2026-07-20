@@ -3,7 +3,7 @@
 ## Phase 1: the discovery call
 
 6:39
-we'll get into that, but let's get into the weeds of like, well, what do like how do we actually how do we fulfill this assessment and how do we actually,
+let's get into the weeds of like, well, what do like how do we actually how do we fulfill this assessment and how do we actually,
 6:46
 you know, deliver this to the client? So, it's four different phases. We'll go one phase at a time. Phase one is the
 6:54
