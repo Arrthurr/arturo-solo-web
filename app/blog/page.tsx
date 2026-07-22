@@ -7,7 +7,7 @@ import { createClient } from '@/lib/supabase/server';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Notes from the build log — AI systems, workflows, and practical automation for small businesses.',
+  description: 'Notes on workflow assessment, solution choices, practical automation, AI feasibility, and custom implementation for small organizations.',
 };
 
 export default async function BlogPage() {
@@ -25,7 +25,7 @@ export default async function BlogPage() {
       <main className="pt-32">
         <section className="section-padding">
           <div className="container mx-auto max-w-6xl">
-            <h1 className="heading-lg mb-8">From the build log</h1>
+            <h1 className="heading-lg mb-8">Notes from the work</h1>
 
             {!posts?.length ? (
               <div className="border-t border-gray-200 pt-12 max-w-2xl">
@@ -33,7 +33,7 @@ export default async function BlogPage() {
                   Posts coming soon.
                 </p>
                 <p className="text-gray-500 font-display">
-                  I&apos;m writing about practical AI builds, workflow automation, and what actually works for small businesses. Check back soon — or{' '}
+                  I&apos;m writing about how to map operational work, compare simpler process, software, automation, AI, and custom builds, and test what matters before scaling it. Check back soon—or{' '}
                   <Link href="/contact" className="text-black underline hover:no-underline">
                     start a conversation
                   </Link>{' '}

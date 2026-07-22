@@ -27,7 +27,7 @@ export default function TermsOfServicePage() {
 
               <h2>2. Services described</h2>
               <p>
-                This website describes AI build and consulting services offered by Arturo Solo LLC. Content on this site is informational and does not constitute a binding offer until a separate written agreement is signed.
+                This website describes workflow assessment and custom implementation services offered by Arturo Solo LLC. Content on this site is informational and does not constitute a binding offer until a separate written agreement is signed.
               </p>
 
               <h2>3. Contact submissions</h2>

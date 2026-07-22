@@ -13,7 +13,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <button type="submit" disabled={pending} className="btn-primary w-full">
-      {pending ? 'Sending...' : 'Send the bottleneck'}{' '}
+      {pending ? 'Sending...' : 'Send the workflow'}{' '}
       <ArrowRight className="inline ml-2" />
     </button>
   );
@@ -70,16 +70,16 @@ export default function ContactForm() {
             className={inputClass(state.errors?.service)}
           >
             <option value="" disabled>Select an option</option>
-            <option value="ai-jumpstart">AI Jumpstart</option>
-            <option value="custom-ai-build">Custom AI build / implementation</option>
-            <option value="not-sure">Not sure yet — let&apos;s talk</option>
+            <option value="ai-jumpstart">Workflow Assessment — $1,500 fixed fee</option>
+            <option value="custom-ai-build">Custom AI Build — scoped implementation</option>
+            <option value="not-sure">Not sure — help me choose the next step</option>
           </select>
         </Field>
       </div>
 
       <Field
         id="message"
-        label="What's the work you want off your plate?"
+        label="Where does the workflow break down?"
         error={state.errors?.message}
       >
         <textarea

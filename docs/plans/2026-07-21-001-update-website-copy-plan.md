@@ -1,436 +1,552 @@
-## Implementation-ready public website copy plan
+# Public website copy update plan
 
-I inspected the current public pages/components and verified that `docs/asllc-delivery-playbook.md` in the workspace is identical to commit `98d05f5` (`git diff --exit-code 98d05f5 -- docs/asllc-delivery-playbook.md` is clean). No website files were edited.
+**Status:** Approved and implementation-ready
 
-### Core correction
+**Scope:** Public website copy, supporting metadata, and copy-contract tests
 
-The conflict is site-wide, not limited to one Services sentence. The current Hero, Services, Process, metadata, Contact page, and Success page collectively present AI Jumpstart as “the first build.” The revised journey should be:
+**Primary correction:** Present the first engagement as a workflow assessment and decision—not as a small implementation
 
-**workflow no longer fits current tools → map the work and establish evidence → compare simplify / buy / automate / build → deliver a decision-ready Implementation Brief → separately scope implementation only when justified**
+## Approved decisions
 
-Keep the current homepage section order (`Header → Hero → Stats → Services → Process → Why Arturo → BlogTeaser → Footer`). Do not add a service-detail page in this pass. Expand the Services cards enough to define the two engagements clearly; that is the smallest coherent IA change.
+- Rename **AI Jumpstart** to **Workflow Assessment** in all visitor-facing copy.
+- Retain **Custom AI Build** as the implementation service name for this pass.
+- Permit direct entry to Custom AI Build when equivalent prior assessment and evidence already exist; a client does not have to purchase Arturo's Workflow Assessment first.
+- Price Workflow Assessment at **$1,500 fixed fee** and publish that price.
+- Do not publish a Custom AI Build starting price until it is separately approved.
+- Keep the one-business-day response expectation.
+- Define the best-fit audience as **small organizations where owners or operations leaders are directly accessible and close to the work**.
+- Use **DMDL** and **Joy for Books** as the only approved named client contexts in this pass.
+- Do not use Texas Head Start Association publicly; it was a proprietary project.
+- Omit HG Jones Associates from public proof unless separately approved later.
+- Start the seven-business-day delivery clock only after payment and kickoff are complete, the decision owner and workflow lead are identified, and the agreed representative materials are available.
+- Keep stable backend service values (`ai-jumpstart`, `custom-ai-build`, `not-sure`) unless a separate data migration is intentionally approved. The legacy `ai-jumpstart` value becomes the internal identifier for visitor-facing **Workflow Assessment** submissions.
+
+## Core correction
+
+The current Hero, Services, Process, metadata, Contact page, and Success page collectively present the first engagement as “the first build.” The revised journey is:
+
+**work no longer fits current tools → reconstruct the workflow and establish evidence → compare simplify / buy / automate / build → deliver a decision-ready Implementation Brief → separately scope implementation only when justified**
+
+AI is a technique under automate or build, not the premise of the assessment or a fifth solution path.
+
+Keep the homepage section order:
+
+`Header → Hero → Stats → Services → Process → WhyArturo → BlogTeaser → Footer`
+
+Do not add a service-detail page in this pass. Keep the Services cards concise enough for a homepage while making the timing, deliverable, price, entry conditions, and implementation boundary explicit.
 
 ---
 
-# 1. Inventory of affected files and sections
+# 1. Audience, offer, and buying path
+
+## Best-fit audience
+
+Use this public-facing definition:
+
+> Small organizations where the people making operational decisions are close to the work.
+
+Use this fuller definition internally when qualifying prospects:
+
+> Small organizations with direct access to an owner or operations leader, a consequential workflow that no longer fits the current tools, and enough operational access to examine a representative case.
+
+Organization size matters because it usually creates shorter decision paths, accessible evidence, and accountable ownership—not because a company officer title is mandatory.
+
+## Service relationship
+
+The two services are distinct, not an automatic funnel:
+
+1. **Workflow Assessment** determines what should change and why.
+2. **Custom AI Build** implements a separately approved scope when custom software or AI is justified.
+
+Most unresolved workflow problems should begin with Workflow Assessment. A prospect may discuss Custom AI Build directly when equivalent prior work has already established the problem, evidence, implementation boundary, and reason custom software is appropriate.
+
+Do not imply that every assessment leads to a build or that Arturo's assessment is the only valid route into implementation.
+
+## Readiness gate
+
+Qualify readiness by authority, operational knowledge, and access—not executive title. Before the seven-business-day clock begins, require:
+
+1. **An empowered decision owner** who can approve process or tool changes, resolve tradeoffs, authorize access, and act on the recommendation.
+2. **A workflow owner or knowledgeable operator** who can explain normal work, exceptions, records, tools, handoffs, and workarounds.
+3. **One representative recent case** that can be traced from trigger to completion or failure through artifacts, redacted records, screenshots, or a live walkthrough.
+4. **Openness to every valid outcome:** simplify, buy, automate, build, investigate, or defer.
+5. **Payment, kickoff, role confirmation, and agreed materials complete.**
+
+One person may fill both owner roles. A company officer alone is insufficient when that person cannot explain the actual day-to-day workflow.
+
+Use this public expectation rather than placing the full qualification checklist on the homepage:
+
+> Best for a consequential workflow with an accessible decision maker, someone who knows the day-to-day work, and a recent example we can examine.
+
+Use the full gate during the fit call and onboarding. Do not add more required contact-form fields in this pass.
+
+Use this timing language wherever start conditions need to be explained:
+
+> The seven-business-day assessment begins once payment and kickoff are complete, the decision owner and workflow lead are identified, and the agreed representative materials are available.
+
+---
+
+# 2. Messaging hierarchy
+
+Apply this order across the homepage:
+
+1. **Recognition:** the work and tools no longer fit each other.
+2. **Point of view:** do not begin with AI or a requested feature.
+3. **Method:** reconstruct the workflow and compare credible paths.
+4. **Proof:** show specific work, accurately labeled by evidence level.
+5. **Offer:** Workflow Assessment produces the decision; Custom AI Build implements a justified scope.
+6. **Founder advantage:** one accountable person capable of both judgment and implementation.
+7. **CTA:** bring a recent example of the workflow breaking down.
+
+## CTA system
+
+Use each CTA according to its intent:
+
+- **Header/global:** `Talk through the workflow`
+- **Hero:** `Bring me the bottleneck`
+- **Workflow Assessment:** `See if the assessment fits`
+- **Custom AI Build:** `Discuss a scoped build`
+- **Contact submit:** `Send the workflow`
+
+The accessible mobile navigation label may remain `Contact`.
+
+---
+
+# 3. Affected files
 
 ## Must change
 
-1. **`components/Hero.tsx` — positioning, promise, CTA support line**
-   - Current: “Working AI. In your business,” “I build the first useful AI system,” and “Delivered as a working workflow.”
-   - Problem: leads directly to implementation and implies the first engagement produces a running system.
-   - Change: install the agreed operation/tools positioning and explain that the first job is choosing the right intervention, not assuming AI or custom software.
+1. **`components/Hero.tsx`**
+   - Replace the implementation-first promise with the approved workflow-first position.
+   - Keep the blunt, kinetic homepage tone.
 
-2. **`components/Services.tsx` — section intro, both service cards, CTA**
-   - Current direct contradiction: Jumpstart says “I build the first running version,” “A real handoff, not a PDF”; section says both engagements are “delivered as working systems … on day one.”
-   - Current Custom Build also depends on the false premise “When the first workflow proves value, we expand.”
-   - Change: explicitly separate a seven-business-day assessment ending in an Implementation Brief from a later, separately scoped implementation engagement. This component needs slightly richer card structure than one description plus three generic bullets.
+2. **`components/Services.tsx`**
+   - Rename AI Jumpstart to Workflow Assessment.
+   - Separate assessment from implementation without reproducing the full delivery playbook.
+   - Show seven-business-day timing, the Implementation Brief, the `$1,500` fixed fee, all six possible decisions, and the no-implementation boundary.
+   - Explain that Custom AI Build accepts equivalent prior assessment and is not an automatic next step.
 
-3. **`components/Process.tsx` — homepage process model**
-   - Current: map → “Build until it runs” → expand.
-   - Problem: collapses assessment and implementation into one automatic funnel.
-   - Change: map the work → choose the path → implement separately when justified.
+3. **`components/Process.tsx`**
+   - Replace map → build → expand with reconstruct → compare → act on the decision.
 
-4. **`app/layout.tsx` — default, OpenGraph, and Twitter metadata**
-   - Current: “I build working AI systems … not decks, not demos.”
-   - Problem: external previews repeat the same Jumpstart/build conflation and disparage the actual brief deliverable.
-   - Change all title/description variants together.
+4. **`components/Stats.tsx`**
+   - Replace generic proof categories with specific, supportable evidence where available.
+   - Use only DMDL and Joy for Books as named client contexts.
+   - Remove HG Jones Associates and do not add Texas Head Start Association.
+   - Do not imply outcomes from logos, shipped code, development status, or usage.
 
-5. **`app/contact/page.tsx` — metadata, opening paragraph, first-message guidance**
-   - Current: “help find the right first build — usually an AI Jumpstart.”
-   - Problem: explicitly calls Jumpstart a build.
-   - Change: ask for the latest concrete workflow failure and explain that Arturo will assess fit for Jumpstart, an already-supported next step, or separately scoped implementation.
+5. **`components/WhyArturo.tsx`**
+   - Keep builder credibility while adding the judgment not to build when a lower-complexity path fits.
 
-6. **`components/ContactForm.tsx` — service labels, message prompt, possibly submit label**
-   - Keep backend values exactly unchanged: `ai-jumpstart`, `custom-ai-build`, `not-sure`.
-   - Change visible labels so the distinction is evident at conversion: assessment/brief versus scoped implementation.
+6. **`components/Header.tsx` and `components/Footer.tsx`**
+   - Align global positioning and CTA language with the workflow-first message.
 
-7. **`app/success/page.tsx` — post-submit expectation**
-   - Current: submitted detail “helps us scope the first build faster.”
-   - Problem: implies implementation is assumed.
-   - Change: explain that the detail helps validate the workflow and determine the right next step.
+7. **`app/layout.tsx`**
+   - Update default, OpenGraph, and Twitter metadata together.
+   - Replace AI Jumpstart keywords with Workflow Assessment terminology while retaining relevant automation, custom software, and custom AI terms.
 
-8. **`components/Footer.tsx` — global positioning sentence**
-   - Current repeats “Working AI, built into your business.”
-   - Change to the operation/tools positioning in a shortened global form.
+8. **`app/contact/page.tsx` and `components/ContactForm.tsx`**
+   - Ask for a recent workflow failure rather than an AI idea or “first build.”
+   - Update visitor-facing service labels while preserving backend values.
+   - Keep the page warm and low-friction; readiness screening happens after initial contact.
 
-9. **`e2e/homepage.spec.ts` and `e2e/contact.spec.ts` — copy contract**
-   - Homepage test currently requires “Working AI / In your business.”
-   - Update to assert the new H1 and, critically, visible Jumpstart timing/deliverable/no-implementation boundary plus distinct Custom Build language.
-   - Contact test should assert the qualified service labels while leaving form behavior intact.
+9. **`app/success/page.tsx`**
+   - Preserve the one-business-day reply expectation.
+   - Explain that the submitted detail helps validate the workflow and determine the next step rather than scope an assumed build.
+
+10. **`e2e/homepage.spec.ts` and `e2e/contact.spec.ts`**
+    - Replace stale copy assertions and add the copy-contract assertions listed below.
+
+11. **`AGENTS.md`**
+    - Update the service-name invariant from AI Jumpstart to Workflow Assessment so project guidance matches the approved public offer.
+    - Preserve the two-service invariant and stable backend form values.
 
 ## Align in the same pass
 
-10. **`components/WhyArturo.tsx` — founder rationale**
-    - Current is almost entirely “design, build, and ship.”
-    - Keep founder-led builder credibility, but add the judgment not to build when simpler process or existing software is the better answer.
+- **`app/blog/page.tsx`** — include workflow mapping, solution choices, feasibility, automation, and practical implementation in metadata and empty-state copy.
+- **`app/privacy-policy/page.tsx`** — update visible service terminology if present; do not change the data contract merely because the label changed.
+- **`app/terms-of-service/page.tsx`** — review terminology only; avoid broad legal rewrites.
 
-11. **`components/Stats.tsx` — proof framing**
-    - Preserve the required hybrid proof model and subordinate client logos.
-    - Audit “Ops systems that run daily” and all shipped/live wording against evidence. “Daily” should be removed unless specifically documented. Do not imply client outcomes from logos, product existence, or usage.
+## No composition change
 
-12. **`app/blog/page.tsx` — metadata and zero-post copy**
-    - Low priority, but change “build log” framing to include workflow mapping, solution choices, feasibility, and practical implementation—not only AI builds.
-
-13. **`components/Header.tsx` — CTA consistency**
-    - “Bring me a bottleneck” is compatible and can remain. If CTA language is standardized, use “Talk through the workflow” on desktop while retaining the accessible mobile “Contact” label. No navigation/anchor changes are needed.
-
-## Review only; likely no substantive change
-
-14. **`app/terms-of-service/page.tsx`**
-    - Existing language correctly says content is not a binding offer and disclaims guaranteed outcomes. Keep it. Optionally clarify that services include workflow assessment and separately contracted implementation, subject to legal review.
-
-15. **`app/privacy-policy/page.tsx`**
-    - Existing service-interest categories remain accurate. Because form values do not change, no data-contract update is needed. Only update prose if visible service names are expanded.
-
-16. **`app/page.tsx`**
-    - No direct copy and no composition change recommended.
+- **`app/page.tsx`** — preserve section order and composition.
 
 ---
 
-# 2. Recommended information architecture and messaging hierarchy
-
-## Site-level hierarchy
-
-1. **Problem/positioning:** the operation has outgrown its current tools.
-2. **Method:** reconstruct the work, identify the real constraint, and compare all credible paths.
-3. **Proof:** practical product/workflow/client context, carefully labeled by evidence level.
-4. **Engagement choice:**
-   - AI Jumpstart = assessment and decision.
-   - Custom AI Build = separately scoped implementation after justification.
-5. **Process:** map → decide → implement only if justified.
-6. **Founder reason:** one accountable operator who can assess and build, without treating custom software as the default.
-7. **Low-friction CTA:** describe the stuck workflow; no polished AI idea required.
-
-## Services section hierarchy
-
-The two services should not share one generic promise. Give each card explicit labeled blocks:
-
-### AI Jumpstart
-- **Best fit**
-- **What happens**
-- **What you receive**
-- **Decision paths**
-- **Timing**
-- **Boundary**
-- Optional price only after confirmation
-
-### Custom AI Build
-- **Entry condition**
-- **Scope and acceptance**
-- **Feasibility**
-- **Build and representative-data testing**
-- **UAT and release approval**
-- **Deployment / documentation / training**
-- **Post-launch support**
-- Optional starting floor only after confirmation
-
-This can still be implemented in the existing two-column section; use short subheads and compact lists rather than adding a new page.
-
----
-
-# 3. Proposed replacement copy blocks
+# 4. Approved replacement copy
 
 ## `components/Hero.tsx`
 
 **Eyebrow**
+
 > Arturo Solo LLC · Workflow and AI systems
 
-**H1 (use the agreed positioning verbatim)**
-> When your operation no longer fits the tools you have, I turn the workflow into a system that does.
+**H1**
+
+> When the work no longer fits the tools, start with the workflow.
 
 **Primary support**
-> I map how the work actually moves, identify the real constraint, and determine what should change before asking you to fund more software.
+
+> I reconstruct how the work actually moves, find the real constraint, and determine whether the right next step is to simplify, buy, automate, or build.
 
 **Secondary support**
-> The right answer may be a simpler process, existing software, automation, a focused use of AI, or a custom build.
+
+> The answer may be a simpler process, existing software, focused automation, a justified use of AI, or a custom system.
 
 **CTA**
+
 > Bring me the bottleneck
 
-**CTA support line**
-> Start with the workflow, not a predetermined tool.
+**CTA support**
 
-This keeps the blunt homepage tone while removing the implied production deliverable.
+> Start with a recent example—not a predetermined tool.
 
 ## `components/Stats.tsx`
 
 **Heading**
+
 > Built work. Real operating context.
 
 **Support**
-> The proof is practical: public products, internal workflows, real client contexts, and AI work clearly labeled when it is still in development—not inflated into outcome claims.
 
-**Proof item revisions**
-- `Public products` / `Shipped and available` — retain only if each referenced product is verifiably public.
-- `Internal workflows` / `Operational tools and processes` — replaces unsupported “run daily.”
-- `Real client contexts` / `Lean teams and consequential workflows`.
-- `AI work in development` / `In progress, clearly labeled`.
+> The proof is practical: public products, operational workflows, and client work described at the level the evidence supports—not inflated into outcome claims.
 
-Keep “Client contexts” above the logos; do not use “trusted by,” and do not attach outcome language to the logo strip.
+Before implementation, inventory the exact public artifacts, links, screenshots, implementation state, and measured facts available for DMDL and Joy for Books. Write proof items from that inventory. Do not invent generic outcome language to fill the section.
+
+Rules:
+
+- DMDL and Joy for Books are approved named contexts.
+- Texas Head Start Association must not appear publicly.
+- HG Jones Associates must be removed unless separately approved.
+- Use `Client contexts`, never `Trusted by`.
+- Distinguish shipped work, development state, adoption, usage, and business outcomes.
+- Remove `daily`, `live`, `production`, and outcome language unless the specific claim is documented.
 
 ## `components/Services.tsx`
 
 **Section heading**
+
 > Start with the decision. Build only when it earns its way in.
 
 **Section intro**
-> Two distinct engagements: AI Jumpstart establishes what should change and why. Custom AI Build implements a separately approved scope when the evidence supports it.
 
-### AI Jumpstart card
+> Two distinct engagements: Workflow Assessment establishes what should change and why. Custom AI Build implements a separately approved scope when the evidence supports it.
+
+### Workflow Assessment card
+
+**Tagline**
+
+> A seven-business-day decision on what to change next.
 
 **Description**
-> A seven-business-day assessment for a consequential workflow that no longer fits the tools around it. It ends with a decision-ready Implementation Brief—not a prototype or production build.
 
-**Best fit**
-> You have a decision owner, a process owner, and a representative workflow or artifacts to review. You are open to simplify, buy, automate, build, investigate, or defer as valid outcomes.
-
-**What happens**
-> I review the evidence, walk through one representative case, map the current workflow and durable records, identify the real constraint, and compare credible solution paths against the same requirements.
+> I reconstruct one consequential workflow, identify the real constraint, and compare simpler process, existing software, automation, AI, and custom development.
 
 **What you receive**
-> An Implementation Brief with the recommended path, current-state workflow, evidence and unknowns, reasons the other paths were rejected, the smallest valuable boundary, measurement plan, risks and ownership needs, and conditional budget/timeline assumptions where supportable.
 
-**Decision paths (short line or pills)**
+> A decision-ready Implementation Brief: the current workflow, the recommended path, the evidence behind it, and the smallest valuable next step—followed by a findings and decision review.
+
+**Decision paths**
+
 > Simplify · Buy · Automate · Build · Investigate · Defer
 
-**Timing**
-> Seven business days, ending with a findings and decision review.
+**Best fit**
 
-**Boundary (must be visually explicit, not tooltip/fine print)**
-> No production implementation, working integration, data migration, or custom prototype is included. Any prototype or implementation is authorized and priced separately.
+> Best for a consequential workflow with an accessible decision maker, someone who knows the day-to-day work, and a recent example we can examine.
+
+**Price and timing**
+
+> $1,500 fixed fee · Seven business days
+
+If space permits, link or place the readiness/start condition adjacent to timing rather than expanding the card with the full onboarding checklist.
+
+**Boundary**
+
+> Workflow Assessment does not include a prototype or production implementation. Those are authorized and priced separately only when justified. The assessment fee is not automatically a deposit on a future build.
 
 **CTA**
-> See if Jumpstart fits
 
-**[PRICE CONFIRMATION REQUIRED — omit the entire line unless Arturo approves]**
-> AI Jumpstart — $1,500 fixed fee. The fee covers the assessment and Implementation Brief; implementation is separate and the fee is not automatically a deposit on a future build.
+> See if the assessment fits
 
 ### Custom AI Build card
 
+**Tagline**
+
+> Separately scoped implementation for a validated workflow.
+
 **Description**
-> A separately scoped implementation engagement for a workflow where assessment has justified custom software and the client is ready to own acceptance, data, adoption, and ongoing operation.
 
-**Scope and acceptance**
-> We agree on the smallest valuable boundary, must-haves, exclusions, normal and exception examples, acceptance criteria, client owners, and release approver before implementation begins.
+> For workflows with a supported need and a clear reason custom software or AI is the right path. That evidence may come from a Workflow Assessment or equivalent discovery already completed by your team.
 
-**Feasibility first**
-> If success depends on an uncertain device, platform, API, account, integration, or data behavior, we test that assumption under representative conditions before committing to the architecture. A feasibility prototype is separately scoped learning work, not production software.
+**How it works**
 
-**Implementation and testing**
-> I implement the approved scope and test normal, exception, fallback, integration, and data behavior using representative accounts, environments, and data where available.
+> We agree on the smallest useful boundary, acceptance criteria, ownership, and any feasibility tests before committing to implementation.
 
-**UAT and launch**
-> Representative users complete client UAT against the acceptance criteria. The client approves release; deployment, account setup, documentation, and training are included only as stated in the approved scope.
+**Delivery**
 
-**Post-launch**
-> Initial support, defect handling, outcome review, and ongoing maintenance are defined before launch rather than assumed afterward.
+> Build, representative testing, client acceptance, release, and post-launch responsibilities are defined in the approved scope.
 
 **CTA**
+
 > Discuss a scoped build
 
-**[PRICE CONFIRMATION REQUIRED — omit the entire line unless Arturo approves]**
-> Custom AI Builds start at $5,000. Each build is scoped and quoted separately; unresolved feasibility may require a separately priced prototype first.
-
-Do not state or imply that every Jumpstart leads to Custom Build.
+Do not publish a Custom AI Build price in this pass. Do not imply that every Workflow Assessment leads to Custom AI Build.
 
 ## `components/Process.tsx`
 
 **Heading**
+
 > Map the work. Choose the path. Build only what is justified.
 
 **01 — Reconstruct the workflow**
+
 > Walk one representative case from trigger to completed state. Identify the people, records, systems, handoffs, exceptions, workarounds, and the source that wins when records disagree.
 
 **02 — Find the real constraint**
-> Separate the requested feature from the operational problem. Compare simpler process, existing software, automation, AI, and custom software against the same must-haves and evidence.
+
+> Separate the requested feature from the operational problem. Compare simpler process, existing software, automation, AI, and custom software against the same requirements and evidence.
 
 **03 — Act on the decision**
-> Simplify, buy, automate, investigate, defer—or separately scope a build with clear acceptance criteria, feasibility gates, ownership, and a measurable boundary.
 
-This makes the public process describe Jumpstart while still creating a clear bridge to Custom Build.
+> Simplify, buy, automate, investigate, defer—or separately scope a build with clear acceptance criteria, feasibility gates, ownership, and a measurable boundary.
 
 ## `components/WhyArturo.tsx`
 
 **Heading**
-> Builder’s judgment. Operator’s discipline.
+
+> Builder's judgment. Operator's discipline.
 
 **Body**
+
 > I can map the operation, test the hard assumptions, and build the software myself. That does not mean custom software is always the answer. You get one accountable partner who can recommend the lower-complexity path when it fits—and carry a justified build through implementation when it does not.
 
 **Bullets**
+
 - Hands-on workflow assessment and implementation
 - Evidence and tradeoffs in plain language
 - No predetermined AI or custom-build pitch
 
 ## `components/Footer.tsx`
 
-> When the operation no longer fits the tools, start with the workflow. Assessment and separately scoped implementation for small businesses and lean teams.
+> When the work no longer fits the tools, start with the workflow. Assessment and separately scoped implementation for small organizations where decision makers are close to the work.
 
 ## `app/layout.tsx`
 
 **Default title**
+
 > Arturo Solo LLC — Workflow assessment and custom AI builds
 
-**Default description**
-> When your operation no longer fits the tools you have, Arturo Solo maps the workflow, compares the options, and scopes the right next step.
+**Default/OpenGraph/Twitter description**
 
-Use the same truthful description for OpenGraph and Twitter. Retain keywords such as AI Jumpstart, workflow assessment, process automation, custom software, and custom AI; remove “working AI” as the primary positioning keyword if it no longer appears in visible copy.
+> When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.
+
+Suggested keywords:
+
+- workflow assessment
+- process automation
+- small business operations
+- custom software
+- custom AI
+- Arturo Solo
 
 ## `app/contact/page.tsx`
 
 **Metadata description**
-> Tell me where the work gets stuck. We’ll determine whether the next step is a simpler process, existing software, automation, an AI Jumpstart, or a separately scoped build.
+
+> Tell me where the work gets stuck. I will reply within one business day and help determine whether the next step is a simpler process, existing software, automation, assessment, or a separately scoped build.
 
 **H1**
+
 > Tell me where the work gets stuck.
 
 **Opening**
-> You do not need a polished AI idea or a feature list. Send the latest concrete example of the workflow breaking down—the handoff, record, report, reconciliation, or follow-up that keeps failing. I’ll reply personally and help determine the right next step.
+
+> You do not need a polished AI idea or a feature list. Send the latest concrete example of the workflow breaking down—the handoff, record, report, reconciliation, or follow-up that keeps failing. I'll reply personally within one business day and help determine the right next step.
 
 **Guidance heading**
+
 > A useful first message covers
 
-**Guidance bullets/examples**
+**Guidance**
+
 - What happened in the latest concrete example?
 - Who does the work, and which tools or records are involved?
 - What have you already tried, and what still does not fit?
 
 **Form-card heading**
+
 > Start with the workflow
 
 ## `components/ContactForm.tsx`
 
-Keep submitted values unchanged; change visible option labels only:
-- `AI Jumpstart — assessment + Implementation Brief`
-- `Custom AI Build — scoped implementation`
-- `Not sure — help me choose the next step`
+Keep submitted values unchanged; change only visitor-facing labels:
+
+- `ai-jumpstart` → `Workflow Assessment — $1,500 fixed fee`
+- `custom-ai-build` → `Custom AI Build — scoped implementation`
+- `not-sure` → `Not sure — help me choose the next step`
 
 **Message label**
+
 > Where does the workflow break down?
 
 **Submit**
-> Send the workflow
 
-“Send the bottleneck” can remain if brand continuity is preferred; neither option makes a delivery promise.
+> Send the workflow
 
 ## `app/success/page.tsx`
 
-Keep the warm acknowledgement and one-business-day response expectation if Arturo still supports it.
+Keep the warm acknowledgement and one-business-day response expectation.
 
-**Replace final paragraph**
+**Final paragraph**
+
 > While you wait, think of one recent case: what started the work, who touched it, which record or tool mattered, and where it broke down. That helps me validate the workflow and suggest the right next step—not assume a build before the evidence supports one.
 
 ## `app/blog/page.tsx`
 
 **Metadata**
-> Notes on workflow assessment, solution choices, practical automation, AI feasibility, and custom implementation for lean teams.
 
-**Empty-state body**
-> I’m writing about how to map operational work, compare simpler process, software, automation, AI, and custom builds, and test what matters before scaling it.
+> Notes on workflow assessment, solution choices, practical automation, AI feasibility, and custom implementation for small organizations.
+
+**Empty state**
+
+> I'm writing about how to map operational work, compare simpler process, software, automation, AI, and custom builds, and test what matters before scaling it.
 
 ---
 
-# 4. Claims and terminology to remove or avoid
-
-## Remove from current copy
-- “I build the first running version” for Jumpstart.
-- “both delivered as working systems … on day one.”
-- “A real handoff, not a PDF.” The deliverable is a substantial Implementation Brief; do not disparage it as “a PDF.”
-- “Build until it runs” as the universal second step.
-- “right first build—usually an AI Jumpstart.”
-- “scope the first build faster” after every contact submission.
-- “When the first workflow proves value, we expand” unless referring to measured evidence from a separate implementation.
-- “Built on what already works” where no working implementation exists yet.
-- “Shipped into daily operations” and “Ops systems that run daily” unless documented.
-- “not decks, not demos” where it creates the false contrast that Jumpstart delivers software.
+# 5. Terminology and claim controls
 
 ## Use consistently
-- **AI Jumpstart:** assessment, seven business days, Implementation Brief, decision review.
+
+- **Workflow Assessment:** seven-business-day assessment, `$1,500` fixed fee, Implementation Brief, findings and decision review.
 - **Implementation Brief:** capitalize as the named deliverable; do not call it merely a report.
 - **Solution paths:** simplify / buy / automate / build; investigate / defer when evidence is insufficient.
-- **AI:** a technique within automate or build, not the assumed solution or a fifth path.
-- **Custom AI Build:** separately scoped implementation engagement.
+- **AI:** a technique within automate or build, not the assumed solution or a separate path.
+- **Custom AI Build:** separately scoped implementation supported by Arturo's assessment or equivalent prior evidence.
 - **Feasibility prototype:** separately authorized, time-boxed learning work with pass/fail criteria; never production software by implication.
-- **Acceptance:** client-owned UAT and release approval, with representative users/data/environment.
+- **Acceptance:** client-owned UAT and release approval using representative users, data, and environments.
 
-## Avoid unsupported claims
-- Fixed hours saved, guaranteed ROI, standard percentage improvements, or universal time/cost reductions.
-- “Proven value,” “transformed,” “optimized,” or “eliminated” without outcome-level evidence.
+## Remove or avoid
+
+- `AI Jumpstart` in visitor-facing copy.
+- `I build the first running version` for the assessment.
+- `both delivered as working systems ... on day one`.
+- `A real handoff, not a PDF`; the named deliverable is an Implementation Brief.
+- `Build until it runs` as the universal second step.
+- `right first build—usually an AI Jumpstart`.
+- `scope the first build faster` after every contact submission.
+- `When the first workflow proves value, we expand` unless referring to measured evidence from a separate implementation.
+- `Shipped into daily operations` or `Ops systems that run daily` without documented evidence.
+- `not decks, not demos` where it falsely contrasts the assessment with its actual brief deliverable.
+- Fixed savings, guaranteed ROI, standard percentage improvements, or universal time/cost reductions.
+- `proven value`, `transformed`, `optimized`, or `eliminated` without outcome-level evidence.
+- Unverified `launched`, `live`, `production`, `daily`, `secure`, `compliant`, `governed`, or `privacy-safe` claims.
 - Treating demand, adoption, usage, successful output, and business outcome as interchangeable.
-- Treating a shipped product, code, prototype, presentation use, or client logo as proof of a business outcome.
-- Unverified “launched,” “live,” “production,” “daily,” “secure,” “compliant,” “governed,” or “privacy-safe” claims.
-- Legal/compliance determinations by ASLLC. Public copy may say ownership and requirements are identified; it should not promise compliance certification.
-- Unconditional fixed build quotes while critical feasibility or ownership questions remain unresolved.
-- Language implying the Jumpstart fee is credited toward or deposits against a future build.
+- Treating a shipped product, repository, prototype, presentation, or client logo as proof of a business outcome.
+- Legal, privacy, employment, or compliance determinations on a client's behalf.
+- Language implying the Workflow Assessment fee is credited toward a future build.
 
 ---
 
-# 5. Sequencing and validation checklist
+# 6. Implementation sequence
 
-## Recommended implementation sequence
+1. **Update source-of-truth terminology**
+   - Update `AGENTS.md` from AI Jumpstart to Workflow Assessment while preserving the stable backend value.
+   - Freeze the terminology above for the rest of the pass.
 
-1. **Confirm decisions before editing**
-   - Arturo approves the exact hero positioning.
-   - Arturo decides whether to publish `$1,500` Jumpstart pricing.
-   - Arturo decides whether to publish the `$5,000` Custom Build starting floor.
-   - If either is unconfirmed, omit it completely—do not publish “tentative,” “expected,” or placeholder pricing.
-   - Confirm the one-business-day reply expectation remains operationally reliable.
+2. **Install the primary message**
+   - Update Hero and metadata together.
+   - Verify the shorter H1 wraps cleanly at representative breakpoints.
 
-2. **Install the source-of-truth message**
-   - Update Hero and all metadata first.
-   - Freeze the terminology list above so every later section uses the same service definitions.
+3. **Separate the services**
+   - Implement concise labeled blocks rather than the full delivery-playbook detail.
+   - Keep timing, deliverable, price, six decision paths, and implementation boundary visible without hover, accordion, or fine print.
+   - Make equivalent prior assessment an explicit Custom AI Build entry path.
 
-3. **Separate the engagements**
-   - Restructure Services copy into explicit labeled blocks.
-   - Make seven-business-day timing, Implementation Brief, and the no-production-implementation boundary visible without hover, accordion, or fine print.
-   - Preserve the two-service invariant: AI Jumpstart and Custom AI Build only.
+4. **Correct the journey and founder rationale**
+   - Update Process, Why Arturo, Header, and Footer.
 
-4. **Correct the journey**
-   - Replace Process with map → decide → separately implement.
-   - Align Why Arturo and Footer with assessment-plus-builder positioning.
+5. **Build proof from evidence**
+   - Inventory approved facts and artifacts for DMDL and Joy for Books.
+   - Write Stats from that inventory.
+   - Remove unapproved names and unsupported frequency/outcome claims.
 
-5. **Correct conversion expectations**
-   - Update Contact metadata/body/form labels and Success copy.
-   - Preserve service enum values and server action/database contracts.
+6. **Align conversion expectations**
+   - Update Contact, form labels, and Success.
+   - Preserve backend enum values and server/database contracts.
 
-6. **Audit proof and secondary surfaces**
-   - Validate each Stats claim and client logo permission/status.
-   - Remove unsupported frequency/outcome language.
-   - Align Blog empty-state copy.
-   - Review Terms and Privacy for terminology consistency without broad legal rewrites.
+7. **Align secondary surfaces**
+   - Update Blog metadata/empty state.
+   - Review Terms and Privacy for terminology consistency only.
 
-7. **Update tests and validate**
-   - Change stale text assertions.
-   - Add regression assertions for:
-     - new hero H1;
-     - “seven business days”;
-     - “Implementation Brief”;
-     - explicit no production implementation boundary;
-     - Custom AI Build being separately scoped;
-     - distinct contact service labels.
+8. **Update tests and validate**
+   - Replace stale assertions.
+   - Run the technical checks and comprehension review below.
+
+---
+
+# 7. Validation
+
+## Copy-contract assertions
+
+Add or update tests for:
+
+- the new hero H1;
+- `Workflow Assessment` and absence of visitor-facing `AI Jumpstart`;
+- `$1,500 fixed fee`;
+- `seven business days`;
+- `Implementation Brief`;
+- all six decision paths;
+- explicit no-prototype/no-production-implementation boundary;
+- Custom AI Build being separately scoped;
+- equivalent prior assessment being a valid implementation entry path;
+- distinct contact service labels while submitted values remain unchanged;
+- the one-business-day reply expectation;
+- absence of Texas Head Start Association and HG Jones Associates from public proof.
 
 ## Content QA
 
-- [ ] A visitor can explain in one sentence that Jumpstart is an assessment, not a build.
-- [ ] “Implementation Brief” is named and its decision content is concrete.
-- [ ] All six possible assessment outcomes appear: simplify, buy, automate, build, investigate, defer.
-- [ ] Seven-business-day timing is attached only to Jumpstart.
-- [ ] No prototype, integration, migration, or production implementation is implied as included in Jumpstart.
-- [ ] Custom Build starts only after evidence/assessment justifies it; it is not an automatic upsell.
-- [ ] Custom Build copy covers scope/acceptance, feasibility, representative-data testing, UAT, client release approval, deployment/docs/training, and support.
-- [ ] AI is presented as one technique, not the default answer.
+- [ ] A visitor can explain that Workflow Assessment is an assessment, not a build.
+- [ ] The `$1,500` price, seven-business-day timing, and start conditions are not misleading.
+- [ ] The Implementation Brief and its decision value are concrete.
+- [ ] Simplify, buy, automate, build, investigate, and defer all appear.
+- [ ] No prototype, integration, migration, or production implementation is implied as included.
+- [ ] Custom AI Build may follow equivalent prior assessment and is not an automatic upsell.
+- [ ] AI is presented as a technique, not the default answer.
+- [ ] The audience is small organizations with accessible decision makers close to the work.
+- [ ] Named public proof is limited to DMDL and Joy for Books.
 - [ ] No unsupported outcome, ROI, savings, launch, security, compliance, privacy, governance, or usage claim remains.
-- [ ] Proof language distinguishes shipped work, development status, usage, and outcomes.
-- [ ] Pricing is absent unless Arturo explicitly confirms it.
+
+## Five-person comprehension review
+
+Before release, show the homepage to five people who were not involved in writing it and ask:
+
+1. What does Arturo do?
+2. What do you receive from Workflow Assessment?
+3. Does the assessment include implementation?
+4. When would Custom AI Build be appropriate?
+5. What would you send Arturo in a first message?
+
+Success criteria:
+
+- At least four of five identify Workflow Assessment as an assessment.
+- No participant thinks a working prototype or production implementation is included.
+- At least four distinguish the two services.
+- At least four understand that AI is evaluated rather than assumed.
+- At least four can describe the first contact without needing a polished AI idea.
+
+Revise unclear copy before release if these thresholds are not met.
 
 ## Technical/UX QA
 
 - [ ] Existing homepage order, section IDs, header anchors, and routes still work.
 - [ ] Contact service values remain `ai-jumpstart`, `custom-ai-build`, and `not-sure`.
-- [ ] Longer Services copy remains readable at mobile, tablet, and desktop widths; no clipped cards or excessive animation delay.
-- [ ] Heading hierarchy remains valid and CTA labels have clear accessible names.
-- [ ] Metadata title/description render correctly in generated output and social previews.
-- [ ] Search the public source for stale/conflicting phrases: `first running`, `first build`, `working system`, `day one`, `build until`, `proves value`, `run daily`, `not a PDF`, `not decks`, `ROI`, `%`, `guarantee`, `compliant`, `governance`.
-- [ ] Run `npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`, and `npm run test:e2e` after implementation.
-
+- [ ] Services remains readable at mobile, tablet, and desktop widths.
+- [ ] Longer content does not clip or create excessive animation delay.
+- [ ] Heading hierarchy and accessible CTA names remain valid.
+- [ ] Metadata title and description render correctly in generated output and social previews.
+- [ ] Search public source for stale/conflicting phrases: `AI Jumpstart`, `first running`, `first build`, `working system`, `day one`, `build until`, `proves value`, `run daily`, `not a PDF`, `not decks`, `ROI`, `%`, `guarantee`, `compliant`, `governance`, `Texas Head Start`, `TXHSA`, `HG Jones`.
+- [ ] Run `npm run lint`.
+- [ ] Run `npm run typecheck`.
+- [ ] Run `npm run test`.
+- [ ] Run `npm run build`.
+- [ ] Run `npm run test:e2e`.

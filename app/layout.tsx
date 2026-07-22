@@ -4,17 +4,17 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Arturo Solo LLC — Working AI, built into your business',
+    default: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
     template: '%s | Arturo Solo LLC',
   },
   description:
-    'Founder-led AI build studio for small businesses. I build working AI systems into the way your team already operates — not decks, not demos.',
+    'When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.',
   keywords: [
-    'AI build studio',
-    'AI Jumpstart',
+    'workflow assessment',
+    'process automation',
+    'small business operations',
+    'custom software',
     'custom AI',
-    'small business automation',
-    'working AI',
     'Arturo Solo',
   ],
   authors: [{ name: 'Arthur Turnbull', url: 'https://arturosolo.com' }],
@@ -30,15 +30,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://arturosolo.com',
     siteName: 'Arturo Solo LLC',
-    title: 'Arturo Solo LLC — Working AI, built into your business',
+    title: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
     description:
-      'Founder-led AI build studio for small businesses. Working systems, not decks or demos.',
+      'When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Arturo Solo LLC — Working AI, built into your business',
+    title: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
     description:
-      'Founder-led AI build studio for small businesses. Working systems, not decks or demos.',
+      'When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.',
   },
   robots: {
     index: true,

@@ -2,9 +2,9 @@ import { Resend } from 'resend';
 import type { ContactFormData } from '@/lib/validation/contact';
 
 const serviceLabels: Record<ContactFormData['service'], string> = {
-  'ai-jumpstart': 'AI Jumpstart',
-  'custom-ai-build': 'Custom AI build / implementation',
-  'not-sure': 'Not sure yet — let\'s talk',
+  'ai-jumpstart': 'Workflow Assessment',
+  'custom-ai-build': 'Custom AI Build — scoped implementation',
+  'not-sure': 'Not sure — help me choose the next step',
 };
 
 export async function notifyLead(data: ContactFormData): Promise<void> {

@@ -43,7 +43,7 @@ export default function Header() {
             <NavLink href={getNavLink('#process')}>Process</NavLink>
             <NavLink href={getNavLink('#team')}>About</NavLink>
             <NavLink href="/blog">Blog</NavLink>
-            <Link href="/contact" className="btn-primary">Bring me a bottleneck</Link>
+            <Link href="/contact" className="btn-primary">Talk through the workflow</Link>
           </nav>
 
           <button

@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Logo className="text-white" />
             <p className="text-gray-400">
-              Working AI, built into your business. A founder-led AI build studio for small businesses.
+              When the work no longer fits the tools, start with the workflow. Assessment and separately scoped implementation for small organizations where decision makers are close to the work.
             </p>
           </div>
 
