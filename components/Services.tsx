@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Wrench } from 'lucide-react';
+import { Search, Wrench } from 'lucide-react';
 import Link from 'next/link';
 import { Highlight } from '@/components/Highlight';
 import { usePrefersReducedMotion } from '@/lib/motion';
@@ -11,26 +11,53 @@ export default function Services() {
 
   const services = [
     {
-      icon: <Zap className="h-12 w-12" />,
-      title: 'AI Jumpstart',
+      icon: <Search className="h-12 w-12" />,
+      title: 'Workflow Assessment',
+      tagline: 'A seven-business-day decision on what to change next.',
       description:
-        'A focused first engagement for operators who need a working AI workflow, not a strategy fog. You bring the bottleneck. I build the first running version.',
-      bullets: [
-        'One high-leverage workflow',
-        'Clear build boundary',
-        'A real handoff, not a PDF',
+        'I reconstruct one consequential workflow, identify the real constraint, and compare simpler process, existing software, automation, AI, and custom development.',
+      details: [
+        {
+          label: 'What you receive',
+          text: 'A decision-ready Implementation Brief: the current workflow, the recommended path, the evidence behind it, and the smallest valuable next step—followed by a findings and decision review.',
+        },
+        {
+          label: 'Decision paths',
+          text: 'Simplify · Buy · Automate · Build · Investigate · Defer',
+        },
+        {
+          label: 'Best fit',
+          text: 'A consequential workflow with an accessible decision maker, someone who knows the day-to-day work, and a recent example we can examine.',
+        },
       ],
+      price: '$1,500 fixed fee · Seven business days',
+      startCondition:
+        'The seven-business-day clock starts after payment and kickoff, with the decision owner, workflow lead, and agreed materials in place.',
+      boundary:
+        'Workflow Assessment does not include a prototype or production implementation. Those are authorized and priced separately only when justified. The assessment fee is not automatically a deposit on a future build.',
+      cta: 'See if the assessment fits',
     },
     {
       icon: <Wrench className="h-12 w-12" />,
       title: 'Custom AI Build',
+      tagline: 'Separately scoped implementation for a validated workflow.',
       description:
-        'When the first workflow proves value, we expand. Custom integrations, multi-step automations, and AI systems built into how your team actually operates.',
-      bullets: [
-        'Evidence-driven scope',
-        'Built on what already works',
-        'Shipped into daily operations',
+        'For workflows with a supported need and a clear reason custom software or AI is the right path. That evidence may come from a Workflow Assessment or equivalent discovery already completed by your team.',
+      details: [
+        {
+          label: 'How it works',
+          text: 'We agree on the smallest useful boundary, acceptance criteria, ownership, and any feasibility tests before committing to implementation.',
+        },
+        {
+          label: 'Feasibility first',
+          text: 'When success depends on uncertain platform, API, device, or data behavior, we test that assumption under representative conditions before committing to the architecture.',
+        },
+        {
+          label: 'Delivery',
+          text: 'Build, representative testing, client acceptance, release, and post-launch responsibilities are defined in the approved scope.',
+        },
       ],
+      cta: 'Discuss a scoped build',
     },
   ];
 
@@ -46,10 +73,10 @@ export default function Services() {
         >
           <div className="grid md:grid-cols-2 gap-24 mb-24">
             <h2 className="heading-lg">
-              Start with what <Highlight>runs</Highlight>.
+              Start with the decision. <Highlight>Build only when it earns its way in.</Highlight>
             </h2>
             <p className="text-xl text-gray-400 font-display">
-              Two ways to work together — both scoped to real bottlenecks, both delivered as working systems your team can use on day one.
+              Two distinct engagements: Workflow Assessment establishes what should change and why. Custom AI Build implements a separately approved scope when the evidence supports it.
             </p>
           </div>
 
@@ -61,24 +88,41 @@ export default function Services() {
                 whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="border-t border-gray-800 pt-8"
+                className="flex flex-col border-t border-gray-800 pt-8"
               >
                 {service.icon}
                 <h3 className="text-2xl font-bold mt-6 mb-4">{service.title}</h3>
-                <p className="text-gray-400 mb-6">{service.description}</p>
-                <ul className="space-y-2 text-gray-500 text-sm">
-                  {service.bullets.map((bullet) => (
-                    <li key={bullet}>· {bullet}</li>
+                <p className="text-lg font-semibold text-white mb-4">{service.tagline}</p>
+                <p className="text-gray-400 mb-8">{service.description}</p>
+                <dl className="flex-1 space-y-6">
+                  {service.details.map((detail) => (
+                    <div key={detail.label}>
+                      <dt className="text-sm font-semibold uppercase tracking-wider text-gray-300">
+                        {detail.label}
+                      </dt>
+                      <dd className="mt-2 text-sm text-gray-500">{detail.text}</dd>
+                    </div>
                   ))}
-                </ul>
+                </dl>
+                {service.price && (
+                  <p className="mt-8 text-lg font-bold text-white">{service.price}</p>
+                )}
+                {service.startCondition && (
+                  <p className="mt-2 text-sm text-gray-500">{service.startCondition}</p>
+                )}
+                {service.boundary && (
+                  <p className="mt-6 border-l-2 border-white pl-4 text-sm text-gray-400">
+                    {service.boundary}
+                  </p>
+                )}
+                <Link
+                  href="/contact"
+                  className="mt-8 inline-flex w-fit font-semibold text-white underline decoration-gray-600 underline-offset-4 transition-colors hover:decoration-white"
+                >
+                  {service.cta}
+                </Link>
               </motion.div>
             ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Link href="/contact" className="btn-secondary border-white text-white hover:bg-white hover:text-black">
-              Start AI Jumpstart
-            </Link>
           </div>
         </motion.div>
       </div>

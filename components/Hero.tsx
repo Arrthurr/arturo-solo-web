@@ -19,19 +19,24 @@ export default function Hero() {
           className="max-w-6xl mx-auto"
         >
           <p className="text-sm uppercase tracking-widest text-gray-500 mb-6">
-            Arturo Solo LLC · AI build studio
+            Arturo Solo LLC · Workflow and AI systems
           </p>
-          <h1 className="heading-xl mb-8">
-            Working AI.<br />
-            In your business.
+          <h1 className="heading-xl mb-8 text-[2.5rem] md:text-[4.5rem]">
+            When the work{' '}<br />
+            no longer fits{' '}<br />
+            the tools,{' '}<br />
+            <Highlight>
+              start with<span className="md:hidden"><br /></span>{' '}
+              the workflow.
+            </Highlight>
           </h1>
           <div className="grid md:grid-cols-2 gap-16 items-end">
             <div className="space-y-6">
               <p className="text-xl text-gray-600 font-display">
-                Not another deck. Not a demo that dies after the meeting. I build the first useful AI system into the way your team already works.
+                I reconstruct how the work actually moves, find the real constraint, and determine whether the right next step is to simplify, buy, automate, or build.
               </p>
               <p className="text-lg text-gray-500 font-display">
-                Your messy process is the map. Inbox triage, handoffs, reporting, follow-up, data cleanup — the work people avoid is usually where the first AI win lives.
+                The answer may be a simpler process, existing software, focused automation, a justified use of AI, or a custom system.
               </p>
             </div>
             <div className="md:text-right space-y-4">
@@ -39,7 +44,7 @@ export default function Hero() {
                 Bring me a bottleneck <ArrowRight className="inline-block ml-2" />
               </Link>
               <p className="text-sm text-gray-500 md:text-right">
-                Built to run · Scoped to one real bottleneck · Delivered as a working workflow
+                Start with a recent example—not a predetermined tool.
               </p>
             </div>
           </div>

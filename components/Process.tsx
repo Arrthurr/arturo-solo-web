@@ -10,21 +10,21 @@ export default function Process() {
   const steps = [
     {
       number: '01',
-      title: 'Map the bottleneck',
+      title: 'Reconstruct the workflow',
       description:
-        'Find the repeatable drag — inbox triage, handoffs, reporting, follow-up, data cleanup. Pick one job worth automating first.',
+        'Walk one representative case from trigger to completed state. Identify the people, records, systems, handoffs, exceptions, workarounds, and the source that wins when records disagree.',
     },
     {
       number: '02',
-      title: 'Build until it runs',
+      title: 'Find the real constraint',
       description:
-        'Design the smallest useful workflow, ship it into the business, and put it in front of real use — not a slide deck.',
+        'Separate the requested feature from the operational problem. Compare simpler process, existing software, automation, AI, and custom software against the same requirements and evidence.',
     },
     {
       number: '03',
-      title: 'Expand from evidence',
+      title: 'Act on the decision',
       description:
-        'Use the result — not guesses — to choose the next system. Scope small, build real, learn fast.',
+        'Simplify, buy, automate, investigate, defer—or separately scope a build with clear acceptance criteria, feasibility gates, ownership, and a measurable boundary.',
     },
   ];
 
@@ -39,7 +39,7 @@ export default function Process() {
           className="max-w-6xl mx-auto"
         >
           <h2 className="heading-lg mb-24 max-w-3xl">
-            Scope small. Build real. <Highlight>Learn fast.</Highlight>
+            Map the work. Choose the path. <Highlight>Build only what is justified.</Highlight>
           </h2>
           <div className="grid md:grid-cols-3 gap-16">
             {steps.map((step, index) => (

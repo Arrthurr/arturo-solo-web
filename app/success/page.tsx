@@ -30,7 +30,7 @@ export default function SuccessPage() {
               directly.
             </p>
             <p className="text-gray-500 mb-12 font-display">
-              While you wait: think about where the work actually gets stuck — the handoff, the spreadsheet, the follow-up that keeps slipping. That detail helps us scope the first build faster.
+              While you wait, think of one recent case: what started the work, who touched it, which record or tool mattered, and where it broke down. That helps me validate the workflow and suggest the right next step—not assume a build before the evidence supports one.
             </p>
             <Link href="/" className="btn-primary">
               Back to homepage

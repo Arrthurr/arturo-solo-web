@@ -28,7 +28,7 @@ export default async function BlogTeaser() {
     <section className="section-padding">
       <div className="container mx-auto max-w-6xl">
         <div className="flex items-end justify-between mb-12">
-          <h2 className="heading-lg">From the build log</h2>
+          <h2 className="heading-lg">Notes from the work</h2>
           <Link href="/blog" className="text-sm font-medium hover:text-gray-600 transition-colors">
             View all posts <ArrowRight className="inline h-4 w-4 ml-1" />
           </Link>

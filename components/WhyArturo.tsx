@@ -8,9 +8,9 @@ export default function WhyArturo() {
   const reduced = usePrefersReducedMotion();
 
   const bullets = [
-    'Hands on keyboards',
-    'Plain-language decisions',
-    'No generic AI transformation pitch',
+    'Hands-on workflow assessment and implementation',
+    'Evidence and tradeoffs in plain language',
+    'No predetermined AI or custom-build pitch',
   ];
 
   return (
@@ -43,10 +43,10 @@ export default function WhyArturo() {
               Why Arturo
             </p>
             <h2 className="heading-lg mb-8">
-              Solo-builder speed. <Highlight>Operator patience.</Highlight>
+              Builder&apos;s judgment. <Highlight>Operator&apos;s discipline.</Highlight>
             </h2>
             <p className="text-xl text-gray-600 mb-8 font-display">
-              I use AI-native tools to design, build, and ship software myself — then bring that same practical build rhythm to small businesses that need momentum without theater.
+              I can map the operation, test the hard assumptions, and build the software myself. That does not mean custom software is always the answer. You get one accountable partner who can recommend the lower-complexity path when it fits—and carry a justified build through implementation when it does not.
             </p>
             <ul className="space-y-3 text-gray-600">
               {bullets.map((bullet) => (

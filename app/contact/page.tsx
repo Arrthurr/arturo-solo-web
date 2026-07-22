@@ -8,7 +8,7 @@ import { Highlight } from '@/components/Highlight';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Tell me where the work gets stuck. Start with an AI Jumpstart or describe the bottleneck you want off your plate.',
+    'Tell me where the work gets stuck. I will reply within one business day and help determine whether the next step is a simpler process, existing software, automation, assessment, or a separately scoped build.',
 };
 
 export default function ContactPage() {
@@ -26,7 +26,7 @@ export default function ContactPage() {
                     Tell me where the work gets <Highlight>stuck</Highlight>.
                   </h1>
                   <p className="text-xl text-gray-600 mb-12 font-display">
-                    You do not need a polished AI idea. Send the annoying process, the repeated handoff, the report nobody wants to clean, or the follow-up that keeps slipping. I&apos;ll reply personally and help find the right first build — usually an AI Jumpstart.
+                    You do not need a polished AI idea or a feature list. Send the latest concrete example of the workflow breaking down—the handoff, record, report, reconciliation, or follow-up that keeps failing. I&apos;ll reply personally within one business day and help determine the right next step.
                   </p>
 
                   <div className="space-y-8 mb-10">
@@ -52,17 +52,17 @@ export default function ContactPage() {
                   </div>
 
                   <div className="rounded-lg bg-gray-50 p-6">
-                    <h2 className="text-lg font-bold mb-4">A good first message is simple</h2>
-                    <div className="space-y-3 text-gray-600 text-sm font-display">
-                      <p className="mb-0">&ldquo;We spend three hours every Friday reconciling this spreadsheet.&rdquo;</p>
-                      <p className="mb-0">&ldquo;Leads get lost between the form and follow-up.&rdquo;</p>
-                      <p className="mb-0">&ldquo;We bought AI tools but nobody knows what to automate first.&rdquo;</p>
-                    </div>
+                    <h2 className="text-lg font-bold mb-4">A useful first message covers</h2>
+                    <ul className="space-y-3 text-gray-600 text-sm font-display">
+                      <li>· What happened in the latest concrete example?</li>
+                      <li>· Who does the work, and which tools or records are involved?</li>
+                      <li>· What have you already tried, and what still does not fit?</li>
+                    </ul>
                   </div>
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                  <h2 className="text-2xl font-bold mb-8">Start with the bottleneck</h2>
+                  <h2 className="text-2xl font-bold mb-8">Start with the workflow</h2>
                   <ContactForm />
                 </div>
               </div>

@@ -10,8 +10,8 @@ Homepage section IA (template-native remap):
 <Header />
 <Hero />        {/* opening promise + bottleneck subhead */}
 <Stats />       {/* hybrid proof */}
-<Services />    {/* AI Jumpstart + Custom AI Build */}
-<Process />     {/* discover → build → expand */}
+<Services />    {/* Workflow Assessment + Custom AI Build */}
+<Process />     {/* reconstruct → compare → act on the decision */}
 <WhyArturo />   {/* solo-founder block */}
 <BlogTeaser />  {/* hidden when zero published posts */}
 <Footer />
@@ -34,7 +34,8 @@ Important files:
 
 Preserve the hybrid proof model: public products, internal workflows, real client contexts, and AI tools in development. Do not imply unfinished products are finished portfolio items. Client logos in `Stats` are subordinate proof — not a generic "trusted by" strip.
 
-Services exposes **AI Jumpstart** and **Custom AI Build** only.
+Services exposes **Workflow Assessment** and **Custom AI Build** only. Keep the stable
+contact service value `ai-jumpstart` as the internal identifier for Workflow Assessment.
 
 Why Arturo is a visible solo-founder block — not a multi-person grid.
 

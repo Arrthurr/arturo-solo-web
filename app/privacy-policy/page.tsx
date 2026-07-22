@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
                 <li>Full name</li>
                 <li>Email address</li>
                 <li>Company name</li>
-                <li>Service interest (AI Jumpstart, Custom AI Build, or not sure)</li>
+                <li>Service interest (Workflow Assessment, Custom AI Build, or not sure)</li>
                 <li>Optional message describing your bottleneck or project</li>
               </ul>
               <p>
