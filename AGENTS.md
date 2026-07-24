@@ -89,3 +89,11 @@ npm run test:e2e
 ```
 
 Playwright uses Next.js on `127.0.0.1:3000` (`next dev` locally; `next start` in CI after build).
+
+## Cursor Cloud specific instructions
+
+Node 20+ is required (repo tested on Node 22). Standard commands are in `## Verification` above and `package.json` scripts.
+
+- A `.env.local` is required for `dev`/`build`/`test:e2e` because `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` must be defined. It is gitignored, so it does not persist across fresh VMs — recreate it with placeholder values (same ones CI uses: `https://placeholder.supabase.co` and `placeholder-anon-key`). All pages, unit tests, and Playwright e2e pass with only these placeholders.
+- The site runs and renders fully on placeholders. Real credentials are only needed to actually persist data: submitting the `/contact` form without a real `SUPABASE_SERVICE_ROLE_KEY` reaches the server action, fails the insert, and shows the graceful banner "Something went wrong. Please try again..." — this is expected, not an environment defect. Resend (`RESEND_API_KEY`) and Upstash rate limiting are also inert without their credentials.
+- Playwright locally reuses an already-running dev server on `127.0.0.1:3000`; if one is running, `npm run test:e2e` will attach to it instead of spawning its own.
