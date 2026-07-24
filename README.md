@@ -40,9 +40,10 @@ See `.env.example`. Use **separate Supabase projects** for Vercel Preview vs Pro
 
 ## Deployment
 
-Production hosting is on Vercel. DNS cutover and rollback steps are in `docs/runbooks/2026-07-06-vercel-cutover.md`.
+Production hosting is on Vercel. DNS cutover and rollback steps are in `docs/runbooks/2026-07-06-vercel-cutover.md`. Production contact smoke (Supabase / Resend / Upstash) is in `docs/runbooks/2026-07-24-prod-contact-smoke.md`.
 
 ## Documentation
 
 - `AGENTS.md` — architecture invariants for AI assistants and contributors
 - `docs/plans/` — feature plans and requirements
+- `docs/runbooks/` — cutover and production contact smoke
