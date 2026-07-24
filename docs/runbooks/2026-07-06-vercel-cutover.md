@@ -18,11 +18,11 @@ Verified from the public site (no auth required):
 - [x] Named public proof includes DMDL and Joy for Books
 - [x] `/contact` returns 200
 
-Still for an operator with prod credentials (not verified from the public HTML alone):
+Credential-backed checks (see `docs/runbooks/2026-07-24-prod-contact-smoke.md` for the 2026-07-24 pass):
 
-- [ ] Contact submit writes a row in **prod** Supabase `contact_leads`
-- [ ] Resend delivers the operator lead email
-- [ ] Upstash rate limit is configured on production
+- [x] Contact submit writes a row in **prod** Supabase `contact_leads`
+- [x] Upstash Redis is reachable from production credentials (rate limit arms when both Upstash env vars are set)
+- [x] Contact Server Action completes past Resend `notifyLead` without a visitor-facing server error (confirm inbox, then delete the labeled smoke row)
 - [ ] Preview and Production Vercel envs point at separate Supabase projects
 - [ ] `SUPABASE_SERVICE_ROLE_KEY` is absent from client bundles
 - [ ] Legacy Vite repo (`asllc-website`) archived or clearly marked retired
@@ -121,10 +121,12 @@ Steps:
 ## Post-cutover smoke (within 15 minutes)
 
 - [x] `https://arturosolo.com` serves Next.js site (not Vite/Netlify)
-- [ ] Contact form submits to **prod** Supabase
-- [ ] Operator receives Resend notification
-- [ ] `/success` renders warm confirmation after a real submit
+- [x] Contact form submits to **prod** Supabase (reconfirmed 2026-07-24)
+- [x] `/success` renders warm confirmation after a real submit
 - [x] `/blog`, `/privacy-policy`, `/terms-of-service`, `/contact` reachable
+- [ ] Operator confirms Resend inbox for the smoke lead, then deletes the smoke `contact_leads` row
+
+Full contact procedure and dated evidence: `docs/runbooks/2026-07-24-prod-contact-smoke.md`.
 
 **Rollback trigger:** Production contact path fails within 15 minutes of a DNS flip or env change that breaks lead capture.
 
