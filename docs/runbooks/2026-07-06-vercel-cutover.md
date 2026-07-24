@@ -149,7 +149,7 @@ If the Vite Netlify stack is already retired, rollback means restoring the last 
    git tag archive/vite-story-scroll-2026-07-06 <commit-sha>
    git push origin archive/vite-story-scroll-2026-07-06
    ```
-2. GitHub archive `asllc-website` or add README banner: "Retired — see arturo-solo-web"
+2. GitHub archive `asllc-website` or add README banner: "Retired. See arturo-solo-web"
 3. Close any open migration PRs from the old repo
 4. Retire Netlify production deploy (keep domain registration if desired)
 5. After one stable production week, optionally delete the dormant old Vercel project
