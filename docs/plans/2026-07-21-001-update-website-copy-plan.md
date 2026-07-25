@@ -1,20 +1,25 @@
 # Public website copy update plan
 
-**Status:** Approved and implementation-ready
+**Status:** Approved spine; strategy-amended (2026-07-24) for focused copy delta
 
 **Scope:** Public website copy, supporting metadata, and copy-contract tests
 
 **Primary correction:** Present the first engagement as a workflow assessment and decision—not as a small implementation
 
+**Strategy grounding:** `STRATEGY.md` (2026-07-24). Public copy remains workflow-first. AI-first delivery is Arturo’s *operating method* (internal)—not a homepage promise. Buyer job ends in a **self-operated reusable workflow** when implementation is justified; Assessment still sells a **decision path**, not a shipped product.
+
 ## Approved decisions
 
 - Rename **AI Jumpstart** to **Workflow Assessment** in all visitor-facing copy.
-- Retain **Custom AI Build** as the implementation service name for this pass.
+- Retain **Custom AI Build** as the implementation service name for this pass (rename later if needed; card copy must allow custom software *or* AI).
 - Permit direct entry to Custom AI Build when equivalent prior assessment and evidence already exist; a client does not have to purchase Arturo's Workflow Assessment first.
 - Price Workflow Assessment at **$1,500 fixed fee** and publish that price.
 - Do not publish a Custom AI Build starting price until it is separately approved.
 - Keep the one-business-day response expectation.
-- Define the best-fit audience as **small organizations where owners or operations leaders are directly accessible and close to the work**.
+- Define the best-fit audience as **small organizations where leaders wear many hats, decision-makers (or strong recommenders) are close to the work, and one consequential process is costing real time**.
+- Emphasize **client-owned handoff** on Custom AI Build: reusable workflows the team operates—not one-off task utilities.
+- Use qualitative time/capacity language only; do not publish fixed savings, guaranteed ROI, or percentage improvements.
+- Do not lead public copy with “AI-first practice” or pitch AI as the default client answer.
 - Use **DMDL** and **Joy for Books** as the only approved named client contexts in this pass.
 - Do not use Texas Head Start Association publicly; it was a proprietary project.
 - Omit HG Jones Associates from public proof unless separately approved later.
@@ -25,9 +30,9 @@
 
 The current Hero, Services, Process, metadata, Contact page, and Success page collectively present the first engagement as “the first build.” The revised journey is:
 
-**work no longer fits current tools → reconstruct the workflow and establish evidence → compare simplify / buy / automate / build → deliver a decision-ready Implementation Brief → separately scope implementation only when justified**
+**scarce leadership time on a multi-source / multi-hat process → reconstruct the workflow and locate the real barriers → compare simplify / buy / automate / build → deliver a decision-ready Implementation Brief → separately scope implementation only when justified → when building, hand off a reusable workflow the client can run**
 
-AI is a technique under automate or build, not the premise of the assessment or a fifth solution path.
+AI is a technique under automate or build for the *buyer’s* solution path, not the premise of the assessment or a fifth solution path. Arturo may use AI internally to produce judgment and the brief; that method stays off the hero.
 
 Keep the homepage section order:
 
@@ -43,13 +48,13 @@ Do not add a service-detail page in this pass. Keep the Services cards concise e
 
 Use this public-facing definition:
 
-> Small organizations where the people making operational decisions are close to the work.
+> Small organizations where leaders wear many hats, decision-makers (or strong recommenders) are close to the work, and one consequential process is costing real time.
 
 Use this fuller definition internally when qualifying prospects:
 
-> Small organizations with direct access to an owner or operations leader, a consequential workflow that no longer fits the current tools, and enough operational access to examine a representative case.
+> Small organizations (often under ~20) with direct access to a founder/president/CEO or operations second-in-command (decision- or recommendation-level authority), a consequential multi-source or multi-step process eating scarce leadership time, and enough operational access to examine a representative case.
 
-Organization size matters because it usually creates shorter decision paths, accessible evidence, and accountable ownership—not because a company officer title is mandatory.
+Organization size matters because it usually creates shorter decision paths, accessible evidence, and accountable ownership—not because a company officer title is mandatory. Scarce time and many hats are why efficient, self-operated workflows have clear buyer ROI—state that as capacity/time language, never as guaranteed savings.
 
 ## Service relationship
 
@@ -76,7 +81,7 @@ One person may fill both owner roles. A company officer alone is insufficient wh
 
 Use this public expectation rather than placing the full qualification checklist on the homepage:
 
-> Best for a consequential workflow with an accessible decision maker, someone who knows the day-to-day work, and a recent example we can examine.
+> Best for small organizations where leaders wear many hats, decision-makers (or strong recommenders) are close to the work, and one consequential process is costing real time—with a recent example we can examine.
 
 Use the full gate during the fit call and onboarding. Do not add more required contact-form fields in this pass.
 
@@ -90,13 +95,20 @@ Use this timing language wherever start conditions need to be explained:
 
 Apply this order across the homepage:
 
-1. **Recognition:** the work and tools no longer fit each other.
-2. **Point of view:** do not begin with AI or a requested feature.
-3. **Method:** reconstruct the workflow and compare credible paths.
-4. **Proof:** show specific work, accurately labeled by evidence level.
-5. **Offer:** Workflow Assessment produces the decision; Custom AI Build implements a justified scope.
-6. **Founder advantage:** one accountable person capable of both judgment and implementation.
-7. **CTA:** bring a recent example of the workflow breaking down.
+1. **Recognition:** a consequential process is eating scarce leadership time (many hats; multi-source grind).
+2. **Crux:** they already know it is broken, but usual fixes (consultant, SaaS, ChatGPT) fail when the real barriers are not located.
+3. **Point of view:** do not begin with AI or a requested feature.
+4. **Method:** reconstruct the workflow and compare credible paths.
+5. **Proof:** show specific work, accurately labeled by evidence level.
+6. **Offer:** Workflow Assessment produces the decision; Custom AI Build implements a justified scope and hands off a system the client can operate.
+7. **Founder advantage:** one accountable person capable of both judgment and implementation—who leaves capability, not dependency.
+8. **CTA:** bring a recent example of the workflow breaking down.
+
+**Service end-state split (do not blur):**
+
+- **Workflow Assessment** sells a **decision path** (Implementation Brief). It must not imply a shipped product.
+- **Custom AI Build** sells **client-owned, reusable operation** when custom software or AI is justified.
+- Studio promise across both: more capable, not more dependent.
 
 ## CTA system
 
@@ -187,11 +199,11 @@ The accessible mobile navigation label may remain `Contact`.
 
 **Primary support**
 
-> I reconstruct how the work actually moves, find the real constraint, and determine whether the right next step is to simplify, buy, automate, or build.
+> I reconstruct how the work actually moves, find the real constraint, and determine whether to simplify, buy, automate, or build—so you stop spending scarce leadership time on the wrong fix.
 
 **Secondary support**
 
-> The answer may be a simpler process, existing software, focused automation, a justified use of AI, or a custom system.
+> The path may be a simpler process, existing software, focused automation, justified AI, or a custom system—and when you build, it should be a reusable workflow your team can run, not a utility that only completes one task for you.
 
 **CTA**
 
@@ -209,9 +221,13 @@ The accessible mobile navigation label may remain `Contact`.
 
 **Support**
 
-> The proof is practical: public products, operational workflows, and client work described at the level the evidence supports—not inflated into outcome claims.
+> The proof is practical: operational workflows and client work described at the level the evidence supports—not inflated into outcome claims. When we build, the aim is a system the team can run.
 
-Before implementation, inventory the exact public artifacts, links, screenshots, implementation state, and measured facts available for DMDL and Joy for Books. Write proof items from that inventory. Do not invent generic outcome language to fill the section.
+**Client contexts category detail**
+
+> Small organizations; leaders close to the work.
+
+Before implementation, inventory the exact public artifacts, links, screenshots, implementation state, and measured facts available for DMDL and Joy for Books. Write proof items from that inventory. Do not invent generic outcome language to fill the section. Support may state the *aim* of client-owned systems when building; do not invent outcome claims for named clients.
 
 Rules:
 
@@ -252,7 +268,7 @@ Rules:
 
 **Best fit**
 
-> Best for a consequential workflow with an accessible decision maker, someone who knows the day-to-day work, and a recent example we can examine.
+> Best for small organizations where leaders wear many hats, decision-makers (or strong recommenders) are close to the work, and one consequential process is costing real time—with a recent example we can examine.
 
 **Price and timing**
 
@@ -272,15 +288,19 @@ If space permits, link or place the readiness/start condition adjacent to timing
 
 **Tagline**
 
-> Separately scoped implementation for a validated workflow.
+> Separately scoped implementation for a validated workflow—built to hand off.
 
 **Description**
 
-> For workflows with a supported need and a clear reason custom software or AI is the right path. That evidence may come from a Workflow Assessment or equivalent discovery already completed by your team.
+> For workflows with a supported need and a clear reason custom software or AI is the right path. That evidence may come from a Workflow Assessment or equivalent discovery already completed by your team. The goal is a reusable system your team operates, not a one-off task utility.
 
 **How it works**
 
 > We agree on the smallest useful boundary, acceptance criteria, ownership, and any feasibility tests before committing to implementation.
+
+**Ownership**
+
+> Designed so your team can run it. Handoff, operating responsibility, and acceptance are explicit in the approved scope.
 
 **Delivery**
 
@@ -308,7 +328,7 @@ Do not publish a Custom AI Build price in this pass. Do not imply that every Wor
 
 **03 — Act on the decision**
 
-> Simplify, buy, automate, investigate, defer—or separately scope a build with clear acceptance criteria, feasibility gates, ownership, and a measurable boundary.
+> Simplify, buy, automate, investigate, or defer—or separately scope a build with acceptance criteria, feasibility gates, a measurable boundary, and an explicit handoff so your team can operate what ships.
 
 ## `components/WhyArturo.tsx`
 
@@ -318,17 +338,18 @@ Do not publish a Custom AI Build price in this pass. Do not imply that every Wor
 
 **Body**
 
-> I can map the operation, test the hard assumptions, and build the software myself. That does not mean custom software is always the answer. You get one accountable partner who can recommend the lower-complexity path when it fits—and carry a justified build through implementation when it does not.
+> I can map the operation, test the hard assumptions, and build the software myself. That does not mean custom software is always the answer. You get one accountable partner who can recommend the lower-complexity path when it fits, carry a justified build through implementation when it does not, and leave you more capable of running the work—not more dependent on me.
 
 **Bullets**
 
 - Hands-on workflow assessment and implementation
 - Evidence and tradeoffs in plain language
 - No predetermined AI or custom-build pitch
+- Leave capability, not dependency
 
 ## `components/Footer.tsx`
 
-> When the work no longer fits the tools, start with the workflow. Assessment and separately scoped implementation for small organizations where decision makers are close to the work.
+> Reconstruct the work, decide the path, and—when you build—leave a workflow the organization can run. Assessment and separately scoped implementation for small organizations where leaders wear many hats and decision makers are close to the work.
 
 ## `app/layout.tsx`
 
@@ -338,7 +359,7 @@ Do not publish a Custom AI Build price in this pass. Do not imply that every Wor
 
 **Default/OpenGraph/Twitter description**
 
-> When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.
+> When a complicated process is eating scarce leadership time, Arturo Solo reconstructs the work, decides the path, and—when justified—leaves a workflow small organizations can run themselves.
 
 Suggested keywords:
 
@@ -371,7 +392,7 @@ Suggested keywords:
 
 - What happened in the latest concrete example?
 - Who does the work, and which tools or records are involved?
-- What have you already tried, and what still does not fit?
+- What have you already tried (tools, consultants, AI), and what still does not fit?
 
 **Form-card heading**
 
@@ -405,11 +426,11 @@ Keep the warm acknowledgement and one-business-day response expectation.
 
 **Metadata**
 
-> Notes on workflow assessment, solution choices, practical automation, AI feasibility, and custom implementation for small organizations.
+> Notes on workflow assessment, decision paths, practical automation, AI feasibility, and client-owned implementation for small organizations where leaders wear many hats.
 
 **Empty state**
 
-> I'm writing about how to map operational work, compare simpler process, software, automation, AI, and custom builds, and test what matters before scaling it.
+> I'm writing about how to map operational work, find the real barriers, compare simpler process, software, automation, AI, and custom builds, and leave teams able to run what ships—testing what matters before scaling it.
 
 ---
 
@@ -511,10 +532,11 @@ Add or update tests for:
 - [ ] Simplify, buy, automate, build, investigate, and defer all appear.
 - [ ] No prototype, integration, migration, or production implementation is implied as included.
 - [ ] Custom AI Build may follow equivalent prior assessment and is not an automatic upsell.
-- [ ] AI is presented as a technique, not the default answer.
-- [ ] The audience is small organizations with accessible decision makers close to the work.
+- [ ] AI is presented as a technique, not the default answer (and AI-first delivery method is not the hero promise).
+- [ ] The audience reflects many hats, scarce time, and decision-makers or recommenders close to the work.
+- [ ] Custom AI Build clearly promises client-operated handoff, not a one-off task utility.
 - [ ] Named public proof is limited to DMDL and Joy for Books.
-- [ ] No unsupported outcome, ROI, savings, launch, security, compliance, privacy, governance, or usage claim remains.
+- [ ] No unsupported outcome, guaranteed ROI, savings percentages, launch, security, compliance, privacy, governance, or usage claim remains.
 
 ## Five-person comprehension review
 
@@ -525,6 +547,8 @@ Before release, show the homepage to five people who were not involved in writin
 3. Does the assessment include implementation?
 4. When would Custom AI Build be appropriate?
 5. What would you send Arturo in a first message?
+6. What does a successful engagement leave you able to do day-to-day?
+7. Is AI assumed, or evaluated?
 
 Success criteria:
 
@@ -533,6 +557,7 @@ Success criteria:
 - At least four distinguish the two services.
 - At least four understand that AI is evaluated rather than assumed.
 - At least four can describe the first contact without needing a polished AI idea.
+- At least four say a successful build leaves them able to operate the workflow themselves (or leaves a clear non-build decision).
 
 Revise unclear copy before release if these thresholds are not met.
 

@@ -11,6 +11,7 @@ export default function WhyArturo() {
     'Hands-on workflow assessment and implementation',
     'Evidence and tradeoffs in plain language',
     'No predetermined AI or custom-build pitch',
+    'Leave capability, not dependency',
   ];
 
   return (
@@ -46,7 +47,7 @@ export default function WhyArturo() {
               Builder&apos;s judgment. <Highlight>Operator&apos;s discipline.</Highlight>
             </h2>
             <p className="text-xl text-gray-600 mb-8 font-display">
-              I can map the operation, test the hard assumptions, and build the software myself. That does not mean custom software is always the answer. You get one accountable partner who can recommend the lower-complexity path when it fits—and carry a justified build through implementation when it does not.
+              I can map the operation, test the hard assumptions, and build the software myself. That does not mean custom software is always the answer. You get one accountable partner who can recommend the lower-complexity path when it fits, carry a justified build through implementation when it does not, and leave you more capable of running the work—not more dependent on me.
             </p>
             <ul className="space-y-3 text-gray-600">
               {bullets.map((bullet) => (

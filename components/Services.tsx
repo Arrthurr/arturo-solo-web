@@ -27,7 +27,7 @@ export default function Services() {
         },
         {
           label: 'Best fit',
-          text: 'A consequential workflow with an accessible decision maker, someone who knows the day-to-day work, and a recent example we can examine.',
+          text: 'Small organizations where leaders wear many hats, decision-makers (or strong recommenders) are close to the work, and one consequential process is costing real time—with a recent example we can examine.',
         },
       ],
       price: '$1,500 fixed fee · Seven business days',
@@ -40,13 +40,17 @@ export default function Services() {
     {
       icon: <Wrench className="h-12 w-12" />,
       title: 'Custom AI Build',
-      tagline: 'Separately scoped implementation for a validated workflow.',
+      tagline: 'Separately scoped implementation for a validated workflow—built to hand off.',
       description:
-        'For workflows with a supported need and a clear reason custom software or AI is the right path. That evidence may come from a Workflow Assessment or equivalent discovery already completed by your team.',
+        'For workflows with a supported need and a clear reason custom software or AI is the right path. That evidence may come from a Workflow Assessment or equivalent discovery already completed by your team. The goal is a reusable system your team operates, not a one-off task utility.',
       details: [
         {
           label: 'How it works',
           text: 'We agree on the smallest useful boundary, acceptance criteria, ownership, and any feasibility tests before committing to implementation.',
+        },
+        {
+          label: 'Ownership',
+          text: 'Designed so your team can run it. Handoff, operating responsibility, and acceptance are explicit in the approved scope.',
         },
         {
           label: 'Feasibility first',

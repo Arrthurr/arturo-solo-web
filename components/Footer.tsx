@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Logo className="text-white" />
             <p className="text-gray-400">
-              When the work no longer fits the tools, start with the workflow. Assessment and separately scoped implementation for small organizations where decision makers are close to the work.
+              Reconstruct the work, decide the path, and—when you build—leave a workflow the organization can run. Assessment and separately scoped implementation for small organizations where leaders wear many hats and decision makers are close to the work.
             </p>
           </div>
 

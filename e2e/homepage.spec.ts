@@ -26,10 +26,28 @@ test.describe('Homepage', () => {
       services.getByText(/Simplify · Buy · Automate · Build · Investigate · Defer/i),
     ).toBeVisible();
     await expect(services.getByText(/equivalent discovery/i)).toBeVisible();
+    await expect(services.getByText(/built to hand off/i)).toBeVisible();
+    await expect(services.getByText(/Designed so your team can run it/i)).toBeVisible();
+    await expect(services.getByText(/wear many hats/i)).toBeVisible();
+    await expect(
+      page.getByText(/reusable workflow your team can run/i),
+    ).toBeVisible();
+    await expect(
+      page.locator('#team').getByText(/Leave capability, not dependency/i),
+    ).toBeVisible();
+    await expect(
+      page.locator('#process').getByText(/explicit handoff so your team can operate/i),
+    ).toBeVisible();
     await expect(page.getByText('AI Jumpstart', { exact: true })).toHaveCount(0);
 
     await expect(page.getByAltText('DMDL')).toBeVisible();
     await expect(page.getByAltText('Joy for Books')).toBeVisible();
+    await expect(
+      page.getByText(/When we build, the aim is a system the team can run/i),
+    ).toBeVisible();
+    await expect(
+      page.getByText('Client contexts', { exact: true }).first(),
+    ).toBeVisible();
     await expect(page.getByAltText('HG Jones Associates')).toHaveCount(0);
     await expect(page.getByAltText('Texas Head Start Association')).toHaveCount(0);
     await expect(page.getByText('Why Arturo')).toBeVisible();

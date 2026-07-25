@@ -2,7 +2,7 @@
 
 ## Project Shape
 
-This is a **Next.js 14 (App Router)** marketing site for Arturo Solo LLC, scaffolded from the Nuggets agency template. Positioning: founder-led AI build studio — "working AI, built into your business."
+This is a **Next.js 14 (App Router)** marketing site for Arturo Solo LLC, scaffolded from the Nuggets agency template. Positioning: founder-led workflow and systems studio — reconstruct the work, decide the path, and hand off self-operated workflows when a build is justified. Product strategy lives in `STRATEGY.md`.
 
 Homepage section IA (template-native remap):
 
@@ -36,6 +36,13 @@ Preserve the hybrid proof model: public products, internal workflows, real clien
 
 Services exposes **Workflow Assessment** and **Custom AI Build** only. Keep the stable
 contact service value `ai-jumpstart` as the internal identifier for Workflow Assessment.
+
+Public messaging invariants (see `STRATEGY.md` and the copy plan):
+
+- Assessment sells a **decision path** (Implementation Brief), not a prototype or production build.
+- Custom AI Build is separately scoped; when used, emphasize **client-owned handoff** (reusable workflow the team operates).
+- AI is evaluated as a technique under automate/build for the buyer—not pitched as the default answer. AI-first delivery is Arturo’s internal method, not the hero promise.
+- Audience: small orgs where leaders wear many hats and decision-makers or recommenders are close to the work. Use qualitative time/capacity language only—no guaranteed ROI or savings percentages.
 
 Why Arturo is a visible solo-founder block — not a multi-person grid.
 
