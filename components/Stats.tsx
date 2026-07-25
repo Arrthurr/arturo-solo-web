@@ -7,7 +7,10 @@ import { usePrefersReducedMotion } from '@/lib/motion';
 const proofItems = [
   { label: 'Public products', detail: 'Software shipped outside client work' },
   { label: 'Internal workflows', detail: 'Operational tools and processes' },
-  { label: 'Client contexts', detail: 'Small organizations and consequential work' },
+  {
+    label: 'Client contexts',
+    detail: 'Small organizations; leaders close to the work',
+  },
   { label: 'AI work', detail: 'In development, clearly labeled' },
 ];
 
@@ -46,7 +49,7 @@ export default function Stats() {
               Built work. Real operating <Highlight>context</Highlight>.
             </h2>
             <p className="text-xl text-gray-400 font-display">
-              The proof is practical: operational workflows and client work described at the level the evidence supports—not inflated into outcome claims.
+              The proof is practical: operational workflows and client work described at the level the evidence supports—not inflated into outcome claims. When we build, the aim is a system the team can run.
             </p>
           </div>
 

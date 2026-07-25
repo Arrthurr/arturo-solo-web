@@ -24,7 +24,7 @@ export default function Process() {
       number: '03',
       title: 'Act on the decision',
       description:
-        'Simplify, buy, automate, investigate, defer—or separately scope a build with clear acceptance criteria, feasibility gates, ownership, and a measurable boundary.',
+        'Simplify, buy, automate, investigate, or defer—or separately scope a build with acceptance criteria, feasibility gates, a measurable boundary, and an explicit handoff so your team can operate what ships.',
     },
   ];
 

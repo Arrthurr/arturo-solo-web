@@ -56,7 +56,7 @@ export default function ContactPage() {
                     <ul className="space-y-3 text-gray-600 text-sm font-display">
                       <li>· What happened in the latest concrete example?</li>
                       <li>· Who does the work, and which tools or records are involved?</li>
-                      <li>· What have you already tried, and what still does not fit?</li>
+                      <li>· What have you already tried (tools, consultants, AI), and what still does not fit?</li>
                     </ul>
                   </div>
                 </div>

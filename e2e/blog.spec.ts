@@ -5,5 +5,9 @@ test.describe('Blog', () => {
     const response = await page.goto('/blog');
     expect(response?.status()).toBe(200);
     await expect(page.getByText('Posts coming soon')).toBeVisible();
+    await expect(
+      page.getByText(/leave teams able to run what ships/i),
+    ).toBeVisible();
+    await expect(page.getByText(/find the real barriers/i)).toBeVisible();
   });
 });

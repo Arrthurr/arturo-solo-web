@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: '%s | Arturo Solo LLC',
   },
   description:
-    'When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.',
+    'When a complicated process is eating scarce leadership time, Arturo Solo reconstructs the work, decides the path, and—when justified—leaves a workflow small organizations can run themselves.',
   keywords: [
     'workflow assessment',
     'process automation',
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     siteName: 'Arturo Solo LLC',
     title: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
     description:
-      'When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.',
+      'When a complicated process is eating scarce leadership time, Arturo Solo reconstructs the work, decides the path, and—when justified—leaves a workflow small organizations can run themselves.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
     description:
-      'When the work no longer fits the tools, Arturo Solo maps the workflow, compares the options, and scopes the right next step for small organizations.',
+      'When a complicated process is eating scarce leadership time, Arturo Solo reconstructs the work, decides the path, and—when justified—leaves a workflow small organizations can run themselves.',
   },
   robots: {
     index: true,

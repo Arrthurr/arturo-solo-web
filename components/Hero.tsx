@@ -33,10 +33,10 @@ export default function Hero() {
           <div className="grid md:grid-cols-2 gap-16 items-end">
             <div className="space-y-6">
               <p className="text-xl text-gray-600 font-display">
-                I reconstruct how the work actually moves, find the real constraint, and determine whether the right next step is to simplify, buy, automate, or build.
+                I reconstruct how the work actually moves, find the real constraint, and determine whether to simplify, buy, automate, or build—so you stop spending scarce leadership time on the wrong fix.
               </p>
               <p className="text-lg text-gray-500 font-display">
-                The answer may be a simpler process, existing software, focused automation, a justified use of AI, or a custom system.
+                The path may be a simpler process, existing software, focused automation, justified AI, or a custom system—and when you build, it should be a reusable workflow your team can run, not a utility that only completes one task for you.
               </p>
             </div>
             <div className="md:text-right space-y-4">
