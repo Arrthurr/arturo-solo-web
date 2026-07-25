@@ -46,8 +46,20 @@ test.describe('Homepage', () => {
       page.getByText(/When we build, the aim is a system the team can run/i),
     ).toBeVisible();
     await expect(
+      page.getByText(/reconstruct how the work moves/i),
+    ).toBeVisible();
+    await expect(
       page.getByText('Client contexts', { exact: true }).first(),
     ).toBeVisible();
+    await expect(page.getByText('What discovery found').first()).toBeVisible();
+    await expect(page.getByText(/Client workflow · beta/i)).toBeVisible();
+    await expect(page.getByText(/external workforce/i)).toBeVisible();
+    await expect(page.getByText(/Active development/i)).toBeVisible();
+    await expect(
+      page.getByRole('link', {
+        name: /Bring a recent example of where the work breaks/i,
+      }),
+    ).toHaveAttribute('href', '/contact');
     await expect(page.getByAltText('HG Jones Associates')).toHaveCount(0);
     await expect(page.getByAltText('Texas Head Start Association')).toHaveCount(0);
     await expect(page.getByText('Why Arturo')).toBeVisible();
