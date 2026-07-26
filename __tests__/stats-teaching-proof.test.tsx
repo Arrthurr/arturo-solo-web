@@ -45,12 +45,13 @@ describe('Stats teaching proof', () => {
     expect(screen.queryByAltText('Texas Head Start Association')).not.toBeInTheDocument();
   });
 
-  it('uses discovery-first labeled beats on both stories', () => {
+  it('uses the full teaching template on both stories', () => {
     render(<Stats />);
     const dmdl = screen.getByTestId('client-story-dmdl');
     const joy = screen.getByTestId('client-story-joy-for-books');
 
     for (const card of [dmdl, joy]) {
+      expect(within(card).getByText('What looked true')).toBeInTheDocument();
       expect(within(card).getByText('What discovery found')).toBeInTheDocument();
       expect(within(card).getByText('Path that followed')).toBeInTheDocument();
       expect(within(card).getByText('Status')).toBeInTheDocument();
@@ -64,11 +65,15 @@ describe('Stats teaching proof', () => {
     const joy = screen.getByTestId('client-story-joy-for-books');
 
     expect(within(dmdl).getByText(/Client workflow · beta/i)).toBeInTheDocument();
+    expect(within(dmdl).getByText(/Google Form/i)).toBeInTheDocument();
+    expect(within(dmdl).getAllByText(/PWA/i).length).toBeGreaterThan(0);
+    expect(within(dmdl).getByText(/Expo\/React Native/i)).toBeInTheDocument();
     expect(within(dmdl).getByText(/admin and staff/i)).toBeInTheDocument();
     expect(within(dmdl).getByText(/external workforce/i)).toBeInTheDocument();
-    expect(within(dmdl).getByText(/iOS\/Android/i)).toBeInTheDocument();
 
     expect(within(joy).getByText(/Client system · in development/i)).toBeInTheDocument();
+    expect(within(joy).getByText(/school event/i)).toBeInTheDocument();
+    expect(within(joy).getByText(/Book inventory/i)).toBeInTheDocument();
     expect(within(joy).getByText(/Active development/i)).toBeInTheDocument();
     expect(
       within(joy).getByText(/Not framed as a finished portfolio outcome/i),

@@ -51,9 +51,13 @@ test.describe('Homepage', () => {
     await expect(
       page.getByText('Client contexts', { exact: true }).first(),
     ).toBeVisible();
+    await expect(page.getByText('What looked true').first()).toBeVisible();
     await expect(page.getByText('What discovery found').first()).toBeVisible();
     await expect(page.getByText(/Client workflow · beta/i)).toBeVisible();
+    await expect(page.getByText(/Google Form/i)).toBeVisible();
+    await expect(page.getByText(/Expo\/React Native/i)).toBeVisible();
     await expect(page.getByText(/external workforce/i)).toBeVisible();
+    await expect(page.getByText(/Book inventory/i)).toBeVisible();
     await expect(page.getByText(/Active development/i)).toBeVisible();
     await expect(
       page.getByRole('link', {

@@ -28,10 +28,7 @@ type ClientStory = {
   beats: TeachingBeat[];
 };
 
-/**
- * Interim beats: only already-public phrasing plus R6 status.
- * Owner story arcs (plan U2 / R10) replace discovery/path and add "What looked true".
- */
+/** Owner-approved teaching arcs (plan U2 / R10). Status stays maturity-honest. */
 const clientStories: ClientStory[] = [
   {
     name: 'DMDL',
@@ -39,20 +36,24 @@ const clientStories: ClientStory[] = [
     statusLine: 'Client workflow · beta',
     beats: [
       {
+        label: 'What looked true',
+        text: 'External service providers had to scan a printed QR code into a Google Form on arrival and again on departure. The proposed fix was a DMDL-hosted form that auto-marked the visit complete via geolocation when the provider left the site—so they would not complete the form twice.',
+      },
+      {
         label: 'What discovery found',
-        text: 'A field check-in workflow reframed after discovery.',
+        text: 'The field team needed a real check-in system: capture visits on phones, sync to the office, and record provider sessions. Shipping a PWA plus web portal features looked like the obvious next step.',
       },
       {
         label: 'Path that followed',
-        text: 'Critical platform behavior tested through real-device use.',
+        text: 'A PWA and portal supported about forty providers and office staff, but iOS browsers do not support background location. Users hit bugs where the PWA was expected to behave like a native app.',
       },
       {
         label: 'Status',
-        text: 'Beta: admin and staff testing the website portal and native iOS/Android apps; external workforce testing the native phone app.',
+        text: 'The PWA path was retired. Mobile is rebuilt as native iPhone and Android apps with Expo/React Native. Beta: admin and staff testing the website portal and native apps; external workforce testing the native phone app.',
       },
       {
         label: 'What this means for you',
-        text: 'Start from a recent case of how the work actually moves—not a predetermined build.',
+        text: 'On mobile, users often trust a native app more than a PWA—regardless of how well the PWA performs. Test the platform assumption before you lock the architecture.',
       },
     ],
   },
@@ -62,12 +63,16 @@ const clientStories: ClientStory[] = [
     statusLine: 'Client system · in development',
     beats: [
       {
+        label: 'What looked true',
+        text: 'A custom CRM-style app needed a school event as its center—the hub where inventory, distributors, and reviews all connected.',
+      },
+      {
         label: 'What discovery found',
-        text: 'An inventory-centered workflow connecting books, purchases, requests, donations, and visits.',
+        text: 'Book inventory was the real center. Without books, the other business units would not exist.',
       },
       {
         label: 'Path that followed',
-        text: 'An auditable ledger so those streams stay connected for the team that operates the work.',
+        text: 'A first web application framework was built on the event-centered model, far enough for the client to test. Further discovery showed inventory should be the focus; AI helped revise the requirements document, and the app is being rebuilt around that center.',
       },
       {
         label: 'Status',
@@ -75,7 +80,7 @@ const clientStories: ClientStory[] = [
       },
       {
         label: 'What this means for you',
-        text: 'Start from a recent case of how the work actually moves—not a predetermined build.',
+        text: 'Start from how the work actually hangs together—not the first object that looks like the center of the system.',
       },
     ],
   },
