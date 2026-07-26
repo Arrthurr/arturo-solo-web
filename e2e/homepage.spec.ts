@@ -5,8 +5,24 @@ test.describe('Homepage', () => {
     await page.goto('/');
 
     await expect(page.getByRole('heading', { level: 1 })).toContainText(
-      'When the work no longer fits the tools',
+      'When your workflow no longer fits the work',
     );
+    await expect(
+      page.getByText(/Let.?s reconstruct how the work actually moves/i),
+    ).toBeVisible();
+    await expect(
+      page.getByText(/use AI only when it earns its place/i),
+    ).toBeVisible();
+    await expect(page.getByText('Bring me a bottleneck', { exact: true })).toHaveCount(0);
+    await expect(page.getByText(/Start with a recent example/i)).toHaveCount(0);
+    await expect(
+      page.getByText(/Reconstruct the work first\. AI is a technique/i),
+    ).toHaveCount(0);
+    await expect(
+      page.getByRole('img', {
+        name: /Scattered work inputs consolidating into a clear ordered workflow path/i,
+      }),
+    ).toBeVisible();
 
     const services = page.locator('#services');
     await expect(

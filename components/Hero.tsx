@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import Image from 'next/image';
 import { Highlight } from '@/components/Highlight';
 import { usePrefersReducedMotion } from '@/lib/motion';
 
@@ -18,34 +17,35 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          <p className="text-sm uppercase tracking-widest text-gray-500 mb-6">
-            Arturo Solo LLC · Workflow and AI systems
-          </p>
-          <h1 className="heading-xl mb-8 text-[2.5rem] md:text-[4.5rem]">
-            When the work{' '}<br />
-            no longer fits{' '}<br />
-            the tools,{' '}<br />
-            <Highlight>
-              start with<span className="md:hidden"><br /></span>{' '}
-              the workflow.
-            </Highlight>
-          </h1>
-          <div className="grid md:grid-cols-2 gap-16 items-end">
-            <div className="space-y-6">
-              <p className="text-xl text-gray-600 font-display">
-                I reconstruct how the work actually moves, find the real constraint, and determine whether to simplify, buy, automate, or build—so you stop spending scarce leadership time on the wrong fix.
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-gray-500 mb-6">
+                Arturo Solo LLC · Workflow and AI systems
               </p>
-              <p className="text-lg text-gray-500 font-display">
-                The path may be a simpler process, existing software, focused automation, justified AI, or a custom system—and when you build, it should be a reusable workflow your team can run, not a utility that only completes one task for you.
+              <h1 className="heading-xl mb-8 text-[2.5rem] md:text-[4rem] lg:text-[4.5rem]">
+                When your workflow{' '}<br />
+                <Highlight>
+                  no longer fits{' '}<br />
+                  the work.
+                </Highlight>
+              </h1>
+              <p className="text-xl text-gray-600 font-display max-w-xl">
+                Let&apos;s reconstruct how the work actually moves, find the real constraint, and decide whether to simplify, buy, automate, build—or use AI only when it earns its place—so you leave with a decision path, and when you build, a reusable workflow your team can run.
               </p>
             </div>
-            <div className="md:text-right space-y-4">
-              <Link href="/contact" className="btn-primary md:w-2/3">
-                Bring me a bottleneck <ArrowRight className="inline-block ml-2" />
-              </Link>
-              <p className="text-sm text-gray-500 md:text-right">
-                Start with a recent example—not a predetermined tool.
-              </p>
+
+            <div className="relative">
+              <div className="overflow-hidden rounded-2xl border border-gray-100 bg-gray-50 shadow-sm">
+                <Image
+                  src="/hero-workflow.jpg"
+                  alt="Scattered work inputs consolidating into a clear ordered workflow path"
+                  width={1024}
+                  height={1024}
+                  priority
+                  className="h-auto w-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
         </motion.div>

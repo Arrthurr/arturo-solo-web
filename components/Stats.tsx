@@ -101,7 +101,7 @@ export default function Stats() {
         >
           <div className="grid md:grid-cols-2 gap-16 mb-16">
             <h2 className="heading-lg">
-              Built work. Real operating <Highlight>context</Highlight>.
+              Built work. Real operating <Highlight>context.</Highlight>
             </h2>
             <p className="text-xl text-gray-400 font-display">
               The proof is practical: reconstruct how the work moves, find the real constraint, and decide the path—described at the level the evidence supports, not inflated into outcome claims. When we build, the aim is a system the team can run.
