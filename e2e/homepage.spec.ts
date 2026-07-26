@@ -5,8 +5,24 @@ test.describe('Homepage', () => {
     await page.goto('/');
 
     await expect(page.getByRole('heading', { level: 1 })).toContainText(
-      'When the work no longer fits the tools',
+      'When your workflow no longer fits the work',
     );
+    await expect(
+      page.getByText(/Let.?s reconstruct how the work actually moves/i),
+    ).toBeVisible();
+    await expect(
+      page.getByText(/use AI only when it earns its place/i),
+    ).toBeVisible();
+    await expect(page.getByText('Bring me a bottleneck', { exact: true })).toHaveCount(0);
+    await expect(page.getByText(/Start with a recent example/i)).toHaveCount(0);
+    await expect(
+      page.getByText(/Reconstruct the work first\. AI is a technique/i),
+    ).toHaveCount(0);
+    await expect(
+      page.getByRole('img', {
+        name: /Scattered work inputs consolidating into a clear ordered workflow path/i,
+      }),
+    ).toBeVisible();
 
     const services = page.locator('#services');
     await expect(
@@ -46,8 +62,24 @@ test.describe('Homepage', () => {
       page.getByText(/When we build, the aim is a system the team can run/i),
     ).toBeVisible();
     await expect(
+      page.getByText(/reconstruct how the work moves/i),
+    ).toBeVisible();
+    await expect(
       page.getByText('Client contexts', { exact: true }).first(),
     ).toBeVisible();
+    await expect(page.getByText('What looked true').first()).toBeVisible();
+    await expect(page.getByText('What discovery found').first()).toBeVisible();
+    await expect(page.getByText(/Client workflow · beta/i)).toBeVisible();
+    await expect(page.getByText(/Google Form/i)).toBeVisible();
+    await expect(page.getByText(/Expo\/React Native/i)).toBeVisible();
+    await expect(page.getByText(/external workforce/i)).toBeVisible();
+    await expect(page.getByText(/Book inventory/i)).toBeVisible();
+    await expect(page.getByText(/Active development/i)).toBeVisible();
+    await expect(
+      page.getByRole('link', {
+        name: /Bring a recent example of where the work breaks/i,
+      }),
+    ).toHaveAttribute('href', '/contact');
     await expect(page.getByAltText('HG Jones Associates')).toHaveCount(0);
     await expect(page.getByAltText('Texas Head Start Association')).toHaveCount(0);
     await expect(page.getByText('Why Arturo')).toBeVisible();
