@@ -12,9 +12,9 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <Stats />
       <Services />
       <Process />
+      <Stats />
       <WhyArturo />
       <BlogTeaser />
       <Footer />
