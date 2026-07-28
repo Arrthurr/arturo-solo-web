@@ -9,6 +9,27 @@ import { usePrefersReducedMotion } from '@/lib/motion';
 export default function Services() {
   const reduced = usePrefersReducedMotion();
 
+  const steps = [
+    {
+      number: '01',
+      title: 'Reconstruct the workflow',
+      description:
+        'Walk one representative case from trigger to completed state. Identify the people, records, systems, handoffs, exceptions, workarounds, and the source that wins when records disagree.',
+    },
+    {
+      number: '02',
+      title: 'Find the real constraint',
+      description:
+        'Separate the requested feature from the operational problem. Compare simpler process, existing software, automation, AI, and custom software against the same requirements and evidence.',
+    },
+    {
+      number: '03',
+      title: 'Act on the decision',
+      description:
+        'Simplify, buy, automate, investigate, or defer—or separately scope a build with acceptance criteria, feasibility gates, a measurable boundary, and an explicit handoff so your team can operate what ships.',
+    },
+  ];
+
   const services = [
     {
       icon: <Search className="h-12 w-12" />,
@@ -77,11 +98,28 @@ export default function Services() {
         >
           <div className="grid md:grid-cols-2 gap-24 mb-24">
             <h2 className="heading-lg">
-              Start with the decision. <Highlight>Build only when it earns its way in.</Highlight>
+              Start with the decision. <Highlight>Build only when necessary.</Highlight>
             </h2>
             <p className="text-xl text-gray-400 font-display">
               Two distinct engagements: Workflow Assessment establishes what should change and why. Custom AI Build implements a separately approved scope when the evidence supports it.
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-16 mb-24">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={reduced ? false : { opacity: 0, y: 20 }}
+                whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="border-t border-gray-800 pt-8"
+              >
+                <span className="text-sm text-gray-500">{step.number}</span>
+                <h3 className="text-2xl font-bold mt-4 mb-4">{step.title}</h3>
+                <p className="text-gray-400">{step.description}</p>
+              </motion.div>
+            ))}
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
