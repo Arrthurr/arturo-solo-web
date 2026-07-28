@@ -77,7 +77,7 @@ export default function Services() {
         >
           <div className="grid md:grid-cols-2 gap-24 mb-24">
             <h2 className="heading-lg">
-              Start with the decision. <Highlight>Build only when necessary.</Highlight>
+              Start with the decision. <Highlight>Build when necessary.</Highlight>
             </h2>
             <p className="text-xl text-gray-400 font-display">
               Two distinct engagements: Workflow Assessment establishes what should change and why. Custom AI Build implements a separately approved scope when the evidence supports it.
