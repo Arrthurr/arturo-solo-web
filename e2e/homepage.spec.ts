@@ -52,7 +52,7 @@ test.describe('Homepage', () => {
       page.locator('#team').getByText(/Leave capability, not dependency/i),
     ).toBeVisible();
     await expect(
-      page.locator('#services').getByText(/explicit handoff so your team can operate/i),
+      page.locator('section').first().getByText(/explicit handoff so your team can operate/i),
     ).toBeVisible();
     await expect(page.getByText('AI Jumpstart', { exact: true })).toHaveCount(0);
 
