@@ -10,7 +10,7 @@ export default function Footer() {
   const reduced = usePrefersReducedMotion();
 
   return (
-    <footer className="bg-black text-white py-20">
+    <footer className="bg-[#182f58] text-white py-20">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 px-4">
           <div className="space-y-6">

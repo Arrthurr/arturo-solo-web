@@ -90,7 +90,7 @@ export default function Stats() {
   const reduced = usePrefersReducedMotion();
 
   return (
-    <section className="py-20 bg-black text-white" data-testid="stats-proof">
+    <section className="py-20 bg-[#182f58] text-white" data-testid="stats-proof">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={reduced ? false : { opacity: 0, y: 20 }}

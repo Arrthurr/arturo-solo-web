@@ -9,7 +9,7 @@
   }
   
   body {
-    @apply text-gray-900 bg-white;
+    @apply text-gray-900 bg-[#FDF0E0];
   }
 
   @media (prefers-reduced-motion: reduce) {

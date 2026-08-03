@@ -66,7 +66,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="section-padding bg-black text-white">
+    <section id="services" className="section-padding bg-[#D0E7F9] text-gray-900">
       <div className="container mx-auto">
         <motion.div
           initial={reduced ? false : { opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function Services() {
             <h2 className="heading-lg">
               Start with the decision. <Highlight>Build when necessary.</Highlight>
             </h2>
-            <p className="text-xl text-gray-400 font-display">
+            <p className="text-xl text-gray-700 font-display">
               Two distinct engagements: Workflow Assessment establishes what should change and why. Custom AI Build implements a separately approved scope when the evidence supports it.
             </p>
           </div>
@@ -92,36 +92,36 @@ export default function Services() {
                 whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col border-t border-gray-800 pt-8"
+                className="flex flex-col border-t border-gray-900/20 pt-8"
               >
                 {service.icon}
                 <h3 className="text-2xl font-bold mt-6 mb-4">{service.title}</h3>
-                <p className="text-lg font-semibold text-white mb-4">{service.tagline}</p>
-                <p className="text-gray-400 mb-8">{service.description}</p>
+                <p className="text-lg font-semibold text-gray-900 mb-4">{service.tagline}</p>
+                <p className="text-gray-700 mb-8">{service.description}</p>
                 <dl className="flex-1 space-y-6">
                   {service.details.map((detail) => (
                     <div key={detail.label}>
-                      <dt className="text-sm font-semibold uppercase tracking-wider text-gray-300">
+                      <dt className="text-sm font-semibold uppercase tracking-wider text-gray-800">
                         {detail.label}
                       </dt>
-                      <dd className="mt-2 text-sm text-gray-500">{detail.text}</dd>
+                      <dd className="mt-2 text-sm text-gray-700">{detail.text}</dd>
                     </div>
                   ))}
                 </dl>
                 {service.price && (
-                  <p className="mt-8 text-lg font-bold text-white">{service.price}</p>
+                  <p className="mt-8 text-lg font-bold text-gray-900">{service.price}</p>
                 )}
                 {service.startCondition && (
-                  <p className="mt-2 text-sm text-gray-500">{service.startCondition}</p>
+                  <p className="mt-2 text-sm text-gray-700">{service.startCondition}</p>
                 )}
                 {service.boundary && (
-                  <p className="mt-6 border-l-2 border-white pl-4 text-sm text-gray-400">
+                  <p className="mt-6 border-l-2 border-gray-900 pl-4 text-sm text-gray-700">
                     {service.boundary}
                   </p>
                 )}
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex w-fit font-semibold text-white underline decoration-gray-600 underline-offset-4 transition-colors hover:decoration-white"
+                  className="mt-8 inline-flex w-fit font-semibold text-gray-900 underline decoration-gray-500 underline-offset-4 transition-colors hover:decoration-gray-900"
                 >
                   {service.cta}
                 </Link>
