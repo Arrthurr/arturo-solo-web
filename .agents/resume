@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# This project has no persistent local services or tunnels to repair on wake.
+echo "No orb resume steps required."

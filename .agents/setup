@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$repo_root"
+
+echo "Checking Node.js runtime..."
+if ! command -v node >/dev/null 2>&1 || ! command -v npm >/dev/null 2>&1; then
+  echo "Node.js and npm are required in the orb base image." >&2
+  exit 1
+fi
+
+node_major="$(node -p 'process.versions.node.split(".")[0]')"
+if (( node_major < 22 )); then
+  echo "Installing Node.js 22 (locked dependencies require it)..."
+  sudo npm install --global n
+  sudo n 22
+  hash -r
+fi
+
+echo "Using $(node --version)."
+
+echo "Installing npm dependencies from package-lock.json..."
+npm ci
+
+if [[ ! -f .env.local ]]; then
+  echo "Creating .env.local with non-secret development placeholders..."
+  cat > .env.local <<'EOF'
+NEXT_PUBLIC_SUPABASE_URL=https://placeholder.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=placeholder-anon-key
+SUPABASE_SERVICE_ROLE_KEY=
+RESEND_API_KEY=
+LEAD_NOTIFICATION_EMAIL=start@arturosolo.com
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+EOF
+else
+  echo "Keeping existing .env.local."
+fi
+
+echo "Installing Chromium and its system dependencies for Playwright..."
+npx playwright install --with-deps chromium
+
+echo "Orb setup complete."
