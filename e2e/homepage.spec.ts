@@ -11,7 +11,7 @@ test.describe('Homepage', () => {
       page.getByText(/Let.?s reconstruct how the work actually moves/i),
     ).toBeVisible();
     await expect(
-      page.getByText(/use AI only when it earns its place/i),
+      page.getByText(/simplify, automate, or build with AI/i),
     ).toBeVisible();
     await expect(page.getByText('Bring me a bottleneck', { exact: true })).toHaveCount(0);
     await expect(page.getByText(/Start with a recent example/i)).toHaveCount(0);
@@ -45,9 +45,6 @@ test.describe('Homepage', () => {
     await expect(services.getByText(/built to hand off/i)).toBeVisible();
     await expect(services.getByText(/Designed so your team can run it/i)).toBeVisible();
     await expect(services.getByText(/wear many hats/i)).toBeVisible();
-    await expect(
-      page.getByText(/reusable workflow your team can run/i),
-    ).toBeVisible();
     await expect(
       page.locator('#team').getByText(/Leave capability, not dependency/i),
     ).toBeVisible();

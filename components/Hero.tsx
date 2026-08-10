@@ -51,7 +51,7 @@ export default function Hero() {
                 </Highlight>
               </h1>
               <p className="text-xl text-white/75 font-display max-w-xl">
-                Let&apos;s reconstruct how the work actually moves, find the real constraint, and decide whether to simplify, buy, automate, build—or use AI only when it earns its place—so you leave with a decision path, and when you build, a reusable workflow your team can run.
+                Let&apos;s reconstruct how the work actually moves, find the real constraint, and decide whether to simplify, automate, or build with AI.
               </p>
             </div>
 
