@@ -2,7 +2,7 @@
 
 ## Project Shape
 
-This is a **Next.js 14 (App Router)** marketing site for Arturo Solo LLC, scaffolded from the Nuggets agency template. Positioning: founder-led workflow and systems studio — reconstruct the work, decide the path, and hand off self-operated workflows when a build is justified. Product strategy lives in `STRATEGY.md`.
+This is a **Next.js 14 (App Router)** marketing site for Arturo Solo LLC, scaffolded from the Nuggets agency template. Positioning: founder-led workflow and systems studio. The public offer is a single SKU, Workflow Assessment. Implementation after a decision is a new conversation, not a second product. Product strategy lives in `STRATEGY.md`.
 
 Homepage section IA (template-native remap):
 
@@ -10,8 +10,7 @@ Homepage section IA (template-native remap):
 <Header />
 <Hero />        {/* opening promise + bottleneck subhead */}
 <Stats />       {/* hybrid proof */}
-<Services />    {/* Workflow Assessment + Custom AI Build */}
-<Process />     {/* reconstruct → compare → act on the decision */}
+<Services />    {/* Workflow Assessment only */}
 <WhyArturo />   {/* solo-founder block */}
 <BlogTeaser />  {/* hidden when zero published posts */}
 <Footer />
@@ -22,7 +21,7 @@ Contact lives at `/contact` with warm, low-friction tone. Do not reintroduce GSA
 Important files:
 
 - `app/page.tsx` — homepage composition
-- `components/Hero.tsx`, `Services.tsx`, `Stats.tsx`, `Process.tsx`, `WhyArturo.tsx` — section copy and Framer Motion wrappers
+- `components/Hero.tsx`, `Services.tsx`, `Stats.tsx`, `WhyArturo.tsx` — section copy and Framer Motion wrappers
 - `components/ContactForm.tsx` + `app/contact/page.tsx` — visitor-facing contact UX
 - `app/actions/submit-contact.ts` — server-mediated Supabase insert, honeypot, rate limit, Resend notification
 - `lib/supabase/admin.ts` — `server-only` service-role client (never import from client components)
@@ -34,14 +33,15 @@ Important files:
 
 Preserve the hybrid proof model: public products, internal workflows, real client contexts, and AI tools in development. Do not imply unfinished products are finished portfolio items. Client logos in `Stats` are subordinate proof — not a generic "trusted by" strip.
 
-Services exposes **Workflow Assessment** and **Custom AI Build** only. Keep the stable
+Services exposes **Workflow Assessment** only. Keep the stable
 contact service value `ai-jumpstart` as the internal identifier for Workflow Assessment.
 
 Public messaging invariants (see `STRATEGY.md` and the copy plan):
 
-- Assessment sells a **decision path** (Implementation Brief), not a prototype or production build.
-- Custom AI Build is separately scoped; when used, emphasize **client-owned handoff** (reusable workflow the team operates).
-- AI is evaluated as a technique under automate/build for the buyer—not pitched as the default answer. AI-first delivery is Arturo’s internal method, not the hero promise.
+- The public offer is one SKU: **$1,500** fixed, **seven business days**, **one consequential workflow**, six named decision paths (Simplify · Buy · Automate · Build · Investigate · Defer), and an Implementation Brief.
+- Assessment sells a **decision path**, not a prototype or production build. The fee is not a deposit on a future build.
+- Custom AI Build is not a public SKU, CTA, or second engagement. Implement capability lives only in Why Arturo: he can map the work, test assumptions, and build if justified, and can recommend the lower-complexity path. No predetermined custom-build pitch.
+- AI is evaluated as a technique under automate/build for the buyer, not pitched as the default answer. AI-first delivery is Arturo’s internal method, not the hero promise. Do not lead with “AI consultancy.”
 - Audience: small orgs where leaders wear many hats and decision-makers or recommenders are close to the work. Use qualitative time/capacity language only—no guaranteed ROI or savings percentages.
 
 Why Arturo is a visible solo-founder block — not a multi-person grid.
@@ -64,7 +64,7 @@ Contact writes use a `'use server'` action with the admin client (`SUPABASE_SERV
 Form contract:
 
 - Fields: `name`, `email`, `company`, `service`, `message`
-- Service values: `ai-jumpstart`, `custom-ai-build`, `not-sure`
+- Visitor-facing service values: `ai-jumpstart`, `not-sure`. Keep `custom-ai-build` accepted in validation for legacy submissions; do not offer it on the form.
 - Honeypot: `website` — silent redirect to `/success`, no DB row
 - Rate limit: 5 submissions/IP/hour via Upstash (when configured)
 - Success: redirect to `/success` with warm confirmation copy

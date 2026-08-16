@@ -18,7 +18,7 @@ export default function TermsOfServicePage() {
             <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
 
             <div className="prose">
-              <p>Last updated: July 6, 2026</p>
+              <p>Last updated: August 16, 2026</p>
 
               <h2>1. Agreement</h2>
               <p>
@@ -27,7 +27,7 @@ export default function TermsOfServicePage() {
 
               <h2>2. Services described</h2>
               <p>
-                This website describes workflow assessment and custom implementation services offered by Arturo Solo LLC. Content on this site is informational and does not constitute a binding offer until a separate written agreement is signed.
+                This website describes the Workflow Assessment offered by Arturo Solo LLC. Content on this site is informational and does not constitute a binding offer until a separate written agreement is signed.
               </p>
 
               <h2>3. Contact submissions</h2>

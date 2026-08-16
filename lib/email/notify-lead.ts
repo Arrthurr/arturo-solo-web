@@ -1,11 +1,8 @@
 import { Resend } from 'resend';
+import { serviceLabels } from '@/lib/contact-service-labels';
 import type { ContactFormData } from '@/lib/validation/contact';
 
-const serviceLabels: Record<ContactFormData['service'], string> = {
-  'ai-jumpstart': 'Workflow Assessment',
-  'custom-ai-build': 'Custom AI Build — scoped implementation',
-  'not-sure': 'Not sure — help me choose the next step',
-};
+export { serviceLabels };
 
 export async function notifyLead(data: ContactFormData): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;

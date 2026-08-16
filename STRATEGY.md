@@ -1,6 +1,6 @@
 ---
 name: Arturo Solo
-last_updated: 2026-07-24
+last_updated: 2026-08-16
 ---
 
 # Arturo Solo Strategy
@@ -52,6 +52,8 @@ _Why it serves the approach:_ Matches the job they hire for and supports repeat 
 
 ## Marketing
 
-**One-liner:** When a complicated process is eating time and the usual fixes waste money, Arturo Solo reconstructs the work, decides the path, and leaves you a workflow you can run yourself.
+**One-liner:** When a complicated process is eating time and the usual fixes waste money, Arturo Solo reconstructs one workflow and delivers a decision path in seven business days.
 
-**Key message:** The engagement is AI-first on Arturo's side—judgment and the brief—not “AI as the answer.” Start with the workflow; compare simplify / buy / automate / build; ship only what is justified; hand off systems the client owns. Best fit: small organizations (<20) where decision-makers or recommenders wear many hats, are close to the work, and need efficient workflows with clear time ROI.
+**Public offer:** Workflow Assessment only. $1,500 fixed, seven business days, one consequential workflow, six named paths (Simplify · Buy · Automate · Build · Investigate · Defer), Implementation Brief. The fee is not a deposit on a future build. Implementation after a decision is a new conversation, not a second SKU.
+
+**Key message:** The engagement is AI-first on Arturo's side, judgment and the brief, not “AI as the answer.” Start with the workflow; compare simplify / buy / automate / build / investigate / defer; decide before anyone builds. Best fit: small organizations (<20) where decision-makers or recommenders wear many hats, are close to the work, and need a clear next path.

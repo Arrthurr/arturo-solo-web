@@ -4,17 +4,16 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
+    default: 'Arturo Solo LLC — Workflow Assessment',
     template: '%s | Arturo Solo LLC',
   },
   description:
-    'When a complicated process is eating scarce leadership time, Arturo Solo reconstructs the work, decides the path, and—when justified—leaves a workflow small organizations can run themselves.',
+    'Bring one stuck workflow. $1,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
   keywords: [
     'workflow assessment',
     'process automation',
     'small business operations',
-    'custom software',
-    'custom AI',
+    'Implementation Brief',
     'Arturo Solo',
   ],
   authors: [{ name: 'Arthur Turnbull', url: 'https://arturosolo.com' }],
@@ -30,15 +29,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://arturosolo.com',
     siteName: 'Arturo Solo LLC',
-    title: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
+    title: 'Arturo Solo LLC — Workflow Assessment',
     description:
-      'When a complicated process is eating scarce leadership time, Arturo Solo reconstructs the work, decides the path, and—when justified—leaves a workflow small organizations can run themselves.',
+      'Bring one stuck workflow. $1,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Arturo Solo LLC — Workflow assessment and custom AI builds',
+    title: 'Arturo Solo LLC — Workflow Assessment',
     description:
-      'When a complicated process is eating scarce leadership time, Arturo Solo reconstructs the work, decides the path, and—when justified—leaves a workflow small organizations can run themselves.',
+      'Bring one stuck workflow. $1,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
   },
   robots: {
     index: true,

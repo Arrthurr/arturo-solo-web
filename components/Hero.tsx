@@ -25,7 +25,7 @@ export default function Hero() {
       number: '03',
       title: 'Act on the decision',
       description:
-        'Simplify, buy, automate, investigate, or defer—or separately scope a build with acceptance criteria, feasibility gates, a measurable boundary, and an explicit handoff so your team can operate what ships.',
+        'Leave with a recommended path and the evidence behind it. Simplify, buy, automate, build, investigate, or defer. If the path is Build, that work is a new conversation.',
     },
   ];
 
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-sm uppercase tracking-widest text-white/60 mb-6">
-                Arturo Solo LLC · Workflow and AI systems
+                Arturo Solo LLC · Workflow assessment
               </p>
               <h1 className="heading-xl mb-8 text-[2.5rem] md:text-[4rem] lg:text-[4.5rem]">
                 When your workflow{' '}<br />
@@ -51,7 +51,7 @@ export default function Hero() {
                 </Highlight>
               </h1>
               <p className="text-xl text-white/75 font-display max-w-xl">
-                Let&apos;s reconstruct how the work actually moves, find the real constraint, and decide whether to simplify, automate, or build with AI.
+                Let&apos;s reconstruct how the work actually moves, find the real constraint, and decide whether to simplify, buy, automate, build, investigate, or defer.
               </p>
             </div>
 
