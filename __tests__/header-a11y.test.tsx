@@ -1,11 +1,16 @@
-import { render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it, vi } from 'vitest';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 vi.mock('next/navigation', () => ({
   usePathname: () => '/',
 }));
+
+afterEach(() => {
+  cleanup();
+});
 
 describe('Header mobile menu accessibility', () => {
   it('exposes aria-expanded and aria-controls on toggle', async () => {
@@ -22,4 +27,17 @@ describe('Header mobile menu accessibility', () => {
     expect(toggle).toHaveAttribute('aria-label', 'Close menu');
     expect(screen.getByRole('navigation', { name: 'Mobile navigation' })).toBeInTheDocument();
   });
+
+  it('does not offer a Process link that would scroll above Services', () => {
+    render(<Header />);
+    expect(screen.queryByRole('link', { name: 'Process' })).not.toBeInTheDocument();
+  });
 });
+
+describe('Footer navigation', () => {
+  it('does not offer a Process link that would scroll above Services', () => {
+    render(<Footer />);
+    expect(screen.queryByRole('link', { name: 'Process' })).not.toBeInTheDocument();
+  });
+});
+

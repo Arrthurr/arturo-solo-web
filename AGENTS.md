@@ -11,7 +11,6 @@ Homepage section IA (template-native remap):
 <Hero />        {/* opening promise + bottleneck subhead */}
 <Stats />       {/* hybrid proof */}
 <Services />    {/* Workflow Assessment only */}
-<Process />     {/* reconstruct → compare → act on the decision; hero steps carry #process */}
 <WhyArturo />   {/* solo-founder block */}
 <BlogTeaser />  {/* hidden when zero published posts */}
 <Footer />
@@ -22,7 +21,7 @@ Contact lives at `/contact` with warm, low-friction tone. Do not reintroduce GSA
 Important files:
 
 - `app/page.tsx` — homepage composition
-- `components/Hero.tsx`, `Services.tsx`, `Stats.tsx`, `Process.tsx`, `WhyArturo.tsx` — section copy and Framer Motion wrappers
+- `components/Hero.tsx`, `Services.tsx`, `Stats.tsx`, `WhyArturo.tsx` — section copy and Framer Motion wrappers
 - `components/ContactForm.tsx` + `app/contact/page.tsx` — visitor-facing contact UX
 - `app/actions/submit-contact.ts` — server-mediated Supabase insert, honeypot, rate limit, Resend notification
 - `lib/supabase/admin.ts` — `server-only` service-role client (never import from client components)

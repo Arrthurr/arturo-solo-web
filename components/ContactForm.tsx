@@ -6,6 +6,7 @@ import {
   submitContact,
   type ContactActionState,
 } from '@/app/actions/submit-contact';
+import { visitorServiceOptions } from '@/lib/contact-service-labels';
 
 const initialState: ContactActionState = { status: 'idle' };
 
@@ -70,8 +71,11 @@ export default function ContactForm() {
             className={inputClass(state.errors?.service)}
           >
             <option value="" disabled>Select an option</option>
-            <option value="ai-jumpstart">Workflow Assessment — $1,500 · seven business days · one workflow</option>
-            <option value="not-sure">Not sure — start with the stuck workflow</option>
+            {visitorServiceOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </Field>
       </div>

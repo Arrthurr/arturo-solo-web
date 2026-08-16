@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div id="process" className="grid md:grid-cols-3 gap-16 mt-20">
+          <div className="grid md:grid-cols-3 gap-16 mt-20">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
