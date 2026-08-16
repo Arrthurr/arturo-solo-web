@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Homepage', () => {
-  test('renders workflow-first positioning and distinct services', async ({ page }) => {
+  test('renders a single Workflow Assessment offer', async ({ page }) => {
     await page.goto('/');
 
     await expect(page.getByRole('heading', { level: 1 })).toContainText(
@@ -11,8 +11,9 @@ test.describe('Homepage', () => {
       page.getByText(/Let.?s reconstruct how the work actually moves/i),
     ).toBeVisible();
     await expect(
-      page.getByText(/simplify, automate, or build with AI/i),
+      page.getByText(/simplify, buy, automate, build, investigate, or defer/i),
     ).toBeVisible();
+    await expect(page.getByText(/build with AI/i)).toHaveCount(0);
     await expect(page.getByText('Bring me a bottleneck', { exact: true })).toHaveCount(0);
     await expect(page.getByText(/Start with a recent example/i)).toHaveCount(0);
     await expect(
@@ -30,36 +31,52 @@ test.describe('Homepage', () => {
     ).toBeVisible();
     await expect(
       services.getByRole('heading', { name: 'Custom AI Build' }),
-    ).toBeVisible();
+    ).toHaveCount(0);
     await expect(services.getByText('$1,500 fixed fee', { exact: false })).toBeVisible();
     await expect(services.getByText(/seven business days/i)).toBeVisible();
+    await expect(services.getByText(/one consequential workflow/i)).toBeVisible();
     await expect(services.getByText(/starts after payment and kickoff/i)).toBeVisible();
     await expect(services.getByText(/Implementation Brief/i)).toBeVisible();
     await expect(
       services.getByText(/does not include a prototype or production implementation/i),
     ).toBeVisible();
     await expect(
+      services.getByText(/not a deposit on a future build/i),
+    ).toBeVisible();
+    await expect(
       services.getByText(/Simplify · Buy · Automate · Build · Investigate · Defer/i),
     ).toBeVisible();
-    await expect(services.getByText(/equivalent discovery/i)).toBeVisible();
-    await expect(services.getByText(/built to hand off/i)).toBeVisible();
-    await expect(services.getByText(/Designed so your team can run it/i)).toBeVisible();
+    await expect(services.getByText(/Two distinct engagements/i)).toHaveCount(0);
+    await expect(services.getByText(/Build when necessary/i)).toHaveCount(0);
+    await expect(services.getByText(/Discuss a scoped build/i)).toHaveCount(0);
+    await expect(services.getByText(/See if the assessment fits/i)).toHaveCount(0);
+    await expect(services.getByText(/equivalent discovery/i)).toHaveCount(0);
+    await expect(services.getByText(/built to hand off/i)).toHaveCount(0);
     await expect(services.getByText(/wear many hats/i)).toBeVisible();
+    await expect(
+      services.getByRole('link', {
+        name: /Bring one stuck workflow\. \$1,500\. Seven days\. A decision\./i,
+      }),
+    ).toHaveAttribute('href', '/contact');
     await expect(
       page.locator('#team').getByText(/Leave capability, not dependency/i),
     ).toBeVisible();
     await expect(
-      page.locator('section').first().getByText(/explicit handoff so your team can operate/i),
+      page.locator('#team').getByText(/map the work/i),
+    ).toBeVisible();
+    await expect(
+      page.locator('#team').getByText(/No predetermined AI or custom-build pitch/i),
     ).toBeVisible();
     await expect(page.getByText('AI Jumpstart', { exact: true })).toHaveCount(0);
+    await expect(page.getByText(/AI consultancy/i)).toHaveCount(0);
 
     await expect(page.getByAltText('DMDL')).toBeVisible();
     await expect(page.getByAltText('Joy for Books')).toBeVisible();
     await expect(
-      page.getByText(/When we build, the aim is a system the team can run/i),
+      page.getByText(/what happened after a decision/i),
     ).toBeVisible();
     await expect(
-      page.getByText(/reconstruct how the work moves/i),
+      page.getByText(/not a catalog of builds for sale/i),
     ).toBeVisible();
     await expect(
       page.getByText('Client contexts', { exact: true }).first(),
@@ -77,6 +94,9 @@ test.describe('Homepage', () => {
         name: /Bring a recent example of where the work breaks/i,
       }),
     ).toHaveAttribute('href', '/contact');
+    await expect(
+      page.getByText(/A concrete stuck workflow—not a feature list or predetermined tool/i),
+    ).toBeVisible();
     await expect(page.getByAltText('HG Jones Associates')).toHaveCount(0);
     await expect(page.getByAltText('Texas Head Start Association')).toHaveCount(0);
     await expect(page.getByText('Why Arturo')).toBeVisible();

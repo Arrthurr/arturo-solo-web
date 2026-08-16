@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
             <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
 
             <div className="prose">
-              <p>Last updated: July 13, 2026</p>
+              <p>Last updated: August 16, 2026</p>
 
               <h2>1. Who we are</h2>
               <p>
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
                 <li>Full name</li>
                 <li>Email address</li>
                 <li>Company name</li>
-                <li>Service interest (Workflow Assessment, Custom AI Build, or not sure)</li>
+                <li>Service interest (Workflow Assessment or not sure)</li>
                 <li>Optional message describing your bottleneck or project</li>
               </ul>
               <p>

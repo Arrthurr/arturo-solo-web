@@ -70,9 +70,8 @@ export default function ContactForm() {
             className={inputClass(state.errors?.service)}
           >
             <option value="" disabled>Select an option</option>
-            <option value="ai-jumpstart">Workflow Assessment — $1,500 fixed fee</option>
-            <option value="custom-ai-build">Custom AI Build — scoped implementation</option>
-            <option value="not-sure">Not sure — help me choose the next step</option>
+            <option value="ai-jumpstart">Workflow Assessment — $1,500 · seven business days · one workflow</option>
+            <option value="not-sure">Not sure — start with the stuck workflow</option>
           </select>
         </Field>
       </div>

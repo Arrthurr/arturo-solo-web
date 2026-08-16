@@ -47,7 +47,7 @@ export default function WhyArturo() {
               Builder&apos;s judgment. <Highlight>Operator&apos;s discipline.</Highlight>
             </h2>
             <p className="text-xl text-gray-600 mb-8 font-display">
-              I can map the operation, test the hard assumptions, and build the software myself. That does not mean custom software is always the answer. You get one accountable partner who can recommend the lower-complexity path when it fits, carry a justified build through implementation when it does not, and leave you more capable of running the work—not more dependent on me.
+              I can map the work, test assumptions, and build if justified. That does not mean custom software is the answer in advance. You get one accountable partner who can recommend the lower-complexity path when it fits, carry a justified build when it does not, and leave you more capable of running the work, not more dependent on me.
             </p>
             <ul className="space-y-3 text-gray-600">
               {bullets.map((bullet) => (

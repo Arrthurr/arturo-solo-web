@@ -32,4 +32,9 @@ describe('contactSchema', () => {
     const result = contactSchema.safeParse({ ...valid, service: 'strategy-deck' });
     expect(result.success).toBe(false);
   });
+
+  it('still accepts legacy custom-ai-build submissions', () => {
+    const result = contactSchema.safeParse({ ...valid, service: 'custom-ai-build' });
+    expect(result.success).toBe(true);
+  });
 });

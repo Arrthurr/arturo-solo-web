@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Logo className="text-white" />
             <p className="text-gray-400">
-              Reconstruct the work, decide the path, and—when you build—leave a workflow the organization can run. Assessment and separately scoped implementation for small organizations where leaders wear many hats and decision makers are close to the work.
+              Reconstruct one stuck workflow and decide the path. Workflow Assessment is $1,500, seven business days, one consequential process. For small organizations where leaders wear many hats and decision makers are close to the work.
             </p>
           </div>
 

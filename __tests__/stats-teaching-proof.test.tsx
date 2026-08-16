@@ -89,9 +89,10 @@ describe('Stats teaching proof', () => {
     expect(screen.getByText(/concrete stuck workflow/i)).toBeInTheDocument();
   });
 
-  it('frames proof as decide-the-path operating context, not a portfolio pitch', () => {
+  it('frames proof as what happened after a decision, not a catalog of builds', () => {
     render(<Stats />);
-    expect(screen.getByText(/reconstruct how the work moves/i)).toBeInTheDocument();
-    expect(screen.getByText(/decide the path/i)).toBeInTheDocument();
+    expect(screen.getByText(/what happened after a decision/i)).toBeInTheDocument();
+    expect(screen.getByText(/not a catalog of builds for sale/i)).toBeInTheDocument();
+    expect(screen.getByText(/discovery changed the plan/i)).toBeInTheDocument();
   });
 });

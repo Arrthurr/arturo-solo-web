@@ -8,7 +8,7 @@ import { Highlight } from '@/components/Highlight';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Tell me where the work gets stuck. I will reply within one business day and help determine whether the next step is a simpler process, existing software, automation, assessment, or a separately scoped build.',
+    'Tell me where the work gets stuck. Workflow Assessment is $1,500, seven business days, one consequential workflow. I will reply within one business day.',
 };
 
 export default function ContactPage() {
@@ -26,7 +26,7 @@ export default function ContactPage() {
                     Tell me where the work gets <Highlight>stuck</Highlight>.
                   </h1>
                   <p className="text-xl text-gray-600 mb-12 font-display">
-                    You do not need a polished AI idea or a feature list. Send the latest concrete example of the workflow breaking down—the handoff, record, report, reconciliation, or follow-up that keeps failing. I&apos;ll reply personally within one business day and help determine the right next step.
+                    You do not need a polished AI idea or a feature list. Send the latest concrete example of the workflow breaking down: the handoff, record, report, reconciliation, or follow-up that keeps failing. I&apos;ll reply personally within one business day.
                   </p>
 
                   <div className="space-y-8 mb-10">
@@ -62,7 +62,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                  <h2 className="text-2xl font-bold mb-8">Start with the workflow</h2>
+                  <h2 className="text-2xl font-bold mb-2">Start with the workflow</h2>
+                  <p className="mb-8 text-sm text-gray-600">
+                    $1,500 · seven business days · one consequential workflow
+                  </p>
                   <ContactForm />
                 </div>
               </div>
