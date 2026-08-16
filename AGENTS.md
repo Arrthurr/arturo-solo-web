@@ -9,8 +9,8 @@ Homepage section IA (template-native remap):
 ```tsx
 <Header />
 <Hero />        {/* opening promise + bottleneck subhead */}
-<Stats />       {/* hybrid proof */}
 <Services />    {/* Workflow Assessment only */}
+<Stats />       {/* hybrid proof */}
 <WhyArturo />   {/* solo-founder block */}
 <BlogTeaser />  {/* hidden when zero published posts */}
 <Footer />
