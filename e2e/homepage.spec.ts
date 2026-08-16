@@ -11,7 +11,7 @@ test.describe('Homepage', () => {
       page.getByText(/Let.?s reconstruct how the work actually moves/i),
     ).toBeVisible();
     await expect(
-      page.getByText(/simplify, buy, automate, build, investigate, or defer/i),
+      page.getByText(/simplify, buy, automate, build, investigate, or defer/i).first(),
     ).toBeVisible();
     await expect(page.getByText(/build with AI/i)).toHaveCount(0);
     await expect(page.getByText('Bring me a bottleneck', { exact: true })).toHaveCount(0);
@@ -33,15 +33,15 @@ test.describe('Homepage', () => {
       services.getByRole('heading', { name: 'Custom AI Build' }),
     ).toHaveCount(0);
     await expect(services.getByText('$1,500 fixed fee', { exact: false })).toBeVisible();
-    await expect(services.getByText(/seven business days/i)).toBeVisible();
-    await expect(services.getByText(/one consequential workflow/i)).toBeVisible();
+    await expect(services.getByText(/seven business days/i).first()).toBeVisible();
+    await expect(services.getByText(/one consequential workflow/i).first()).toBeVisible();
     await expect(services.getByText(/starts after payment and kickoff/i)).toBeVisible();
-    await expect(services.getByText(/Implementation Brief/i)).toBeVisible();
+    await expect(services.getByText(/Implementation Brief/i).first()).toBeVisible();
     await expect(
       services.getByText(/does not include a prototype or production implementation/i),
     ).toBeVisible();
     await expect(
-      services.getByText(/not a deposit on a future build/i),
+      services.getByText(/not a deposit on a future build/i).first(),
     ).toBeVisible();
     await expect(
       services.getByText(/Simplify · Buy · Automate · Build · Investigate · Defer/i),
@@ -73,7 +73,7 @@ test.describe('Homepage', () => {
     await expect(page.getByAltText('DMDL')).toBeVisible();
     await expect(page.getByAltText('Joy for Books')).toBeVisible();
     await expect(
-      page.getByText(/what happened after a decision/i),
+      page.getByText(/what happened after a decision/i).first(),
     ).toBeVisible();
     await expect(
       page.getByText(/not a catalog of builds for sale/i),
