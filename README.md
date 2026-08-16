@@ -1,6 +1,6 @@
 # arturo-solo-web
 
-Next.js 14 marketing site for [arturosolo.com](https://arturosolo.com) — Arturo Solo LLC, a founder-led AI build studio.
+Next.js 14 marketing site for [arturosolo.com](https://arturosolo.com) — Arturo Solo LLC. The public offer is a $1,500, seven-business-day Workflow Assessment that ends in a decision.
 
 ## Stack
 
