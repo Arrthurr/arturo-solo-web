@@ -20,7 +20,7 @@ Product strategy lives in `STRATEGY.md`. When July 2026 plans, playbooks, or the
 
 There is no Process section and no public Custom AI Build card. Do not add either back.
 
-Nav is Services (`#services`), About (`#team`), Blog, and Contact. Contact lives at `/contact` with a warmer, lower-friction tone than the homepage.
+Nav is Services (`#services`), About (`#team`), and Blog, plus a contact CTA. Contact lives at `/contact` with a warmer, lower-friction tone than the homepage.
 
 ## Routes
 
