@@ -53,7 +53,7 @@ describe('Stats teaching proof', () => {
     for (const card of [dmdl, joy]) {
       expect(within(card).getByText('What looked true')).toBeInTheDocument();
       expect(within(card).getByText('What discovery found')).toBeInTheDocument();
-      expect(within(card).getByText('Path that followed')).toBeInTheDocument();
+      expect(within(card).getByText('What the filter decided')).toBeInTheDocument();
       expect(within(card).getByText('Status')).toBeInTheDocument();
       expect(within(card).getByText('What this means for you')).toBeInTheDocument();
     }
@@ -89,9 +89,9 @@ describe('Stats teaching proof', () => {
     expect(screen.getByText(/concrete stuck workflow/i)).toBeInTheDocument();
   });
 
-  it('frames proof as what happened after a decision, not a catalog of builds', () => {
+  it('frames proof as what the filter decided, not a catalog of builds', () => {
     render(<Stats />);
-    expect(screen.getByText(/what happened after a decision/i)).toBeInTheDocument();
+    expect(screen.getByText(/what the Six Paths filter decided/i)).toBeInTheDocument();
     expect(screen.getByText(/not a catalog of builds for sale/i)).toBeInTheDocument();
     expect(screen.getByText(/discovery changed the plan/i)).toBeInTheDocument();
   });
