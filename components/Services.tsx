@@ -39,7 +39,7 @@ export default function Services() {
               Bring one stuck workflow. <Highlight>Leave with a decision.</Highlight>
             </h2>
             <p className="text-xl text-gray-700 font-display">
-              Workflow Assessment is the public offer. $1,500 fixed, seven business days, one consequential workflow. You leave with an Implementation Brief and a recommended path. The fee is not a deposit on a future build.
+              Workflow Assessment applies the filter to one consequential workflow. $1,500 fixed, seven business days. You leave with an Implementation Brief and a recommended path. The fee is not a deposit on a future build.
             </p>
           </div>
 

@@ -40,6 +40,7 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center gap-12 text-sm" aria-label="Main navigation">
             <NavLink href={getNavLink('#services')}>Services</NavLink>
+            <NavLink href="/workshop">Workshop</NavLink>
             <NavLink href={getNavLink('#team')}>About</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <Link href="/contact" className="btn-primary">Talk through the workflow</Link>
@@ -70,6 +71,7 @@ export default function Header() {
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               <MobileLink href={getNavLink('#services')} onClick={closeMobile}>Services</MobileLink>
+              <MobileLink href="/workshop" onClick={closeMobile}>Workshop</MobileLink>
               <MobileLink href={getNavLink('#team')} onClick={closeMobile}>About</MobileLink>
               <MobileLink href="/blog" onClick={closeMobile}>Blog</MobileLink>
               <MobileLink href="/contact" onClick={closeMobile}>Contact</MobileLink>

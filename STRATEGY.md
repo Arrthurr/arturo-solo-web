@@ -1,6 +1,6 @@
 ---
 name: Arturo Solo
-last_updated: 2026-08-16
+last_updated: 2026-09-04
 ---
 
 # Arturo Solo Strategy
@@ -54,6 +54,6 @@ _Why it serves the approach:_ Matches the job they hire for and supports repeat 
 
 **One-liner:** When a complicated process is eating time and the usual fixes waste money, Arturo Solo reconstructs one workflow and delivers a decision path in seven business days.
 
-**Public offer:** Workflow Assessment only. $1,500 fixed, seven business days, one consequential workflow, six named paths (Simplify · Buy · Automate · Build · Investigate · Defer), Implementation Brief. The fee is not a deposit on a future build. Implementation after a decision is a new conversation, not a second SKU.
+**Public offer:** Two visitor paths. Workshop, Decide Before You Build, $97, 90 minutes, virtual, one broken case, Six Paths scored. Workflow Assessment, $1,500 public, seven business days, one consequential workflow, Implementation Brief. Workshop alumni may lock Assessment at $1,200 on the post-pay confirmation page until 24 hours after class. That price is not a site-wide sale and is not a deposit on a Sprint or build. Sprint, Build, Partner, and retainer prices stay off the public site. Implementation after a decision is a new conversation.
 
 **Key message:** The engagement is AI-first on Arturo's side, judgment and the brief, not “AI as the answer.” Start with the workflow; compare simplify / buy / automate / build / investigate / defer; decide before anyone builds. Best fit: small organizations (<20) where decision-makers or recommenders wear many hats, are close to the work, and need a clear next path.

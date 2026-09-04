@@ -44,7 +44,7 @@ const clientStories: ClientStory[] = [
         text: 'The field team needed a real check-in system: capture visits on phones, sync to the office, and record provider sessions. Shipping a PWA plus web portal features looked like the obvious next step.',
       },
       {
-        label: 'Path that followed',
+        label: 'What the filter decided',
         text: 'A PWA and portal supported about forty providers and office staff, but iOS browsers do not support background location. Users hit bugs where the PWA was expected to behave like a native app.',
       },
       {
@@ -71,7 +71,7 @@ const clientStories: ClientStory[] = [
         text: 'Book inventory was the real center. Without books, the other business units would not exist.',
       },
       {
-        label: 'Path that followed',
+        label: 'What the filter decided',
         text: 'A first web application framework was built on the event-centered model, far enough for the client to test. Further discovery showed inventory should be the focus; AI helped revise the requirements document, and the app is being rebuilt around that center.',
       },
       {
@@ -101,10 +101,10 @@ export default function Stats() {
         >
           <div className="grid md:grid-cols-2 gap-16 mb-16">
             <h2 className="heading-lg">
-              What happened after a <Highlight>decision.</Highlight>
+              What the filter <Highlight>decided.</Highlight>
             </h2>
             <p className="text-xl text-gray-400 font-display">
-              These stories are what happened after a decision, including when discovery changed the plan. They are not a catalog of builds for sale. Status stays as honest as the work: beta, in development, no inflated outcome claims.
+              These stories show what the Six Paths filter decided, including when discovery changed the plan. They are not a catalog of builds for sale. Status stays as honest as the work: beta, in development, no inflated outcome claims.
             </p>
           </div>
 

@@ -8,8 +8,19 @@ test.describe('Homepage', () => {
       'When your workflow no longer fits the work',
     );
     await expect(
-      page.getByText(/Let.?s reconstruct how the work actually moves/i),
+      page.getByText(/the expensive mistake is picking a fix before you know the constraint/i),
     ).toBeVisible();
+    await expect(page.getByText(/That filter is the product/i)).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Join the $97 workshop' })).toHaveAttribute(
+      'href',
+      '/workshop',
+    );
+    await expect(
+      page.getByRole('link', { name: /Or start a Workflow Assessment — \$1,500/i }),
+    ).toHaveAttribute('href', '/contact');
+    await expect(page.getByText(/monthly Partner/i)).toHaveCount(0);
+    await expect(page.getByText(/monthly retainer/i)).toHaveCount(0);
+    await expect(page.getByRole('heading', { name: 'Partner' })).toHaveCount(0);
     await expect(
       page.getByText(/simplify, buy, automate, build, investigate, or defer/i).first(),
     ).toBeVisible();
@@ -73,7 +84,7 @@ test.describe('Homepage', () => {
     await expect(page.getByAltText('DMDL')).toBeVisible();
     await expect(page.getByAltText('Joy for Books')).toBeVisible();
     await expect(
-      page.getByText(/what happened after a decision/i).first(),
+      page.getByText(/what the Six Paths filter decided/i).first(),
     ).toBeVisible();
     await expect(
       page.getByText(/not a catalog of builds for sale/i),

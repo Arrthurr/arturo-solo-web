@@ -2,7 +2,7 @@
 
 ## Project shape
 
-This is a Next.js 14 (App Router) marketing site for Arturo Solo LLC. Positioning is a founder-led workflow and systems studio. The public offer is one SKU, Workflow Assessment. Implementation after a decision is a new conversation, not a second product.
+This is a Next.js 14 (App Router) marketing site for Arturo Solo LLC. Positioning is a founder-led workflow and systems studio. Visitors can Join the $97 workshop or start a $1,500 Workflow Assessment. Implementation after a decision is a new conversation, not a second product.
 
 Product strategy lives in `STRATEGY.md`. When July 2026 plans, playbooks, or the cutover runbook disagree with `STRATEGY.md` or this file, follow the live files. Those older docs still describe a two-SKU site, an AI Jumpstart name, a Process section, and a Vite/Netlify cutover that already happened.
 
@@ -10,9 +10,9 @@ Product strategy lives in `STRATEGY.md`. When July 2026 plans, playbooks, or the
 
 ```tsx
 <Header />
-<Hero />        {/* reconstruct → find the constraint → act on the decision */}
-<Services />    {/* Workflow Assessment only */}
-<Stats />       {/* teaching-proof client stories, not a trusted-by strip */}
+<Hero />        {/* filter copy + $97 workshop CTA + $1,500 Assessment link */}
+<Services />    {/* Workflow Assessment only. No Sprint/Build/Partner cards. */}
+<Stats />       {/* teaching-proof client stories: what the filter decided */}
 <WhyArturo />   {/* solo-founder block, id="team" */}
 <BlogTeaser />  {/* hidden when zero published posts */}
 <Footer />
@@ -20,12 +20,15 @@ Product strategy lives in `STRATEGY.md`. When July 2026 plans, playbooks, or the
 
 There is no Process section and no public Custom AI Build card. Do not add either back.
 
-Nav is Services (`#services`), About (`#team`), and Blog, plus a contact CTA. Contact lives at `/contact` with a warmer, lower-friction tone than the homepage.
+Nav is Services (`#services`), Workshop (`/workshop`), About (`#team`), and Blog, plus a contact CTA. Contact lives at `/contact` with a warmer, lower-friction tone than the homepage.
 
 ## Routes
 
 - `/` homepage
-- `/contact` lead form
+- `/workshop` $97 Decide Before You Build checkout
+- `/workshop/confirmed` post-pay thank-you. Alumni $1,200 Assessment only after a verified workshop session
+- `/workshop/alumni-thanks` post-pay thank-you after alumni Assessment
+- `/contact` lead form (public $1,500 Assessment start)
 - `/success` post-submit confirmation
 - `/blog` published index, or "Posts coming soon" when empty
 - `/blog/[slug]` published post
@@ -39,6 +42,8 @@ Nav is Services (`#services`), About (`#team`), and Blog, plus a contact CTA. Co
 - `docs/asllc-story-arcs.md` owner-approved Stats facts. Copy may be polished. Facts should not drift.
 - `components/ContactForm.tsx` and `app/contact/page.tsx` visitor-facing contact UX
 - `app/actions/submit-contact.ts` server-mediated Supabase insert, honeypot, rate limit, Resend notification
+- `lib/checkout/` offer catalog, alumni window, and Stripe Checkout wiring
+- `app/actions/create-checkout-session.ts` workshop $97 and gated alumni $1,200 Checkout Sessions
 - `lib/contact-service-labels.ts` visitor labels vs legacy `custom-ai-build`
 - `lib/supabase/admin.ts` `server-only` service-role client. Never import from client components.
 - `lib/supabase/server.ts` and `lib/supabase/client.ts` `@supabase/ssr` split for blog reads
@@ -52,11 +57,13 @@ Preserve the hybrid proof model: public products, internal workflows, real clien
 
 `Stats` teaches decide-before-build with named client stories (DMDL, Joy for Books). Status stays maturity-honest (beta, in development). Logos sit inside those stories. They are not a generic trusted-by strip. Do not revive HG Jones Associates or Texas Head Start Association on the site.
 
-Services exposes **Workflow Assessment** only. Keep the stable contact service value `ai-jumpstart` as the internal identifier.
+Services exposes **Workflow Assessment** only. The $97 workshop lives on `/workshop` and in the Hero CTA. Keep the stable contact service value `ai-jumpstart` as the internal identifier.
 
 Public messaging invariants (see `STRATEGY.md`):
 
-- The public offer is one SKU: **$1,500** fixed, **seven business days**, **one consequential workflow**, six named decision paths (Simplify · Buy · Automate · Build · Investigate · Defer), and an Implementation Brief.
+- Public paths: **$97** workshop (90 minutes, virtual) and **$1,500** Workflow Assessment (seven business days, one consequential workflow, six named decision paths, Implementation Brief).
+- Alumni Assessment **$1,200** appears only on `/workshop/confirmed` after a verified $97 payment, and only until 24 hours after class. It is not a site-wide sale and is not a deposit on a Sprint or build.
+- Do not publish Sprint, Build, Partner, or retainer prices on `/` or `/workshop`.
 - The seven-business-day clock starts after payment and kickoff, with the decision owner, workflow lead, and agreed materials in place.
 - Assessment sells a decision path, not a prototype or production build. The fee is not a deposit on a future build.
 - Custom AI Build is not a public SKU, CTA, or second engagement. Implement capability lives only in Why Arturo: he can map the work, test assumptions, and build if justified, and can recommend the lower-complexity path. No predetermined custom-build pitch.

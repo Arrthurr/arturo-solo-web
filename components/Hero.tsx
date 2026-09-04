@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Highlight } from '@/components/Highlight';
 import { usePrefersReducedMotion } from '@/lib/motion';
 
@@ -41,7 +42,7 @@ export default function Hero() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-sm uppercase tracking-widest text-white/60 mb-6">
-                Arturo Solo LLC · Workflow assessment
+                Arturo Solo LLC · Decide before you build
               </p>
               <h1 className="heading-xl mb-8 text-[2.5rem] md:text-[4rem] lg:text-[4.5rem]">
                 When your workflow{' '}<br />
@@ -50,9 +51,23 @@ export default function Hero() {
                   the work.
                 </Highlight>
               </h1>
-              <p className="text-xl text-white/75 font-display max-w-xl">
-                Let&apos;s reconstruct how the work actually moves, find the real constraint, and decide whether to simplify, buy, automate, build, investigate, or defer.
+              <p className="text-xl text-white/75 font-display max-w-xl mb-6">
+                When your workflow no longer fits the work, the expensive mistake is picking a fix before you know the constraint.
               </p>
+              <p className="text-lg text-white/75 font-display max-w-xl mb-8">
+                I reconstruct how the work actually moves, then decide — with evidence — whether to simplify, buy, automate, build, investigate, or defer. That filter is the product. The $1,500 assessment applies it to one consequential workflow in seven business days.
+              </p>
+              <div className="flex flex-col items-start gap-4">
+                <Link href="/workshop" className="btn-primary">
+                  Join the $97 workshop
+                </Link>
+                <Link
+                  href="/contact"
+                  className="text-sm font-semibold text-white underline decoration-white/50 underline-offset-4 hover:decoration-white"
+                >
+                  Or start a Workflow Assessment — $1,500
+                </Link>
+              </div>
             </div>
 
             <div className="relative">

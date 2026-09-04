@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Logo className="text-white" />
             <p className="text-gray-400">
-              Reconstruct one stuck workflow and decide the path. Workflow Assessment is $1,500, seven business days, one consequential process. For small organizations where leaders wear many hats and decision makers are close to the work.
+              Reconstruct one stuck workflow and decide the path. Join the $97 workshop, or start a $1,500 Workflow Assessment. For small organizations where leaders wear many hats and decision makers are close to the work.
             </p>
           </div>
 
@@ -24,6 +24,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6">Navigation</h4>
             <ul className="space-y-4">
               <li><Link href="/#services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/workshop" className="text-gray-400 hover:text-white transition-colors">Workshop</Link></li>
               <li><Link href="/#team" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>

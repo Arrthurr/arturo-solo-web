@@ -1,6 +1,6 @@
 # arturo-solo-web
 
-Next.js 14 marketing site for [arturosolo.com](https://arturosolo.com). Arturo Solo LLC sells one public offer: a $1,500, seven-business-day Workflow Assessment that ends in a decision, not a build.
+Next.js 14 marketing site for [arturosolo.com](https://arturosolo.com). Arturo Solo LLC sells a $97 Decide Before You Build workshop and a $1,500, seven-business-day Workflow Assessment. Both end in a decision path, not a build.
 
 ## Stack
 
@@ -9,6 +9,7 @@ Next.js 14 marketing site for [arturosolo.com](https://arturosolo.com). Arturo S
 - Supabase for contact leads (server-mediated) and published blog posts
 - Resend for operator lead notifications
 - Upstash Redis for contact form rate limiting
+- Stripe Checkout for the $97 workshop and gated $1,200 alumni Assessment
 - Vercel for preview and production, each with its own Supabase project
 
 ## Getting started
@@ -41,13 +42,16 @@ Playwright talks to Next.js on `127.0.0.1:3000`. Locally it reuses a running `ne
 
 ## Environment variables
 
-See `.env.example`. Use separate Supabase projects for Vercel Preview vs Production. Never expose `SUPABASE_SERVICE_ROLE_KEY` to client bundles.
+See `.env.example`. Use separate Supabase projects for Vercel Preview vs Production. Never expose `SUPABASE_SERVICE_ROLE_KEY` or `STRIPE_SECRET_KEY` to client bundles. Workshop checkout needs `STRIPE_SECRET_KEY`, `STRIPE_PRICE_WORKSHOP`, `STRIPE_PRICE_ALUMNI_ASSESSMENT`, and `SITE_URL`. Without them the workshop page still renders and the button shows a graceful "not configured" message.
 
 ## Routes
 
 | Path | Role |
 |------|------|
 | `/` | Homepage |
+| `/workshop` | $97 workshop checkout |
+| `/workshop/confirmed` | Workshop thank-you and alumni $1,200 upsell |
+| `/workshop/alumni-thanks` | Alumni Assessment thank-you |
 | `/contact` | Lead form |
 | `/success` | Post-submit confirmation |
 | `/blog` | Published posts, or an empty-state page |
