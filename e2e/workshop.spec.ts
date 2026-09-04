@@ -24,7 +24,7 @@ test.describe('Workshop', () => {
   test('workshop checkout explains missing Stripe instead of crashing', async ({ page }) => {
     await page.goto('/workshop');
     await page.getByRole('button', { name: 'Join the $97 workshop' }).click();
-    await expect(page.getByRole('alert')).toContainText(/not configured/i);
+    await expect(page.getByRole('alert').filter({ hasText: /not configured/i })).toBeVisible();
   });
 
   test('confirmation without a session hides the alumni price', async ({ page }) => {
