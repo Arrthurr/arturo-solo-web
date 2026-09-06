@@ -26,7 +26,7 @@ export default function Hero() {
       number: '03',
       title: 'Act on the decision',
       description:
-        'Leave with a recommended path and the evidence behind it. Simplify, buy, automate, build, investigate, or defer. If the path is Build, that work is a new conversation.',
+        'Leave with a recommended path and the evidence behind it. Simplify, buy, automate, build, investigate, or defer. That recommendation is the deliverable. If the path is Build, that work is a new conversation.',
     },
   ];
 
@@ -52,10 +52,10 @@ export default function Hero() {
                 </Highlight>
               </h1>
               <p className="text-xl text-white/75 font-display max-w-xl mb-6">
-                When your workflow no longer fits the work, the expensive mistake is picking a fix before you know the constraint.
+                The expensive mistake is picking a fix before you know the constraint.
               </p>
               <p className="text-lg text-white/75 font-display max-w-xl mb-8">
-                I reconstruct how the work actually moves, then decide — with evidence — whether to simplify, buy, automate, build, investigate, or defer. That filter is the product. The $1,500 assessment applies it to one consequential workflow in seven business days.
+                I reconstruct how the work actually moves, then decide with evidence whether to simplify, buy, automate, build, investigate, or defer. That filter is the product. The engagement ends at the decision. The $1,500 assessment applies it to one consequential workflow in seven business days. The fee does not credit toward a later build.
               </p>
               <div className="flex flex-col items-start gap-4">
                 <Link href="/workshop" className="btn-primary">

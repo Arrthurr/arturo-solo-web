@@ -48,6 +48,9 @@ describe('Hero offers', () => {
       screen.getByText(/the expensive mistake is picking a fix before you know the constraint/i),
     ).toBeInTheDocument();
     expect(screen.getByText(/That filter is the product/i)).toBeInTheDocument();
+    expect(screen.getByText(/The engagement ends at the decision/i)).toBeInTheDocument();
+    expect(screen.getByText(/does not credit toward a later build/i)).toBeInTheDocument();
+    expect(screen.getByText(/That recommendation is the deliverable/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Join the $97 workshop' })).toHaveAttribute(
       'href',
       '/workshop',

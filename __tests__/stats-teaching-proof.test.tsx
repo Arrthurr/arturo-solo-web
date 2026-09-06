@@ -93,6 +93,9 @@ describe('Stats teaching proof', () => {
     render(<Stats />);
     expect(screen.getByText(/what the Six Paths filter decided/i)).toBeInTheDocument();
     expect(screen.getByText(/not a catalog of builds for sale/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/not proof that assessment turns into implementation/i),
+    ).toBeInTheDocument();
     expect(screen.getByText(/discovery changed the plan/i)).toBeInTheDocument();
   });
 });
