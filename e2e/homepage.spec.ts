@@ -11,6 +11,9 @@ test.describe('Homepage', () => {
       page.getByText(/the expensive mistake is picking a fix before you know the constraint/i),
     ).toBeVisible();
     await expect(page.getByText(/That filter is the product/i)).toBeVisible();
+    await expect(page.getByText(/The engagement ends at the decision/i)).toBeVisible();
+    await expect(page.getByText(/does not credit toward a later build/i)).toBeVisible();
+    await expect(page.getByText(/That recommendation is the deliverable/i)).toBeVisible();
     await expect(page.getByRole('link', { name: 'Join the $97 workshop' })).toHaveAttribute(
       'href',
       '/workshop',
@@ -55,6 +58,12 @@ test.describe('Homepage', () => {
       services.getByText(/not a deposit on a future build/i).first(),
     ).toBeVisible();
     await expect(
+      services.getByText(/Walking away with that brief is success/i),
+    ).toBeVisible();
+    await expect(
+      services.getByText(/does not credit toward later work/i),
+    ).toBeVisible();
+    await expect(
       services.getByText(/Simplify · Buy · Automate · Build · Investigate · Defer/i),
     ).toBeVisible();
     await expect(services.getByText(/Two distinct engagements/i)).toHaveCount(0);
@@ -78,8 +87,24 @@ test.describe('Homepage', () => {
     await expect(
       page.locator('#team').getByText(/No predetermined AI or custom-build pitch/i),
     ).toBeVisible();
+    await expect(
+      page.locator('#team').getByText(/Build only if the filter earns it/i),
+    ).toBeVisible();
+    await expect(
+      page.locator('#team').getByText(/A justified build is a later conversation/i),
+    ).toBeVisible();
+    await expect(
+      page.locator('#team').getByText(/assessment and implementation/i),
+    ).toHaveCount(0);
+    await expect(
+      page.locator('#team').getByText(/accountable partner/i),
+    ).toHaveCount(0);
     await expect(page.getByText('AI Jumpstart', { exact: true })).toHaveCount(0);
     await expect(page.getByText(/AI consultancy/i)).toHaveCount(0);
+    await expect(page.getByText(/\bKash\b/)).toHaveCount(0);
+    await expect(page.getByText(/\bPOLR\b/)).toHaveCount(0);
+    await expect(page.getByText(/Main & Machine/i)).toHaveCount(0);
+    await expect(page.getByText(/Sytepoint/i)).toHaveCount(0);
 
     await expect(page.getByAltText('DMDL')).toBeVisible();
     await expect(page.getByAltText('Joy for Books')).toBeVisible();
@@ -88,6 +113,9 @@ test.describe('Homepage', () => {
     ).toBeVisible();
     await expect(
       page.getByText(/not a catalog of builds for sale/i),
+    ).toBeVisible();
+    await expect(
+      page.getByText(/not proof that assessment turns into implementation/i),
     ).toBeVisible();
     await expect(
       page.getByText('Client contexts', { exact: true }).first(),

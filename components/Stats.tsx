@@ -104,7 +104,7 @@ export default function Stats() {
               What the filter <Highlight>decided.</Highlight>
             </h2>
             <p className="text-xl text-gray-400 font-display">
-              These stories show what the Six Paths filter decided, including when discovery changed the plan. They are not a catalog of builds for sale. Status stays as honest as the work: beta, in development, no inflated outcome claims.
+              These stories show what the Six Paths filter decided, including when discovery changed the plan. They are not a catalog of builds for sale. They are not proof that assessment turns into implementation. Status stays as honest as the work: beta, in development, no inflated outcome claims.
             </p>
           </div>
 

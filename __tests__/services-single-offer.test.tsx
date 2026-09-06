@@ -48,6 +48,8 @@ describe('Services single offer', () => {
     ).toBeInTheDocument();
     expect(screen.getAllByText(/Implementation Brief/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/not a deposit on a future build/i).length).toBeGreaterThan(0);
+    expect(screen.getByText(/Walking away with that brief is success/i)).toBeInTheDocument();
+    expect(screen.getByText(/does not credit toward later work/i)).toBeInTheDocument();
     expect(
       screen.getByRole('link', {
         name: /Bring one stuck workflow\. \$1,500\. Seven days\. A decision\./i,
