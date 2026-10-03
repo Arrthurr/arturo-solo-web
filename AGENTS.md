@@ -126,7 +126,7 @@ Playwright uses Next.js on `127.0.0.1:3000` (`next dev` locally; `next start` in
 
 ## Cursor Cloud specific instructions
 
-Node 20+ is required (CI uses 20; this repo is also tested on Node 22). Standard commands are in `## Verification` above and `package.json` scripts.
+Use a supported Node.js release at version 22 or newer, as declared in `package.json`. CI verifies Node 22; orb setup upgrades older runtimes to 22. Vercel's project setting was verified as Node 24.x on October 3, 2026; no shared setting change is required. Standard commands are in `## Verification` above and `package.json` scripts.
 
 - A `.env.local` is required for `dev`/`build`/`test:e2e` because `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` must be defined. It is gitignored, so it does not persist across fresh VMs. Recreate it with placeholder values (same ones CI uses: `https://placeholder.supabase.co` and `placeholder-anon-key`). All pages, unit tests, and Playwright e2e pass with only these placeholders.
 - The site runs and renders fully on placeholders. Real credentials are only needed to actually persist data. Submitting the `/contact` form without a real `SUPABASE_SERVICE_ROLE_KEY` reaches the server action, fails the insert, and shows the graceful banner "Something went wrong. Please try again..." This is expected, not an environment defect. Resend (`RESEND_API_KEY`) and Upstash rate limiting are also inert without their credentials.

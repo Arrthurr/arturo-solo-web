@@ -14,10 +14,10 @@ Next.js 16 marketing site for [arturosolo.com](https://arturosolo.com). Arturo S
 
 ## Getting started
 
-Next.js requires Node.js 20.9+; use Node.js 22+ for the locked development toolchain.
+Use a supported Node.js release at version 22 or newer. Locked runtime dependencies require Node.js 22+; CI verifies Node.js 22, and orb setup upgrades older runtimes to 22.
 
 ```bash
-npm install
+npm ci
 cp .env.example .env.local
 # Fill in Supabase, Resend, and Upstash credentials, or keep the
 # NEXT_PUBLIC_SUPABASE_* placeholders used by CI.
@@ -67,6 +67,8 @@ There is no in-app blog admin. Publish by inserting a `posts` row in the Supabas
 ## Deployment
 
 Production is live on Vercel at arturosolo.com. CI on `main` (and PRs to `main`) runs lint, typecheck, unit tests, build, and Playwright.
+
+Vercel's project Node.js setting was verified as **24.x** on October 3, 2026, compatible with the `package.json` Node.js 22+ requirement. No deployment-setting change is required. Keep preview and production on a supported Node.js release at version 22 or newer; obtain approval before changing shared Vercel settings. A project-setting check does not establish the runtime of an already-deployed function.
 
 After a contact-path or credential change, use `docs/runbooks/2026-07-24-prod-contact-smoke.md`. The July 2026 DNS cutover is done. `docs/runbooks/2026-07-06-vercel-cutover.md` is the historical record, not a pending task.
 
