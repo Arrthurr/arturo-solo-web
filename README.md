@@ -1,10 +1,10 @@
 # arturo-solo-web
 
-Next.js 14 marketing site for [arturosolo.com](https://arturosolo.com). Arturo Solo LLC sells a $97 Decide Before You Build workshop and a $1,500, seven-business-day Workflow Assessment. Both end in a decision path, not a build.
+Next.js 16 marketing site for [arturosolo.com](https://arturosolo.com). Arturo Solo LLC sells a $97 Decide Before You Build workshop and a $1,500, seven-business-day Workflow Assessment. Both end in a decision path, not a build.
 
 ## Stack
 
-- Next.js 14 (App Router)
+- Next.js 16 (App Router) and React 19
 - Tailwind CSS and Framer Motion
 - Supabase for contact leads (server-mediated) and published blog posts
 - Resend for operator lead notifications
@@ -13,6 +13,8 @@ Next.js 14 marketing site for [arturosolo.com](https://arturosolo.com). Arturo S
 - Vercel for preview and production, each with its own Supabase project
 
 ## Getting started
+
+Next.js requires Node.js 20.9+; use Node.js 22+ for the locked development toolchain.
 
 ```bash
 npm install
@@ -34,7 +36,7 @@ Pages, unit tests, and Playwright e2e run with only `NEXT_PUBLIC_SUPABASE_URL=ht
 | `npm run build` | Production build |
 | `npm run start` | Start production server |
 | `npm run lint` | ESLint |
-| `npm run typecheck` | TypeScript check |
+| `npm run typecheck` | Generate Next.js route types and run TypeScript check |
 | `npm run test` | Unit tests (Vitest) |
 | `npm run test:e2e` | E2E smoke tests (Playwright) |
 
@@ -73,5 +75,6 @@ After a contact-path or credential change, use `docs/runbooks/2026-07-24-prod-co
 - `STRATEGY.md` current product strategy and public-offer rules
 - `AGENTS.md` architecture invariants for AI assistants and contributors
 - `docs/asllc-story-arcs.md` owner-approved client facts used in homepage Stats
+- `docs/runbooks/2026-10-03-dependency-upgrade.md` ASLLC-38 upgrade, advisory review, and verification record
 - `docs/runbooks/` production contact smoke and the completed Vercel cutover record
 - `docs/plans/` and the ASLLC playbooks are historical or internal delivery notes. They still mention AI Jumpstart, Custom AI Build as a public SKU, and the Vite site. Do not treat them as the live spec.

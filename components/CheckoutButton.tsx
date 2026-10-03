@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import {
   createCheckoutSession,
   type CheckoutActionState,
@@ -27,7 +28,7 @@ export default function CheckoutButton({
   alumniToken?: string;
   label: string;
 }) {
-  const [state, formAction] = useFormState(createCheckoutSession, initialState);
+  const [state, formAction] = useActionState(createCheckoutSession, initialState);
 
   return (
     <form action={formAction} className="space-y-3">

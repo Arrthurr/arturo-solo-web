@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 export default async function WorkshopConfirmedPage({
   searchParams,
 }: {
-  searchParams: { session_id?: string };
+  searchParams: Promise<{ session_id?: string }>;
 }) {
-  const sessionId = searchParams.session_id ?? null;
+  const sessionId = (await searchParams).session_id ?? null;
   const config = readCheckoutConfig();
   let paidWorkshop = null;
 

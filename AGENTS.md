@@ -2,7 +2,9 @@
 
 ## Project shape
 
-This is a Next.js 14 (App Router) marketing site for Arturo Solo LLC. Positioning is a founder-led workflow and systems studio. Visitors can Join the $97 workshop or start a $1,500 Workflow Assessment. Implementation after a decision is a new conversation, not a second product.
+This is a Next.js 16 (App Router), React 19 marketing site for Arturo Solo LLC. Positioning is a founder-led workflow and systems studio. Visitors can Join the $97 workshop or start a $1,500 Workflow Assessment. Implementation after a decision is a new conversation, not a second product.
+
+Read version-matched Next.js guidance in `node_modules/next/dist/docs/` before changing framework behavior. Request APIs and page `params`/`searchParams` are async. Lint uses the ESLint CLI with `eslint.config.mjs`; typecheck generates route types before running TypeScript.
 
 Product strategy lives in `STRATEGY.md`. When July 2026 plans, playbooks, or the cutover runbook disagree with `STRATEGY.md` or this file, follow the live files. Those older docs still describe a two-SKU site, an AI Jumpstart name, a Process section, and a Vite/Netlify cutover that already happened.
 

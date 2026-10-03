@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link
           href="https://api.fontshare.com/v2/css?f[]=clash-display@700,400,500,600&display=swap"
