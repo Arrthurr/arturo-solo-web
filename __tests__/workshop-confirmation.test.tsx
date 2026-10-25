@@ -36,12 +36,25 @@ describe('Workshop confirmation upsell', () => {
     );
 
     expect(screen.getByText(/The workshop teaches the filter/i)).toBeInTheDocument();
+    expect(screen.getByText(/Public \$3,500/)).toBeInTheDocument();
     expect(screen.getByText(/Locked in before we start/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Add Assessment — $1,200' })).toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: 'No thanks, see you at the workshop' }),
     ).toBeInTheDocument();
     expect(screen.getByText(/not a deposit on a build or Sprint/i)).toBeInTheDocument();
+  });
+
+  it('names the public Assessment price after the alumni window closes', () => {
+    render(
+      <WorkshopConfirmation
+        state={{ status: 'alumni-expired', expiresAt: new Date('2026-09-12T17:00:00.000Z') }}
+      />,
+    );
+
+    expect(screen.getByText(/Public Assessment remains/i)).toBeInTheDocument();
+    expect(screen.getByText(/\$3,500/)).toBeInTheDocument();
+    expect(screen.queryByText('$1,200')).not.toBeInTheDocument();
   });
 
   it('does not publish the alumni price without a verified session', () => {

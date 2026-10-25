@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: '%s | Arturo Solo LLC',
   },
   description:
-    'Bring one stuck workflow. $1,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
+    'Bring one stuck workflow. $3,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
   keywords: [
     'workflow assessment',
     'process automation',
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     siteName: 'Arturo Solo LLC',
     title: 'Arturo Solo LLC — Workflow Assessment',
     description:
-      'Bring one stuck workflow. $1,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
+      'Bring one stuck workflow. $3,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Arturo Solo LLC — Workflow Assessment',
     description:
-      'Bring one stuck workflow. $1,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
+      'Bring one stuck workflow. $3,500. Seven business days. A decision-ready Implementation Brief for small organizations where leaders wear many hats.',
   },
   robots: {
     index: true,

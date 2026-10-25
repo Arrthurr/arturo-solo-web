@@ -14,7 +14,7 @@ Verified from the public site (no auth required):
 - [x] Apex serves Next.js on Vercel (`x-powered-by: Next.js`, `server: Vercel`)
 - [x] Homepage H1 includes "When the work no longer fits the tools"
 - [x] Services expose **Workflow Assessment** and **Custom AI Build** only (visitor-facing). Stable contact value for Workflow Assessment remains `ai-jumpstart`
-- [x] Workflow Assessment shows `$1,500` fixed fee, seven business days, and Implementation Brief language
+- [x] Workflow Assessment shows `$3,500` fixed fee, seven business days, and Implementation Brief language
 - [x] Named public proof includes DMDL and Joy for Books
 - [x] `/contact` returns 200
 
@@ -179,7 +179,7 @@ Use these when smoke-testing after content deploys:
 |---------|--------|
 | Hero H1 | "When the work no longer fits the tools" |
 | Services | Workflow Assessment + Custom AI Build |
-| Assessment economics | `$1,500` fixed fee · seven business days |
+| Assessment economics | `$3,500` fixed fee · seven business days |
 | Deliverable | Implementation Brief |
 | Decision paths | Simplify · Buy · Automate · Build · Investigate · Defer |
 | Boundary | Assessment does not include prototype or production implementation |

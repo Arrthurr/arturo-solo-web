@@ -39,7 +39,7 @@ export default function Services() {
               Bring one stuck workflow. <Highlight>Leave with a decision.</Highlight>
             </h2>
             <p className="text-xl text-gray-700 font-display">
-              Workflow Assessment applies the filter to one consequential workflow. $1,500 fixed, seven business days. You leave with an Implementation Brief and a recommended path. Walking away with that brief is success. The fee is not a deposit on a future build.
+              Workflow Assessment applies the filter to one consequential workflow. $3,500 fixed, seven business days. You leave with an Implementation Brief and a recommended path. Walking away with that brief is success. The fee is not a deposit on a future build.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function Services() {
               ))}
             </dl>
             <p className="mt-8 text-lg font-bold text-gray-900">
-              $1,500 fixed fee · Seven business days
+              $3,500 fixed fee · Seven business days
             </p>
             <p className="mt-2 text-sm text-gray-700">
               The seven-business-day clock starts after payment and kickoff, with the decision owner, workflow lead, and agreed materials in place.
@@ -81,7 +81,7 @@ export default function Services() {
               href="/contact"
               className="mt-8 inline-flex w-fit font-semibold text-gray-900 underline decoration-gray-500 underline-offset-4 transition-colors hover:decoration-gray-900"
             >
-              Bring one stuck workflow. $1,500. Seven days. A decision.
+              Bring one stuck workflow. $3,500. Seven days. A decision.
             </Link>
           </motion.div>
         </motion.div>

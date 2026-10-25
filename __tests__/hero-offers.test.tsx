@@ -49,6 +49,7 @@ describe('Hero offers', () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/That filter is the product/i)).toBeInTheDocument();
     expect(screen.getByText(/The engagement ends at the decision/i)).toBeInTheDocument();
+    expect(screen.getByText(/The \$3,500 assessment applies it/i)).toBeInTheDocument();
     expect(screen.getByText(/does not credit toward a later build/i)).toBeInTheDocument();
     expect(screen.getByText(/That recommendation is the deliverable/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Join the $97 workshop' })).toHaveAttribute(
@@ -56,7 +57,7 @@ describe('Hero offers', () => {
       '/workshop',
     );
     expect(
-      screen.getByRole('link', { name: /Or start a Workflow Assessment — \$1,500/i }),
+      screen.getByRole('link', { name: /Or start a Workflow Assessment — \$3,500/i }),
     ).toHaveAttribute('href', '/contact');
     expect(screen.queryByText(/Partner/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/retainer/i)).not.toBeInTheDocument();

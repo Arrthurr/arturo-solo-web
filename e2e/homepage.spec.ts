@@ -19,7 +19,7 @@ test.describe('Homepage', () => {
       '/workshop',
     );
     await expect(
-      page.getByRole('link', { name: /Or start a Workflow Assessment — \$1,500/i }),
+      page.getByRole('link', { name: /Or start a Workflow Assessment — \$3,500/i }),
     ).toHaveAttribute('href', '/contact');
     await expect(page.getByText(/monthly Partner/i)).toHaveCount(0);
     await expect(page.getByText(/monthly retainer/i)).toHaveCount(0);
@@ -46,7 +46,7 @@ test.describe('Homepage', () => {
     await expect(
       services.getByRole('heading', { name: 'Custom AI Build' }),
     ).toHaveCount(0);
-    await expect(services.getByText('$1,500 fixed fee', { exact: false })).toBeVisible();
+    await expect(services.getByText('$3,500 fixed fee', { exact: false })).toBeVisible();
     await expect(services.getByText(/seven business days/i).first()).toBeVisible();
     await expect(services.getByText(/one consequential workflow/i).first()).toBeVisible();
     await expect(services.getByText(/starts after payment and kickoff/i)).toBeVisible();
@@ -75,7 +75,7 @@ test.describe('Homepage', () => {
     await expect(services.getByText(/wear many hats/i)).toBeVisible();
     await expect(
       services.getByRole('link', {
-        name: /Bring one stuck workflow\. \$1,500\. Seven days\. A decision\./i,
+        name: /Bring one stuck workflow\. \$3,500\. Seven days\. A decision\./i,
       }),
     ).toHaveAttribute('href', '/contact');
     await expect(

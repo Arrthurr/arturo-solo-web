@@ -3,7 +3,7 @@ import type { ContactFormData } from '@/lib/validation/contact';
 export const visitorServiceOptions = [
   {
     value: 'ai-jumpstart' as const,
-    label: 'Workflow Assessment — $1,500 · seven business days · one workflow',
+    label: 'Workflow Assessment — $3,500 · seven business days · one workflow',
   },
   {
     value: 'not-sure' as const,

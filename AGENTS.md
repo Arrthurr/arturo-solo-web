@@ -2,7 +2,7 @@
 
 ## Project shape
 
-This is a Next.js 16 (App Router), React 19 marketing site for Arturo Solo LLC. Positioning is a founder-led workflow and systems studio. Visitors can Join the $97 workshop or start a $1,500 Workflow Assessment. Implementation after a decision is a new conversation, not a second product.
+This is a Next.js 16 (App Router), React 19 marketing site for Arturo Solo LLC. Positioning is a founder-led workflow and systems studio. Visitors can Join the $97 workshop or start a $3,500 Workflow Assessment. Implementation after a decision is a new conversation, not a second product.
 
 Read version-matched Next.js guidance in `node_modules/next/dist/docs/` before changing framework behavior. Request APIs and page `params`/`searchParams` are async. Lint uses the ESLint CLI with `eslint.config.mjs`; typecheck generates route types before running TypeScript.
 
@@ -12,7 +12,7 @@ Product strategy lives in `STRATEGY.md`. When July 2026 plans, playbooks, or the
 
 ```tsx
 <Header />
-<Hero />        {/* filter copy + $97 workshop CTA + $1,500 Assessment link */}
+<Hero />        {/* filter copy + $97 workshop CTA + $3,500 Assessment link */}
 <Services />    {/* Workflow Assessment only. No Sprint/Build/Partner cards. */}
 <Stats />       {/* teaching-proof client stories: what the filter decided */}
 <WhyArturo />   {/* solo-founder block, id="team" */}
@@ -30,7 +30,7 @@ Nav is Services (`#services`), Workshop (`/workshop`), About (`#team`), and Blog
 - `/workshop` $97 Decide Before You Build checkout
 - `/workshop/confirmed` post-pay thank-you. Alumni $1,200 Assessment only after a verified workshop session
 - `/workshop/alumni-thanks` post-pay thank-you after alumni Assessment
-- `/contact` lead form (public $1,500 Assessment start)
+- `/contact` lead form (public $3,500 Assessment start)
 - `/success` post-submit confirmation
 - `/blog` published index, or "Posts coming soon" when empty
 - `/blog/[slug]` published post
@@ -63,7 +63,7 @@ Services exposes **Workflow Assessment** only. The $97 workshop lives on `/works
 
 Public messaging invariants (see `STRATEGY.md`):
 
-- Public paths: **$97** workshop (90 minutes, virtual) and **$1,500** Workflow Assessment (seven business days, one consequential workflow, six named decision paths, Implementation Brief).
+- Public paths: **$97** workshop (90 minutes, virtual) and **$3,500** Workflow Assessment (seven business days, one consequential workflow, six named decision paths, Implementation Brief).
 - Alumni Assessment **$1,200** appears only on `/workshop/confirmed` after a verified $97 payment, and only until 24 hours after class. It is not a site-wide sale and is not a deposit on a Sprint or build.
 - Do not publish Sprint, Build, Partner, or retainer prices on `/` or `/workshop`.
 - The seven-business-day clock starts after payment and kickoff, with the decision owner, workflow lead, and agreed materials in place.

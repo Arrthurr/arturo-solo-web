@@ -12,13 +12,13 @@ test.describe('Contact page', () => {
     await expect(service).toBeVisible();
     await expect(
       service.locator('option[value="ai-jumpstart"]'),
-    ).toHaveText('Workflow Assessment — $1,500 · seven business days · one workflow');
+    ).toHaveText('Workflow Assessment — $3,500 · seven business days · one workflow');
     await expect(service.locator('option[value="custom-ai-build"]')).toHaveCount(0);
     await expect(
       service.locator('option[value="not-sure"]'),
     ).toHaveText('Not sure — start with the stuck workflow');
     await expect(
-      page.getByText(/\$1,500 · seven business days · one consequential workflow/i),
+      page.getByText(/\$3,500 · seven business days · one consequential workflow/i),
     ).toBeVisible();
     await expect(page.getByLabel('Where does the workflow break down?')).toBeVisible();
     await expect(page.getByText(/within one business day/i)).toBeVisible();

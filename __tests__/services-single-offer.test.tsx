@@ -40,7 +40,7 @@ describe('Services single offer', () => {
     expect(
       screen.getByRole('heading', { name: 'Workflow Assessment' }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/\$1,500 fixed fee/i)).toBeInTheDocument();
+    expect(screen.getByText(/\$3,500 fixed fee/i)).toBeInTheDocument();
     expect(screen.getAllByText(/seven business days/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/one consequential workflow/i).length).toBeGreaterThan(0);
     expect(
@@ -52,7 +52,7 @@ describe('Services single offer', () => {
     expect(screen.getByText(/does not credit toward later work/i)).toBeInTheDocument();
     expect(
       screen.getByRole('link', {
-        name: /Bring one stuck workflow\. \$1,500\. Seven days\. A decision\./i,
+        name: /Bring one stuck workflow\. \$3,500\. Seven days\. A decision\./i,
       }),
     ).toHaveAttribute('href', '/contact');
   });

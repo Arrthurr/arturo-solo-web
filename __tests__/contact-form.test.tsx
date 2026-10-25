@@ -42,6 +42,14 @@ describe('contactSchema', () => {
 });
 
 describe('lead notification labels', () => {
+  it('prices public Workflow Assessment at $3,500 on the visitor form', () => {
+    const formLabel = visitorServiceOptions.find((option) => option.value === 'ai-jumpstart')?.label;
+    expect(formLabel).toBe(
+      'Workflow Assessment — $3,500 · seven business days · one workflow',
+    );
+    expect(serviceLabels['ai-jumpstart']).toBe(formLabel);
+  });
+
   it('uses the same not-sure copy the visitor selected on the form', () => {
     const formLabel = visitorServiceOptions.find((option) => option.value === 'not-sure')?.label;
     expect(formLabel).toBe('Not sure — start with the stuck workflow');
