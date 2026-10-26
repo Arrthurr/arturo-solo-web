@@ -38,7 +38,7 @@ export default function WorkshopConfirmation({
         {state.status === 'alumni-expired' ? (
           <p className="mb-8 text-sm text-gray-600" role="status">
             The alumni Assessment price closed 24 hours after class. Public Assessment remains
-            $1,500.
+            $3,500.
           </p>
         ) : null}
 
@@ -47,7 +47,7 @@ export default function WorkshopConfirmation({
             <h2 className="text-2xl font-bold mb-4">Apply the filter to your operation</h2>
             <p className="text-gray-600 mb-6 font-display">
               The workshop teaches the filter. The Assessment applies it to your operation. Seven
-              days. One workflow. Implementation Brief. Public $1,500. Locked in before we start:
+              days. One workflow. Implementation Brief. Public $3,500. Locked in before we start:
               $1,200.
             </p>
             <div className="flex flex-col items-start gap-4">

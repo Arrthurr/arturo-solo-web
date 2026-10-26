@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Logo className="text-white" />
             <p className="text-gray-400">
-              Reconstruct one stuck workflow and decide the path. Join the $97 workshop, or start a $1,500 Workflow Assessment. For small organizations where leaders wear many hats and decision makers are close to the work.
+              Reconstruct one stuck workflow and decide the path. Join the $97 workshop, or start a $3,500 Workflow Assessment. For small organizations where leaders wear many hats and decision makers are close to the work.
             </p>
           </div>
 

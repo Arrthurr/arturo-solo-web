@@ -8,7 +8,7 @@ import { Highlight } from '@/components/Highlight';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Tell me where the work gets stuck. Workflow Assessment is $1,500, seven business days, one consequential workflow. I will reply within one business day.',
+    'Tell me where the work gets stuck. Workflow Assessment is $3,500, seven business days, one consequential workflow. I will reply within one business day.',
 };
 
 export default function ContactPage() {
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
                   <h2 className="text-2xl font-bold mb-2">Start with the workflow</h2>
                   <p className="mb-8 text-sm text-gray-600">
-                    $1,500 · seven business days · one consequential workflow
+                    $3,500 · seven business days · one consequential workflow
                   </p>
                   <ContactForm />
                 </div>

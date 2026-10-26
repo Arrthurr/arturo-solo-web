@@ -55,7 +55,7 @@ export default function Hero() {
                 The expensive mistake is picking a fix before you know the constraint.
               </p>
               <p className="text-lg text-white/75 font-display max-w-xl mb-8">
-                I reconstruct how the work actually moves, then decide with evidence whether to simplify, buy, automate, build, investigate, or defer. That filter is the product. The engagement ends at the decision. The $1,500 assessment applies it to one consequential workflow in seven business days. The fee does not credit toward a later build.
+                I reconstruct how the work actually moves, then decide with evidence whether to simplify, buy, automate, build, investigate, or defer. That filter is the product. The engagement ends at the decision. The $3,500 assessment applies it to one consequential workflow in seven business days. The fee does not credit toward a later build.
               </p>
               <div className="flex flex-col items-start gap-4">
                 <Link href="/workshop" className="btn-primary">
@@ -65,7 +65,7 @@ export default function Hero() {
                   href="/contact"
                   className="text-sm font-semibold text-white underline decoration-white/50 underline-offset-4 hover:decoration-white"
                 >
-                  Or start a Workflow Assessment — $1,500
+                  Or start a Workflow Assessment — $3,500
                 </Link>
               </div>
             </div>

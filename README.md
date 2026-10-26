@@ -1,6 +1,6 @@
 # arturo-solo-web
 
-Next.js 16 marketing site for [arturosolo.com](https://arturosolo.com). Arturo Solo LLC sells a $97 Decide Before You Build workshop and a $1,500, seven-business-day Workflow Assessment. Both end in a decision path, not a build.
+Next.js 16 marketing site for [arturosolo.com](https://arturosolo.com). Arturo Solo LLC sells a $97 Decide Before You Build workshop and a $3,500, seven-business-day Workflow Assessment. Both end in a decision path, not a build.
 
 ## Stack
 
