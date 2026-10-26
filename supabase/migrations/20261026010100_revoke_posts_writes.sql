@@ -1,0 +1,1 @@
+REVOKE INSERT, UPDATE, DELETE, TRUNCATE, TRIGGER, REFERENCES ON public.posts FROM anon, authenticated;
