@@ -82,16 +82,13 @@ test.describe('Homepage', () => {
       page.locator('#team').getByText(/Leave capability, not dependency/i),
     ).toBeVisible();
     await expect(
-      page.locator('#team').getByText(/map the work/i),
+      page.locator('#team').getByText('Why ASLLC', { exact: true }),
     ).toBeVisible();
     await expect(
       page.locator('#team').getByText(/No predetermined AI or custom-build pitch/i),
     ).toBeVisible();
     await expect(
       page.locator('#team').getByText(/Build only if the filter earns it/i),
-    ).toBeVisible();
-    await expect(
-      page.locator('#team').getByText(/A justified build is a later conversation/i),
     ).toBeVisible();
     await expect(
       page.locator('#team').getByText(/assessment and implementation/i),
@@ -138,7 +135,6 @@ test.describe('Homepage', () => {
     ).toBeVisible();
     await expect(page.getByAltText('HG Jones Associates')).toHaveCount(0);
     await expect(page.getByAltText('Texas Head Start Association')).toHaveCount(0);
-    await expect(page.getByText('Why Arturo')).toBeVisible();
 
     const founderPhoto = page.locator('#team').locator('img');
     await expect(founderPhoto).toBeVisible();

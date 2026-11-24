@@ -33,13 +33,13 @@ afterEach(() => {
   cleanup();
 });
 
-describe('Why Arturo', () => {
+describe('Why ASLLC', () => {
   it('keeps builder credibility without selling implementation as the offer', () => {
     render(<WhyArturo />);
 
-    expect(screen.getByText(/map the work/i)).toBeInTheDocument();
+    expect(screen.getByText(/Arthur Turnbull is a versatile Technical Systems and Operations Leader/i)).toBeInTheDocument();
     expect(screen.getByText(/Build only if the filter earns it/i)).toBeInTheDocument();
-    expect(screen.getByText(/A justified build is a later conversation/i)).toBeInTheDocument();
+    expect(screen.getByText(/Evidence and tradeoffs in plain language/i)).toBeInTheDocument();
     expect(screen.getByText(/Leave capability, not dependency/i)).toBeInTheDocument();
     expect(screen.getByText(/No predetermined AI or custom-build pitch/i)).toBeInTheDocument();
     expect(screen.queryByText(/assessment and implementation/i)).not.toBeInTheDocument();

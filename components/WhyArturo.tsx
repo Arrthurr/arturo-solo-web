@@ -41,13 +41,13 @@ export default function WhyArturo() {
 
           <div>
             <p className="text-sm uppercase tracking-widest text-gray-500 mb-4">
-              Why Arturo
+              Why ASLLC
             </p>
             <h2 className="heading-lg mb-8">
               Builder&apos;s judgment. <Highlight>Operator&apos;s discipline.</Highlight>
             </h2>
             <p className="text-xl text-gray-600 mb-8 font-display">
-              I can map the work, test assumptions, and build if the filter earns it. That does not mean custom software is the answer in advance. Builder skill is how I test a path, not a promise that we will implement. You get one person who will recommend the lower-complexity path when it fits. A justified build is a later conversation. You leave more capable of running the work, not more dependent on me.
+              Arthur Turnbull is a versatile Technical Systems and Operations Leader with a career built on over two decades of cross-functional systems operations, digital distribution, and full-stack engineering. Developed a pragmatic architectural approach by evolving from hands-on technical management and live systems triage into designing resilient, event-driven B2B SaaS platforms. Proficient in leveraging modern full-stack developer tools and AI-native automation to eliminate manual toil, optimize queue/routing logic, and transform recurring operational bottlenecks into durable, scalable systems.
             </p>
             <ul className="space-y-3 text-gray-600">
               {bullets.map((bullet) => (
