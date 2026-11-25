@@ -59,25 +59,31 @@ describe('Stats teaching proof', () => {
     }
   });
 
-  it('states DMDL multi-role beta and Joy in development honestly', () => {
+  it('states DMDL as published and Joy as beta honestly', () => {
     render(<Stats />);
     const dmdl = screen.getByTestId('client-story-dmdl');
     const joy = screen.getByTestId('client-story-joy-for-books');
 
-    expect(within(dmdl).getByText(/Client workflow · beta/i)).toBeInTheDocument();
+    expect(within(dmdl).getByText(/Client workflow · published/i)).toBeInTheDocument();
     expect(within(dmdl).getByText(/Google Form/i)).toBeInTheDocument();
     expect(within(dmdl).getAllByText(/PWA/i).length).toBeGreaterThan(0);
     expect(within(dmdl).getByText(/Expo\/React Native/i)).toBeInTheDocument();
     expect(within(dmdl).getByText(/admin and staff/i)).toBeInTheDocument();
     expect(within(dmdl).getByText(/external workforce/i)).toBeInTheDocument();
+    expect(within(dmdl).queryByText(/Client workflow · beta/i)).not.toBeInTheDocument();
 
-    expect(within(joy).getByText(/Client system · in development/i)).toBeInTheDocument();
-    expect(within(joy).getByText(/school event/i)).toBeInTheDocument();
-    expect(within(joy).getByText(/Book inventory/i)).toBeInTheDocument();
-    expect(within(joy).getByText(/Active development/i)).toBeInTheDocument();
+    expect(within(joy).getByText(/Client system · beta/i)).toBeInTheDocument();
+    expect(within(joy).getByText(/school requests/i)).toBeInTheDocument();
+    expect(within(joy).getByText(/on hand, reserved, and donated/i)).toBeInTheDocument();
+    expect(within(joy).queryByText(/Combinotion/)).not.toBeInTheDocument();
+    expect(within(joy).getByText(/staff operations app/i)).toBeInTheDocument();
+    expect(within(joy).getByText(/Name the record the work depends on/i)).toBeInTheDocument();
+    expect(within(joy).getByText(/^Beta\./)).toBeInTheDocument();
     expect(
-      within(joy).getByText(/Not framed as a finished portfolio outcome/i),
-    ).toBeInTheDocument();
+      within(joy).queryByText(/Not framed as a finished portfolio outcome/i),
+    ).not.toBeInTheDocument();
+    expect(within(joy).queryByText(/in development/i)).not.toBeInTheDocument();
+    expect(within(joy).queryByText(/school event/i)).not.toBeInTheDocument();
   });
 
   it('offers a soft CTA to contact with workflow-example framing', () => {

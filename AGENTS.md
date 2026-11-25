@@ -57,7 +57,7 @@ Nav is Services (`#services`), Workshop (`/workshop`), About (`#team`), and Blog
 
 Preserve the hybrid proof model: public products, internal workflows, real client contexts, and AI tools in development. Do not imply unfinished products are finished portfolio items.
 
-`Stats` teaches decide-before-build with named client stories (DMDL, Joy for Books). Status stays maturity-honest (beta, in development). Logos sit inside those stories. They are not a generic trusted-by strip. Do not revive HG Jones Associates or Texas Head Start Association on the site.
+`Stats` teaches decide-before-build with named client stories (DMDL, Joy for Books). Status stays maturity-honest (DMDL published; Joy for Books beta). Logos sit inside those stories. They are not a generic trusted-by strip. Do not revive HG Jones Associates or Texas Head Start Association on the site.
 
 Services exposes **Workflow Assessment** only. The $97 workshop lives on `/workshop` and in the Hero CTA. Keep the stable contact service value `ai-jumpstart` as the internal identifier.
 

@@ -33,7 +33,7 @@ const clientStories: ClientStory[] = [
   {
     name: 'DMDL',
     logo: '/clients/dmdl.png',
-    statusLine: 'Client workflow · beta',
+    statusLine: 'Client workflow · published',
     beats: [
       {
         label: 'What looked true',
@@ -49,7 +49,7 @@ const clientStories: ClientStory[] = [
       },
       {
         label: 'Status',
-        text: 'The PWA path was retired. Mobile is rebuilt as native iPhone and Android apps with Expo/React Native. Beta: admin and staff testing the website portal and native apps; external workforce testing the native phone app.',
+        text: 'The PWA path was retired. Mobile is rebuilt as native iPhone and Android apps with Expo/React Native. Published: admin and staff on the website portal and native apps; external workforce on the native phone app.',
       },
       {
         label: 'What this means for you',
@@ -60,27 +60,27 @@ const clientStories: ClientStory[] = [
   {
     name: 'Joy for Books',
     logo: '/clients/joy-for-books.png',
-    statusLine: 'Client system · in development',
+    statusLine: 'Client system · beta',
     beats: [
       {
         label: 'What looked true',
-        text: 'A custom CRM-style app needed a school event as its center—the hub where inventory, distributors, and reviews all connected.',
+        text: 'Catalog, physical inventory, and school requests were tracked apart from each other. Copies already promised to a school could disappear from view before staff knew they were gone.',
       },
       {
         label: 'What discovery found',
-        text: 'Book inventory was the real center. Without books, the other business units would not exist.',
+        text: 'The missing piece was one shared record: which books are on hand, which are reserved, and which were donated. Without that, fulfillment and school visits could not stay accountable.',
       },
       {
         label: 'What the filter decided',
-        text: 'A first web application framework was built on the event-centered model, far enough for the client to test. Further discovery showed inventory should be the focus; AI helped revise the requirements document, and the app is being rebuilt around that center.',
+        text: 'A staff operations app now covers titles, auditable inventory movements, school reservations, visits, and intake, plus a public school-request workflow. Authenticated staff share one operational record instead of separate lists.',
       },
       {
         label: 'Status',
-        text: 'Active development. Not framed as a finished portfolio outcome.',
+        text: 'Beta. Staff can work from a shared record of books on hand, reserved, and donated.',
       },
       {
         label: 'What this means for you',
-        text: 'Start from how the work actually hangs together—not the first object that looks like the center of the system.',
+        text: 'Name the record the work depends on before you split it across tools. If promised copies can drop out of view, staff cannot plan visits or account for what went out.',
       },
     ],
   },
@@ -104,7 +104,7 @@ export default function Stats() {
               What the filter <Highlight>decided.</Highlight>
             </h2>
             <p className="text-xl text-gray-400 font-display">
-              These stories show what the Six Paths filter decided, including when discovery changed the plan. They are not a catalog of builds for sale. They are not proof that assessment turns into implementation. Status stays as honest as the work: beta, in development, no inflated outcome claims.
+              These stories show what the Six Paths filter decided, including when discovery changed the plan. They are not a catalog of builds for sale. They are not proof that assessment turns into implementation. Status stays as honest as the work: published, beta, no inflated outcome claims.
             </p>
           </div>
 

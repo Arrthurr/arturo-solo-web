@@ -119,12 +119,14 @@ test.describe('Homepage', () => {
     ).toBeVisible();
     await expect(page.getByText('What looked true').first()).toBeVisible();
     await expect(page.getByText('What discovery found').first()).toBeVisible();
-    await expect(page.getByText(/Client workflow · beta/i)).toBeVisible();
+    await expect(page.getByText(/Client workflow · published/i)).toBeVisible();
     await expect(page.getByText(/Google Form/i)).toBeVisible();
     await expect(page.getByText(/Expo\/React Native/i)).toBeVisible();
     await expect(page.getByText(/external workforce/i)).toBeVisible();
-    await expect(page.getByText(/Book inventory/i)).toBeVisible();
-    await expect(page.getByText(/Active development/i)).toBeVisible();
+    await expect(page.getByText(/Client system · beta/i)).toBeVisible();
+    await expect(page.getByText(/Combinotion/)).toHaveCount(0);
+    await expect(page.getByText(/staff operations app/i)).toBeVisible();
+    await expect(page.getByText(/on hand, reserved, and donated/i).first()).toBeVisible();
     await expect(
       page.getByRole('link', {
         name: /Bring a recent example of where the work breaks/i,
